@@ -1,0 +1,730 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+a:link { 
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* NAV */
+
+nav {
+    background-color: #fff8ea;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.paginas {
+    padding: 0px;
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+}
+
+.index , .productos , .carrito {
+    margin: 15px;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+}
+
+.index::before, .productos::before , .carrito::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: .3s;
+}
+
+.index:hover::before, .productos:hover::before , .carrito:hover::before {
+    width: 100%;
+}
+
+
+.logo-inicio {
+    display: flex;
+    position: relative;
+}
+
+.logo {
+    width: 50px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.texto-logo {
+    display: flex;
+    position: relative;
+    top: 16px;
+    left: 9px;
+    cursor: default;
+}
+
+.icono-carrito {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    position: relative;
+    top: 4px;
+}
+
+.carrito {
+    display: flex;
+    justify-content: space-around;
+}
+
+.barra-con-logo {
+    margin-top: 95px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+}
+
+.productos-nav {
+    background-color: #fff8ea;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.paginas-productos {
+    margin: 15px;
+    display: flex;
+}
+
+.budines , .muffins {
+    margin: 10px;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+}
+
+.budines::before , .muffins::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.budines:hover::before , .muffins:hover::before {
+    width: 100%;
+}
+
+@media (max-width: 576px) {
+
+    nav {
+        width: auto;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+   .paginas {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: start;
+    }
+
+    .barra-con-logo {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: default;
+    }
+
+    .productos-nav {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 320px){
+
+    nav {
+        width: auto;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+   .paginas {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: start;
+    }
+
+    .barra-con-logo {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: default;
+    }
+
+    .productos-nav {
+        font-size: 20px;
+        
+    }
+}
+
+/*MAIN*/
+
+body {
+    background-color: #f7f6f6;
+}
+
+h1 {
+    text-align: center;
+    font-size: 12px;
+    margin: 10px;
+    font-weight: lighter;    
+    cursor: default;
+}
+
+.imagen-budin , .imagen-muffin {
+    width: 400px;
+    border-radius: 10px;
+    border: none;
+    transition: box-shadow 0.3s ease-in-out;;
+}
+
+.imagen-budin:hover , .imagen-muffin:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+}
+
+.producto-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.contenido-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenido-producto .agregar {
+    width: auto;
+    justify-content: end;
+}
+
+.producto {
+    background-color: #f0efef;
+    display: flex;
+    justify-items: center;
+    margin: 20px;
+    margin-bottom: 35px;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 450px;
+    margin-left: 10px;
+}
+
+.texto h2 {
+    font-size: 40px;
+    margin: 10px 0px;
+    padding: 5px;
+}
+
+.texto p {
+    font-size: 20px;
+    padding: 5px;
+    gap: 5px;
+    margin: 10px 0px;
+    line-height: 20px;
+    width: 450px;
+    text-align: start;
+}
+
+.agregar-al-carrito {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    position: relative;
+    bottom: 13px;
+}
+
+.boton-agregar {
+    color: white;
+    background-color: greenyellow;
+    width: fit-content;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px ;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    display: flex;
+    justify-content: center;
+}
+
+.boton-agregar:hover {
+    background-color: rgb(137, 224, 6);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);;
+}
+
+.agregar {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 10px;
+}
+
+
+@media (max-width: 1200px) {
+    
+    .imagen-budin , .imagen-muffin {
+        width: 280px;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    .contenido-producto {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenido-producto .agregar {
+        width: auto;
+        justify-content: end;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .imagen-budin , .imagen-muffin {
+        width: 250px;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    .contenido-producto {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenido-producto .agregar {
+        width: auto;
+        justify-content: end;
+    }
+
+    .texto {
+        width: 250px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .texto h2 {
+        font-size: 19px;
+    }
+    
+    .texto p {
+        font-size: 15px;
+        padding: 5px;
+        margin: 0;
+        line-height: 20px;
+        width: 250px;
+        text-align: center;
+    }
+
+    .agregar-al-carrito {
+        width: 30px;
+        height: 30px;
+        bottom: 13px;
+        align-items: center;
+    }
+
+    .boton-agregar {
+        font-size: 15px;
+        margin: 5px;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+   
+    .imagen-budin , .imagen-muffin {
+        width: 250px;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    .producto-container {
+        margin: 40px;
+    }
+
+    .producto {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+    }
+
+    .contenido-producto .agregar {
+        width: auto;
+        justify-content: end;
+    }
+
+    .texto {
+        width: 250px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .texto h2 {
+        font-size: 19px;
+    }
+    
+    .texto p {
+        font-size: 15px;
+        padding: 5px;
+        margin: 0;
+        line-height: 20px;
+        width: 250px;
+        text-align: center;
+    }
+
+    .agregar-al-carrito {
+        width: 30px;
+        height: 30px;
+        bottom: 13px;
+        align-items: center;
+    }
+
+    .boton-agregar {
+        font-size: 15px;
+        margin: 5px;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    .imagen-budin , .imagen-muffin {
+        width: 250px;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    .producto-container {
+        margin: 40px;
+    }
+
+    .producto {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+    }
+
+    .contenido-producto .agregar {
+        width: auto;
+        align-items: end;
+    }
+
+    .texto {
+        width: 250px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .texto h2 {
+        font-size: 19px;
+    }
+    
+    .texto p {
+        font-size: 15px;
+        padding: 5px;
+        margin: 0;
+        line-height: 20px;
+        width: 250px;
+        text-align: center;
+    }
+
+    .agregar-al-carrito {
+        width: 30px;
+        height: 30px;
+        bottom: 13px;
+        align-items: center;
+    }
+
+    .boton-agregar {
+        font-size: 15px;
+        margin: 5px;
+    }
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: #fff8ea;;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icono-email , .icono-whatsapp , .icono-instagram {
+    width: 25px;
+    display: flex;
+}
+
+.email , .whatsapp , .instagram {
+    display: flex;
+    position: relative;
+    left: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.contacto p {
+    font-weight: lighter;
+    position: relative;
+    left: 10px;
+}
+
+h4 {
+    font-weight: lighter;
+    margin-top: 45px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+.instagram p {
+   width: fit-content;
+}
+
+.instagram p::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.instagram p:hover::before {
+    width: 100%;
+}
+
+.whatsapp p {
+    width: fit-content;
+}
+
+.whatsapp p::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.whatsapp p:hover::before {
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    
+    footer {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacto {
+        width: fit-content;
+    }
+
+    .texto-contacto{
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    h4 {
+        width: auto;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email .whatsapp .instagram {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    footer {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacto {
+        width: fit-content;
+    }
+
+    .texto-contacto{
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    h4 {
+        width: auto;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email .whatsapp .instagram {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+
+} 
+
+@media (max-width: 576px) {
+
+    footer {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .contacto {
+        width: fit-content;
+    }
+
+    .texto-contacto{
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    h4 {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email .whatsapp .instagram {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+    
+    footer {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .contacto {
+        width: fit-content;
+    }
+
+    .texto-contacto{
+        width: auto;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+
+    h4 {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email .whatsapp .instagram {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+}

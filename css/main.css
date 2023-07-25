@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+/* NAV */
+
+nav {
+    background-color: #fff8ea;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.paginas {
+    padding: 0px;
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+}
+
+.index,
+.productos,
+.carrito {
+    margin: 15px;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+}
+
+.index::before,
+.productos::before,
+.carrito::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.index:hover::before,
+.productos:hover::before,
+.carrito:hover::before {
+    width: 100%;
+}
+
+
+.logo-inicio {
+    display: flex;
+    position: relative;
+}
+
+.logo {
+    width: 50px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.texto-logo {
+    display: flex;
+    position: relative;
+    top: 16px;
+    left: 9px;
+    cursor: default;
+}
+
+.icono-carrito {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    position: relative;
+    top: 4px;
+}
+
+.carrito {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 576px) {
+
+    nav {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: sticky;
+    }
+
+    .paginas {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: start;
+    }
+
+
+}
+
+@media (max-width: 320px) {
+
+    nav {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: sticky;
+    }
+
+    .paginas {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: start;
+    }
+}
+
+
+
+/*MAIN*/
+
+body {
+    background-image: url("../media/img/fondo.jpg");
+}
+
+ul {
+    list-style: none;
+}
+
+.carrusel-budines{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.carrusel-budines ul{
+    display: flex;
+    animation: cambio 10s infinite alternate linear;
+}
+
+.carrusel-budines li {
+    width: 100%;
+}
+
+.carrusel-budines img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes cambio {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    25%{margin left: -100%;}
+    45%{margin-left: -100%;}
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+}
+
+.tarjeta-principal {
+    width: 1200px;
+    background-color: #f7f6f6;
+    margin: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border: auto;
+    border-radius: 3px;
+    padding: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    ;
+}
+
+.muffins-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.muffin {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+    ;
+}
+
+.muffin:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+}
+
+h1,
+h2,
+.texto-presentacion {
+    text-align: center;
+}
+
+.texto-presentacion {
+    margin: 5px;
+    padding: 5px;
+}
+
+@media (max-width: 1200px) {
+
+    .budines-container {
+        width: auto;
+        height: 600px;
+        background-size: cover;
+    }
+
+    .tarjeta-principal {
+        width: auto;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .texto-presentacion {
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .budines-container {
+        width: auto;
+        height: 400px;
+        background-size: cover;
+    }
+
+    .tarjeta-principal {
+        width: auto;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .muffin {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    .texto-presentacion {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .budines-container {
+        width: auto;
+        height: 300px;
+        background-size: cover;
+    }
+
+    .tarjeta-principal {
+        width: auto;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .muffins-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .texto-presentacion {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    .budines-container {
+        width: auto;
+        height: 200px;
+        background-size: cover;
+    }
+
+    .tarjeta-principal {
+        width: auto;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .muffins-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .texto-presentacion {
+        font-size: 15px;
+    }
+
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: #fff8ea;
+    ;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icono-email,
+.icono-whatsapp,
+.icono-instagram {
+    width: 25px;
+    display: flex;
+}
+
+.email,
+.whatsapp,
+.instagram {
+    display: flex;
+    position: relative;
+    left: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.texto-contacto {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.contacto p {
+    font-weight: lighter;
+    position: relative;
+    left: 10px;
+}
+
+h4 {
+    font-weight: lighter;
+    margin-top: 45px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+.instagram p {
+    width: fit-content;
+}
+
+.instagram p::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.instagram p:hover::before {
+    width: 100%;
+}
+
+.whatsapp p {
+    width: fit-content;
+}
+
+.whatsapp p::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.whatsapp p:hover::before {
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+
+    footer {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacto {
+        width: fit-content;
+    }
+
+    .texto-contacto {
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    h4 {
+        width: auto;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email .whatsapp .instagram {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    footer {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacto {
+        width: fit-content;
+    }
+
+    .texto-contacto {
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    h4 {
+        width: auto;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email .whatsapp .instagram {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    footer {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .contacto {
+        width: fit-content;
+    }
+
+    .texto-contacto {
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    h4 {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email .whatsapp .instagram {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    footer {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .contacto {
+        width: fit-content;
+    }
+
+    .texto-contacto {
+        width: auto;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+
+    h4 {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email .whatsapp .instagram {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+}
