@@ -21,6 +21,13 @@ ul {
     list-style: none;
 }
 
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/*************INDEX*************/
 /* NAV */
 
 nav {
@@ -107,61 +114,9 @@ nav {
     justify-content: space-around;
 }
 
-@media (max-width: 576px) {
-
-    nav {
-        width: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: sticky;
-    }
-
-    .paginas {
-        padding: 0px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .logo {
-        display: flex;
-        justify-content: start;
-    }
-
-
-}
-
-@media (max-width: 320px) {
-
-    nav {
-        width: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: sticky;
-    }
-
-    .paginas {
-        padding: 0px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .logo {
-        display: flex;
-        justify-content: start;
-    }
-}
-
-
-
 /*MAIN*/
 
-body {
+.body-index {
     background-image: url("../media/img/fondo.jpg");
 }
 
@@ -169,34 +124,12 @@ ul {
     list-style: none;
 }
 
-.carrusel-budines{
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-    overflow: hidden;
-}
-
-.carrusel-budines ul{
-    display: flex;
-    animation: cambio 10s infinite alternate linear;
-}
-
-.carrusel-budines li {
-    width: 100%;
-}
-
-.carrusel-budines img {
-    width: 100%;
-    height: 100%;
-}
-
-@keyframes cambio {
-    0%{margin-left: 0;}
-    20%{margin-left: 0;}
-    25%{margin left: -100%;}
-    45%{margin-left: -100%;}
-    50%{margin-left: -200%;}
-    70%{margin-left: -200%;}
+.budines-container {
+    background-image: url(../media/img/budin1.jpg);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    ;
+    height: 720px;
+    background-size: cover;
 }
 
 .tarjeta-principal {
@@ -241,140 +174,6 @@ h2,
 .texto-presentacion {
     margin: 5px;
     padding: 5px;
-}
-
-@media (max-width: 1200px) {
-
-    .budines-container {
-        width: auto;
-        height: 600px;
-        background-size: cover;
-    }
-
-    .tarjeta-principal {
-        width: auto;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    h1 {
-        font-size: 40px;
-    }
-
-    h2 {
-        font-size: 30px;
-        font-weight: 400;
-    }
-
-    .texto-presentacion {
-        font-size: 25px;
-    }
-
-}
-
-@media (max-width: 768px) {
-
-    .budines-container {
-        width: auto;
-        height: 400px;
-        background-size: cover;
-    }
-
-    .tarjeta-principal {
-        width: auto;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    .muffin {
-        width: 150px;
-        height: 150px;
-    }
-
-    h1 {
-        font-size: 35px;
-    }
-
-    h2 {
-        font-size: 25px;
-        font-weight: 400;
-    }
-
-    .texto-presentacion {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 576px) {
-
-    .budines-container {
-        width: auto;
-        height: 300px;
-        background-size: cover;
-    }
-
-    .tarjeta-principal {
-        width: auto;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    .muffins-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-
-    h2 {
-        font-size: 20px;
-        font-weight: 400;
-    }
-
-    .texto-presentacion {
-        font-size: 20px;
-    }
-
-}
-
-@media (max-width: 320px) {
-
-    .budines-container {
-        width: auto;
-        height: 200px;
-        background-size: cover;
-    }
-
-    .tarjeta-principal {
-        width: auto;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    .muffins-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-
-    h2 {
-        font-size: 20px;
-        font-weight: 400;
-    }
-
-    .texto-presentacion {
-        font-size: 15px;
-    }
-
 }
 
 /*FOOTER*/
@@ -461,8 +260,1270 @@ h4 {
     width: 100%;
 }
 
+/*************PRODUCTOS BUDINES*************/
+
+/*NAV*/
+
+.nav-principal-productosBudines {
+    background-color: #fff8ea;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.paginas-productosBudines {
+    padding: 0px;
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+}
+
+.index-productosBudines,
+.productos-productosBudines,
+.carrito-productosBudines {
+    margin: 15px;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+}
+
+.index-productosBudines::before,
+.productos-productosBudines::before,
+.carrito-productosBudines::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: .3s;
+}
+
+.index-productosBudines:hover::before,
+.productos-productosBudines:hover::before,
+.carrito-productosBudines:hover::before {
+    width: 100%;
+}
+
+.logo-inicio-productosBudines {
+    display: flex;
+    position: relative;
+}
+
+.logo-productosBudines {
+    width: 50px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.texto-logo-productosBudines {
+    display: flex;
+    position: relative;
+    top: 16px;
+    left: 9px;
+    cursor: default;
+}
+
+.icono-carrito-productosBudines {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    position: relative;
+    top: 4px;
+}
+
+.carrito-productosBudines {
+    display: flex;
+    justify-content: space-around;
+}
+
+.barra-con-logo-productosBudines {
+    margin-top: 95px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+}
+
+.productos-nav-productosBudines {
+    background-color: #fff8ea;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.paginas-productos-productosBudines {
+    margin: 15px;
+    display: flex;
+}
+
+.budines-productosBudines,
+.muffins-productosBudines {
+    margin: 10px;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+}
+
+.budines-productosBudines::before,
+.muffins-productosBudines::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.budines-productosBudines:hover::before,
+.muffins-productosBudines:hover::before {
+    width: 100%;
+}
+
+/*MAIN*/
+.body-productosBudines {
+    background-color: #f7f6f6;
+}
+
+.h1-productosBudines {
+    text-align: center;
+    font-size: 12px;
+    margin: 10px;
+    font-weight: lighter;
+    cursor: default;
+}
+
+.h2-productosBudines {
+    text-align: center;
+    font-size: 23px;
+    margin: 10px;
+}
+
+.productos-container-productosBudines {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
+    margin-bottom: 70px;
+    gap: 69px;
+}
+
+.budin1-productosBudines,
+.budin2-productosBudines,
+.budin3-productosBudines {
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    ;
+    transition: box-shadow 0.3s ease-in-out;
+    width: 400px;
+    height: 650px;
+}
+
+.budin1-productosBudines:hover,
+.budin2-productosBudines:hover,
+.budin3-productosBudines:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.budin-de-frutosrojos,
+.budin-de-limonyamapola,
+.budin-de-zanahoria {
+    width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.descripcion-productosBudines {
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0px 20px;
+}
+
+.agregar-al-carrito-productosBudines {
+    width: 40px;
+    display: flex;
+    position: relative;
+    left: 340px;
+}
+
+/*FOOTER*/
+
+.footer-productosBudines {
+    background-color: #fff8ea;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.icono-email-productosBudines,
+.icono-whatsapp-productosBudines,
+.icono-instagram-productosBudines {
+    width: 25px;
+    display: flex;
+}
+
+.email-productosBudines,
+.whatsapp-productosBudines,
+.instagram-productosBudines {
+    display: flex;
+    position: relative;
+    left: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.contacto-productosBudines p {
+    font-weight: lighter;
+    position: relative;
+    left: 10px;
+}
+
+.h4-productosBudines {
+    font-weight: lighter;
+    margin-top: 45px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+.instagram-productosBudines p {
+    width: fit-content;
+}
+
+.instagram-productosBudines p::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.instagram-productosBudines p:hover::before {
+    width: 100%;
+}
+
+.whatsapp-productosBudines p {
+    width: fit-content;
+}
+
+.whatsapp-productosBudines p::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.whatsapp-productosBudines p:hover::before {
+    width: 100%;
+}
+
+/*************PRODUCTOS MUFFINS*************/
+
+/*NAV*/
+
+.nav-principal-productosMuffins {
+    background-color: #fff8ea;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.paginas-productosMuffins {
+    padding: 0px;
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+}
+
+.index-productosMuffins , .productos-productosMuffins , .carrito-productosMuffins {
+    margin: 15px;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+}
+
+.index-productosMuffins::before, .productos-productosMuffins::before , .carrito-productosMuffins::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: .3s;
+}
+
+.index-productosMuffins:hover::before, .productos-productosMuffins:hover::before , .carrito-productosMuffins:hover::before {
+    width: 100%;
+}
+
+
+.logo-inicio-productosMuffins {
+    display: flex;
+    position: relative;
+}
+
+.logo-productosMuffins {
+    width: 50px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.texto-logo-productosMuffins {
+    display: flex;
+    position: relative;
+    top: 16px;
+    left: 9px;
+    cursor: default;
+}
+
+.icono-carrito-productosMuffins {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    position: relative;
+    top: 4px;
+}
+
+.carrito-productosMuffins {
+    display: flex;
+    justify-content: space-around;
+}
+
+.barra-con-logo-productosMuffins {
+    margin-top: 95px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+}
+
+.productos-nav-productosMuffins {
+    background-color: #fff8ea;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.paginas-productos-productosMuffins {
+    margin: 15px;
+    display: flex;
+}
+
+.budines-productosMuffins , .muffins-productosMuffins {
+    margin: 10px;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+}
+
+.budines-productosMuffins::before , .muffins-productosMuffins::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.budines-productosMuffins:hover::before , .muffins-productosMuffins:hover::before {
+    width: 100%;
+}
+
+/*MAIN*/
+
+.body-productosMuffins {
+    background-color: #f7f6f6;
+}
+
+.h1-productosMuffins {
+    text-align: center;
+    font-size: 12px;
+    margin: 10px;
+    font-weight: lighter;
+    cursor: default;
+}
+
+.h2-productosMuffins {
+    text-align: center;
+    font-size: 23px;
+    margin: 10px;
+}
+
+.productos-container-productosMuffins {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 50px;
+    margin-bottom: 70px;
+    gap: 69px;
+}
+
+.muffin1-productosMuffins , .muffin2-productosMuffins, .muffin3-productosMuffins , .muffin4-productosMuffins , .muffin5-productosMuffins , .muffin6-productosMuffins {
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);;
+    transition: box-shadow 0.3s ease-in-out;
+    width: 400px;
+    height: 650px;
+}
+
+.muffin1-productosMuffins:hover , .muffin2-productosMuffins:hover , .muffin3-productosMuffins:hover , .muffin4-productosMuffins:hover , .muffin5-productosMuffins:hover , .muffin6-productosMuffins:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.muffin-banana , .muffin-coco , .muffin-frutosrojos , .muffin-frutossecos , .muffin-limonyamapola , .muffin-vainillaychips {
+    width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.descripcion-producto-productosMuffins {
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0px 20px;
+}
+
+.agregar-al-carrito-productosMuffins {
+    width: 40px;
+    display: flex;
+    position: relative;
+    left: 340px;
+}
+
+/*FOOTER*/
+
+.footer-productosMuffins {
+    background-color: #fff8ea;;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icono-email-productosMuffins , .icono-whatsapp-productosMuffins , .icono-instagram-productosMuffins {
+    width: 25px;
+    display: flex;
+}
+
+.email-productosMuffins , .whatsapp-productosMuffins , .instagram-productosMuffins {
+    display: flex;
+    position: relative;
+    left: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.contacto-productosMuffins p {
+    font-weight: lighter;
+    position: relative;
+    left: 10px;
+}
+
+.h4-productosMuffins {
+    font-weight: lighter;
+    margin-top: 45px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+.instagram-productosMuffins p {
+   width: fit-content;
+}
+
+.instagram-productosMuffins p::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.instagram-productosMuffins p:hover::before {
+    width: 100%;
+}
+
+.whatsapp-productosMuffins p {
+    width: fit-content;
+}
+
+.whatsapp-productosMuffins p::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.whatsapp-productosMuffins p:hover::before {
+    width: 100%;
+}
+
+/*************PRODUCTOS CLICKEADOS*************/
+
+/*NAV*/
+
+.nav-principal-productosClickeados {
+    background-color: #fff8ea;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.paginas-productosClickeados {
+    padding: 0px;
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+}
+
+.index-productosClickeados , .productos-productosClickeados , .carrito-productosClickeados {
+    margin: 15px;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+}
+
+.index-productosClickeados::before, .productos-productosClickeados::before , .carrito-productosClickeados::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: .3s;
+}
+
+.index-productosClickeados:hover::before, .productos-productosClickeados:hover::before , .carrito-productosClickeados:hover::before {
+    width: 100%;
+}
+
+
+.logo-inicio-productosClickeados {
+    display: flex;
+    position: relative;
+}
+
+.logo-productosClickeados {
+    width: 50px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.texto-logo-productosClickeados {
+    display: flex;
+    position: relative;
+    top: 16px;
+    left: 9px;
+    cursor: default;
+}
+
+.icono-carrito-productosClickeados {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    position: relative;
+    top: 4px;
+}
+
+.carrito-productosClickeados {
+    display: flex;
+    justify-content: space-around;
+}
+
+.barra-con-logo-productosClickeados {
+    margin-top: 95px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+}
+
+.productos-nav-productosClickeados {
+    background-color: #fff8ea;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.paginas-productos-productosClickeados {
+    margin: 15px;
+    display: flex;
+}
+
+.budines-productosClickeados , .muffins-productosClickeados {
+    margin: 10px;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+}
+
+.budines-productosClickeados::before , .muffins-productosClickeados::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.budines-productosClickeados:hover::before , .muffins-productosClickeados:hover::before {
+    width: 100%;
+}
+
+/*MAIN*/
+
+.body-productosClickeados {
+    background-color: #f7f6f6;
+}
+
+.h1-productosClickeados {
+    text-align: center;
+    font-size: 12px;
+    margin: 10px;
+    font-weight: lighter;    
+    cursor: default;
+}
+
+.imagen-budin-productosClickeados , .imagen-muffin-productosClickeados {
+    width: 400px;
+    border-radius: 10px;
+    border: none;
+    transition: box-shadow 0.3s ease-in-out;;
+}
+
+.imagen-budin-productosClickeados:hover , .imagen-muffin-productosClickeados:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+}
+
+.producto-container-productosClickeados {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.contenido-producto-productosClickeados {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenido-producto-productosClickeados .agregar-productosClickeados {
+    width: auto;
+    justify-content: end;
+}
+
+.producto-productosClickeados {
+    background-color: #f0efef;
+    display: flex;
+    justify-items: center;
+    margin: 20px;
+    margin-bottom: 35px;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.texto-productosClickeados {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 450px;
+    margin-left: 10px;
+}
+
+.texto-productosClickeados .h2-productosClickeados {
+    font-size: 40px;
+    margin: 10px 0px;
+    padding: 5px;
+}
+
+.texto-productosClickeados p {
+    font-size: 20px;
+    padding: 5px;
+    gap: 5px;
+    margin: 10px 0px;
+    line-height: 20px;
+    width: 450px;
+    text-align: start;
+}
+
+.agregar-al-carrito-productosClickeados {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    position: relative;
+    bottom: 13px;
+}
+
+.boton-agregar-productosClickeados {
+    color: white;
+    background-color: greenyellow;
+    width: fit-content;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px ;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    display: flex;
+    justify-content: center;
+}
+
+.boton-agregar-productosClickeados:hover {
+    background-color: rgb(137, 224, 6);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);;
+}
+
+.agregar-productosClickeados {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 10px;
+}
+
+/*FOOTER*/
+
+.footer-productosClickeados {
+    background-color: #fff8ea;;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icono-email-productosClickeados , .icono-whatsapp-productosClickeados , .icono-instagram-productosClickeados {
+    width: 25px;
+    display: flex;
+}
+
+.email-productosClickeados , .whatsapp-productosClickeados , .instagram-productosClickeados {
+    display: flex;
+    position: relative;
+    left: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.contacto-productosClickeados p {
+    font-weight: lighter;
+    position: relative;
+    left: 10px;
+}
+
+.h4-productosClickeados {
+    font-weight: lighter;
+    margin-top: 45px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+.instagram-productosClickeados p {
+   width: fit-content;
+}
+
+.instagram-productosClickeados p::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.instagram-productosClickeados p:hover::before {
+    width: 100%;
+}
+
+.whatsapp-productosClickeados p {
+    width: fit-content;
+}
+
+.whatsapp-productosClickeados p::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.whatsapp-productosClickeados p:hover::before {
+    width: 100%;
+}
+
+/*************CARRITO*************/
+
+/*NAV*/
+
+.nav-principal-carrito {
+    background-color: #fff8ea;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.paginas-carrito {
+    padding: 0px;
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+}
+
+.index-carrito , .productos-carrito , .carrito-carrito {
+    margin: 15px;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+}
+
+.index-carrito::before, .productos-carrito::before , .carrito-carrito::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: .3s;
+}
+
+.index-carrito:hover::before, .productos-carrito:hover::before , .carrito-carrito:hover::before {
+    width: 100%;
+}
+
+.logo-inicio-carrito {
+    display: flex;
+    position: relative;
+}
+
+.logo-carrito {
+    width: 50px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.texto-logo-carrito {
+    display: flex;
+    position: relative;
+    top: 16px;
+    left: 9px;
+    cursor: default;
+}
+
+.icono-carrito-carrito {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    position: relative;
+    top: 4px;
+}
+
+.carrito-carrito {
+    display: flex;
+    justify-content: space-around;
+}
+
+.barra-con-logo-carrito {
+    margin-top: 95px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+}
+
+.barra-con-texto-carrito {
+    background-color: #fff8ea;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    cursor: default;
+    
+}
+
+.icono-carrito1-carrito {
+    width: 40px;
+    height: 40px;
+}
+
+.h1-carrito {
+    text-align: center;
+}
+
+/*MAIN*/
+
+.body-carrito {
+    background-color: #f7f6f6;
+}
+
+.compras-container-carrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.compra1-carrito , .compra2-carrito , .compra3-carrito {
+    background-color: white;
+    display: flex;
+    width: 1000px;
+    justify-items: start;
+    margin: 20px;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.texto-carrito {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 350px;
+}
+
+.texto-carrito .h2-carrito {
+    font-size: 30px;
+    margin: 10px;
+}
+
+.texto-carrito p {
+    font-size: 16px;
+    padding: 5px;
+    gap: 5px;
+    margin: 10px 0px;
+    line-height: 20px;
+    width: 350px;
+    text-align: start;
+}
+
+.budin-frutosrojos , .muffin-frutosrojos-carrito , .muffin-manzanaynuez{
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.boton-comprar-carrito {
+    color: white;
+    background-color: greenyellow;
+    width: fit-content;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px ;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.boton-comprar-carrito:hover {
+    background-color: rgb(137, 224, 6);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);;
+}
+
+.botoncomprar-container-carrito {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.cantidad-carrito {
+    background-color: white;
+    margin: 10px;
+    padding: 5px;
+    height: 60px;
+    width: fit-content;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);;
+    text-align: center;
+    position: relative;
+    top: 238px;
+    left: 260px;
+}
+
+.boton-restar-carrito , .cantidad-valor-carrito , .boton-agregar-carrito {
+    margin: 5px;
+}
+
+.boton-cerrar-carrito {
+    display: inline;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: -70px;
+    right: -340px;
+}
+
+.cruz-carrito {
+    width: 30px;
+    height: 30px;
+}
+
+.icono-cruz-carrito {
+    width: 30px;
+    height: 30px;
+}
+
+/*FOOTER*/
+
+.footer-carrito {
+    background-color: #fff8ea;;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icono-email-carrito , .icono-whatsapp-carrito , .icono-instagram-carrito {
+    width: 25px;
+    display: flex;
+}
+
+.email-carrito , .whatsapp-carrito , .instagram-carrito {
+    display: flex;
+    position: relative;
+    left: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.contacto-carrito p {
+    font-weight: lighter;
+    position: relative;
+    left: 10px;
+}
+
+.h4-carrito {
+    font-weight: lighter;
+    margin-top: 45px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+.instagram-carrito p {
+   width: fit-content;
+}
+
+.instagram-carrito p::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.instagram-carrito p:hover::before {
+    width: 100%;
+}
+
+.whatsapp-carrito p {
+    width: fit-content;
+}
+
+.whatsapp-carrito p::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.whatsapp-carrito p:hover::before {
+    width: 100%;
+}
+
+
+@media (max-width: 1400px) {
+
+    /*************PRODUCTOS BUDINES*************/
+
+    /*NAV*/
+
+    /*MAIN*/
+    .productos-container-productosBudines {
+        gap: 50px;
+    }
+
+    .budin1-productosBudines,
+    .budin2-productosBudines,
+    .budin3-productosBudines {
+        width: 350px;
+        height: auto;
+    }
+
+    .budin-de-frutosrojos,
+    .budin-de-limonyamapola,
+    .budin-de-zanahoria {
+        width: 350px;
+        display: flex;
+        align-items: center;
+    }
+
+    .agregar-al-carrito-productosBudines {
+        width: 30px;
+        display: flex;
+        position: relative;
+        left: 310px;
+    }
+
+    /*FOOTER*/
+
+    /*************PRODUCTOS MUFFINS*************/
+    /*NAV*/
+
+    /*MAIN*/
+
+    .productos-container-productosMuffins {
+        gap: 50px;
+    }
+
+    .muffin1-productosMuffins , .muffin2-productosMuffins , .muffin3-productosMuffins , .muffin4-productosMuffins , .muffin5-productosMuffins , .muffin6-productosMuffins {
+        width: 350px;
+        height: auto;
+    }
+
+    .muffin-banana , .muffin-coco , .muffin-frutosrojos , .muffin-frutossecos , .muffin-limonyamapola , .muffin-vainillaychips {
+        width: 350px;
+        display: flex;
+        align-items: center;
+    }
+
+    .agregar-al-carrito-productosMuffins {
+        width: 30px;
+        display: flex;
+        position: relative;
+        left: 310px;
+    }
+
+    /*FOOTER*/
+
+    /*************PRODUCTOS CLICKEADOS*************/
+    /*NAV*/
+
+    /*MAIN*/
+
+    /*FOOTER*/
+
+    /*************CARRITO*************/
+    /*NAV*/
+
+    /*MAIN*/
+
+    .muffin-frutosrojos-carrito {
+        width: 250px;
+        object-fit: cover;
+    }
+
+    /*FOOTER*/
+}
+
 @media (max-width: 1200px) {
 
+    /*************INDEX*************/
+    /*MAIN*/
+    .budines-container {
+        width: auto;
+        height: 600px;
+        background-size: cover;
+    }
+
+    .tarjeta-principal {
+        width: auto;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .texto-presentacion {
+        font-size: 25px;
+    }
+
+    /*FOOTER*/
     footer {
         width: auto;
         display: flex;
@@ -491,10 +1552,284 @@ h4 {
         justify-content: start;
         padding: 30px;
     }
+
+    /*************PRODUCTOS BUDINES*************/
+
+    /*NAV*/
+
+    /*MAIN*/
+
+    .productos-container-productosBudines {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .budin1-productosBudines,
+    .budin2-productosBudines,
+    .budin3-productosBudines {
+        width: 450px;
+        height: auto;
+    }
+
+    .budin-de-frutosrojos,
+    .budin-de-limonyamapola,
+    .budin-de-zanahoria {
+        width: 450px;
+        display: flex;
+        align-items: center;
+    }
+
+    .agregar-al-carrito-productosBudines {
+        width: 30px;
+        display: flex;
+        position: relative;
+        left: 410px;
+    }
+
+    /*FOOTER*/
+
+    .footer-productosBudines {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacto-productosBudines {
+        width: fit-content;
+    }
+
+    .texto-contacto-productosBudines {
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .h4-productosBudines {
+        width: auto;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email-productosBudines .whatsapp-productosBudines .instagram-productosBudines {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+
+    /*************PRODUCTOS MUFFINS*************/
+    /*NAV*/
+
+    /*MAIN*/
+
+    .productos-container-productosMuffins {      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .muffin1-productosMuffins , .muffin2-productosMuffins , .muffin3-productosMuffins , .muffin4-productosMuffins , .muffin5-productosMuffins , .muffin6-productosMuffins {
+        width: 450px;
+        height: auto;
+    }
+
+    .muffin-banana , .muffin-coco , .muffin-frutosrojos , .muffin-frutossecos , .muffin-limonyamapola , .muffin-vainillaychips {
+        width: 450px;
+        display: flex;
+        align-items: center;
+    }
+
+    .agregar-al-carrito-productosMuffins {
+        width: 30px;
+        display: flex;
+        position: relative;
+        left: 410px;
+    }
+
+    /*FOOTER*/
+
+    .footer-productosMuffins {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacto-productosMuffins {
+        width: fit-content;
+    }
+
+    .texto-contacto-productosMuffins {
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .h4-productosMuffins {
+        width: auto;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email-productosMuffins .whatsapp-productosMuffins .instagram-productosMuffins {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+
+    /*************PRODUCTOS CLICKEADOS*************/
+    /*NAV*/
+
+    /*MAIN*/
+
+    .imagen-budin-productosClickeados , .imagen-muffin-productosClickeados {
+        width: 280px;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    .contenido-producto-productosClickeados {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenido-producto-productosClickeados .agregar-productosClickeados {
+        width: auto;
+        justify-content: end;
+    }
+
+    /*FOOTER*/
+
+    .footer-productosClickeados {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacto-productosClickeados {
+        width: fit-content;
+    }
+
+    .texto-contacto-productosClickeados {
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .h4-productosClickeados {
+        width: auto;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email-productosClickeados .whatsapp-productosClickeados .instagram-productosClickeados {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+
+    /*************CARRITO*************/
+    /*NAV*/
+
+    /*MAIN*/
+
+    .compra1-carrito , .compra2-carrito , .compra3-carrito {
+        width: 700px;
+    }
+
+    .budin-frutosrojos , .muffin-frutosrojos-carrito , .muffin-manzanaynuez{ 
+        width: 200px;
+        object-fit: cover;
+    }
+
+    .cantidad-y-boton-cerrar-carrito {
+        display: flex; 
+        
+    }
+
+    .cantidad-carrito {
+        top: 10;
+        left: 7px;
+        bottom: 0;
+    }
+
+    .boton-cerrar-carrito {
+        top: 5px;
+        left: -25px;
+        align-items: end;
+    }
+
+    /*FOOTER*/
+
+    .footer-carrito {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacto-carrito {
+        width: fit-content;
+    }
+
+    .texto-contacto-carrito {
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .h4-carrito {
+        width: auto;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email-carrito .whatsapp-carrito .instagram-carrito {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
 }
 
 @media (max-width: 768px) {
 
+    /*************INDEX*************/
+    /*MAIN*/
+    .budines-container {
+        width: auto;
+        height: 400px;
+        background-size: cover;
+    }
+
+    .tarjeta-principal {
+        width: auto;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .muffin {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    .texto-presentacion {
+        font-size: 20px;
+    }
+
+    /*FOOTER*/
     footer {
         width: auto;
         display: flex;
@@ -519,6 +1854,255 @@ h4 {
     }
 
     .email .whatsapp .instagram {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+
+    /*************PRODUCTOS BUDINES*************/
+
+    /*NAV*/
+
+    /*MAIN*/
+
+    .productos-container-productosBudines {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    /*FOOTER*/
+
+    .footer-productosBudines {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacto.productosBudines {
+        width: fit-content;
+    }
+
+    .texto-contacto-productosBudines {
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .h4-productosBudines {
+        width: auto;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email-productosBudines .whatsapp-productosBudines .instagram-productosBudines {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+
+    /*************PRODUCTOS MUFFINS*************/
+    /*NAV*/
+
+    /*MAIN*/
+
+    .productos-container-productosMuffins {      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    /*FOOTER*/
+
+    .footer-productosMuffins {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacto-productosMuffins {
+        width: fit-content;
+    }
+
+    .texto-contacto-productosMuffins {
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .h4-productosMuffins {
+        width: auto;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email-productosMuffins .whatsapp-productosMuffins .instagram-productosMuffins {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+
+    /*************PRODUCTOS CLICKEADOS*************/
+    /*NAV*/
+
+    /*MAIN*/
+
+    .imagen-budin-productosClickeados , .imagen-muffin-productosClickeados {
+        width: 250px;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    .contenido-producto-productosClickeados {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenido-producto-productosClickeados .agregar-productosClickeados {
+        width: auto;
+        justify-content: end;
+    }
+
+    .texto-productosClickeados {
+        width: 250px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .texto-productosClickeados .h2-productosClickeados {
+        font-size: 19px;
+    }
+    
+    .texto-productosClickeados p {
+        font-size: 15px;
+        padding: 5px;
+        margin: 0;
+        line-height: 20px;
+        width: 250px;
+        text-align: center;
+    }
+
+    .agregar-al-carrito-productosClickeados {
+        width: 30px;
+        height: 30px;
+        bottom: 13px;
+        align-items: center;
+    }
+
+    .boton-agregar-productosClickeados {
+        font-size: 15px;
+        margin: 5px;
+    }
+
+    /*FOOTER*/
+
+    .footer-productosClickeados {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacto-productosClickeados {
+        width: fit-content;
+    }
+
+    .texto-contacto-productosClickeados {
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .h4-productosClickeados{
+        width: auto;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email-productosClickeados .whatsapp-productosClickeados .instagram-productosClickeados {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+
+
+    /*************CARRITO*************/
+    
+    /*NAV*/
+
+    /*MAIN*/
+
+    .compra1-carrito , .compra2-carrito , .compra3-carrito {
+        width: 570px;
+    }
+
+    .budin-frutosrojos , .muffin-frutosrojos-carrito , .muffin-manzanaynuez{ 
+        width: 200px;
+    }
+
+    .texto-carrito {
+        width: 250px;
+    }
+
+    .texto-carrito .h2-carrito {
+        font-size: 25px;
+        margin: 10px;
+    }
+
+    .texto-carrito p {
+        font-size: 16px;
+        padding: 5px;
+        width: 250px;
+    }
+
+    .cantidad-y-boton-cerrar-carrito {
+        display: flex; 
+        width: fit-content;
+    }
+
+    .cantidad-carrito {
+        top: 10;
+        left: -20px;
+        bottom: 0;
+    }
+
+    .boton-cerrar-carrito {
+        top: 5px;
+        left: -55px;
+        align-items: end;
+    }
+
+    /*FOOTER*/
+
+    .footer-carrito {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacto-carrito {
+        width: fit-content;
+    }
+
+    .texto-contacto-carrito {
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .h4-carrito {
+        width: auto;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email-carrito .whatsapp-carrito .instagram-carrito {
         width: fit-content;
         justify-content: start;
         padding: 30px;
@@ -528,6 +2112,565 @@ h4 {
 
 @media (max-width: 576px) {
 
+    /*************INDEX*************/
+    /*NAV*/
+    nav {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: sticky;
+    }
+
+    .paginas {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: start;
+    }
+
+    /*************PRODUCTOS BUDINES*************/
+    /*NAV*/
+
+    .nav-principal-productosBudines {
+        width: auto;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .paginas-productosBudines {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo-productosBudines {
+        display: flex;
+        justify-content: start;
+    }
+
+    .barra-con-logo-productosBudines {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: default;
+    }
+
+    .productos-nav-productosBudines {
+        font-size: 20px;
+    }
+
+    /*MAIN*/
+
+    .productos-container-productosBudines {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .muffins-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .budin1-productosBudines,
+    .budin2-productosBudines,
+    .budin3-productosBudines {
+        width: 300px;
+        height: auto;
+    }
+
+    .budin-de-frutosrojos,
+    .budin-de-limonyamapola,
+    .budin-de-zanahoria {
+        width: 300px;
+        display: flex;
+        align-items: center;
+    }
+
+    .agregar-al-carrito-productosBudines {
+        width: 30px;
+        display: flex;
+        position: relative;
+        left: 260px;
+    }
+
+    /*FOOTER*/
+
+    .footer-productosBudines {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .contacto-productosBudines {
+        width: fit-content;
+    }
+
+    .texto-contacto-productosBudines {
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .h4-productosBudines {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email-productosBudines .whatsapp-productosBudines .instagram-productosBudines {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+
+    /*************PRODUCTOS MUFFINS*************/
+    
+    /*NAV*/
+
+    .nav-principal-productosMuffins {
+        width: auto;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+   .paginas-productosMuffins {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo-productosMuffins {
+        display: flex;
+        justify-content: start;
+    }
+
+    .barra-con-logo-productosMuffins {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: default;
+    }
+
+    .productos-nav-productosMuffins {
+        font-size: 20px;
+    }
+
+    /*MAIN*/
+
+    .productos-container-productosMuffins {      
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .muffin1-productosMuffins , .muffin2-productosMuffins , .muffin3-productosMuffins , .muffin4-productosMuffins , .muffin5-productosMuffins , .muffin6-productosMuffins {
+        width: 300px;
+        height: auto;
+    }
+
+    .muffin-banana , .muffin-coco , .muffin-frutosrojos , .muffin-frutossecos , .muffin-limonyamapola , .muffin-vainillaychips {
+        width: 300px;
+        display: flex;
+        align-items: center;
+    }
+
+    .agregar-al-carrito-productosMuffins {
+        width: 30px;
+        display: flex;
+        position: relative;
+        left: 260px;
+    }
+
+    /*FOOTER*/
+
+    .footer-productosMuffins {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .contacto-productosMuffins {
+        width: fit-content;
+    }
+
+    .texto-contacto-productosMuffins {
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .h4-productosMuffins {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email-productosMuffins .whatsapp-productosMuffins .instagram-productosMuffins {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+
+    /*************PRODUCTOS CLICKEADOS*************/
+    
+    /*NAV*/
+
+    .nav-principal-productosClickeados {
+        width: auto;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+   .paginas-productosClickeados {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo-productosClickeados {
+        display: flex;
+        justify-content: start;
+    }
+
+    .barra-con-logo-productosClickeados {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: default;
+    }
+
+    .productos-nav-productosClickeados {
+        font-size: 20px;
+    }
+
+    /*MAIN*/
+
+    .imagen-budin-productosClickeados , .imagen-muffin-productosClickeados {
+        width: 250px;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    .producto-container-productosClickeados {
+        margin: 40px;
+    }
+
+    .producto-productosClickeados {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+    }
+
+    .contenido-producto-productosClickeados .agregar-productosClickeados {
+        width: auto;
+        justify-content: end;
+    }
+
+    .texto-productosClickeados {
+        width: 250px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .texto-productosClickeados .h2-productosClickeados {
+        font-size: 19px;
+    }
+    
+    .texto-productosClickeados p {
+        font-size: 15px;
+        padding: 5px;
+        margin: 0;
+        line-height: 20px;
+        width: 250px;
+        text-align: center;
+    }
+
+    .agregar-al-carrito-productosClickeados {
+        width: 30px;
+        height: 30px;
+        bottom: 13px;
+        align-items: center;
+    }
+
+    .boton-agregar-productosClickeados {
+        font-size: 15px;
+        margin: 5px;
+    }
+
+    /*FOOTER*/
+
+    .footer-productosClickeados {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .contacto-productosClickeados {
+        width: fit-content;
+    }
+
+    .texto-contacto-productosClickeados {
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .h4-productosClickeados {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email-productosClickeados .whatsapp-productosClickeados .instagram-productosClickeados {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+
+    /*************CARRITO*************/
+    
+    /*NAV*/
+
+    .nav-principal-carrito {
+        width: auto;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+   .paginas-carrito {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo-carrito {
+        display: flex;
+        justify-content: start;
+    }
+
+    .barra-con-logo-carrito {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: default;
+    }
+
+    .barra-con-texto-carrito {
+        align-items: center;
+    }
+
+    .icono-carrito1-carrito {
+        width: 20px;
+        height: 20px;
+    }
+
+    .h1-carrito {
+        font-size: 20px;
+    }
+
+    /*MAIN*/
+
+    .compra1-carrito , .compra2-carrito , .compra3-carrito {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+    }
+    
+    .texto-carrito {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 250px;
+    }
+    
+    .texto-carrito .h2-carrito {
+        font-size: 20px;
+        margin: 10px;
+    }
+    
+    .compra3-carrito .texto-carrito .h2-carrito {
+        font-size: 17px;
+        margin: 10px;
+    }
+    
+    .texto-carrito p {
+        font-size: 16px;
+        padding: 5px;
+        width: 250px;
+        text-align: center;
+    }
+    
+    .budin-frutosrojos , .muffin-frutosrojos-carrito , .muffin-manzanaynuez{
+        width: 250px;
+        height: 300px;
+        margin: 0px;
+        border-radius: 5px;
+    }
+
+    .cantidad-carrito {
+        top: 0;
+        left: 130px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .boton-cerrar-carrito {
+        top: -515px;
+        left: 105px;
+    }
+
+    .compra3-carrito .boton-cerrar-carrito {
+        top: -510px;
+    }
+
+    .cantidad-y-boton-cerrar-carrito {
+        display: flex;
+        flex: row;
+        justify-content: end;
+        position: relative;
+    }
+
+    .icono-cruz-carrito {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .cruz-carrito {
+        width: 20px;
+        height: 20px;
+    }
+
+    /*FOOTER*/
+
+    .footer-carrito {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .contacto-carrito {
+        width: fit-content;
+    }
+
+    .texto-contacto-carrito {
+        width: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .h4-carrito {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email-carrito .whatsapp-carrito .instagram-carrito {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    /*************INDEX*************/
+    /*NAV*/
+    nav {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: sticky;
+    }
+
+    .paginas {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: start;
+    }
+
+    /*MAIN*/
+    .budines-container {
+        width: auto;
+        height: 200px;
+        background-size: cover;
+    }
+
+    .tarjeta-principal {
+        width: auto;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .muffins-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .texto-presentacion {
+        font-size: 15px;
+    }
+
+    /*FOOTER*/
     footer {
         width: auto;
         display: flex;
@@ -541,8 +2684,8 @@ h4 {
 
     .texto-contacto {
         width: auto;
-        margin-left: 10px;
         margin-top: 10px;
+        margin-left: 10px;
         font-weight: bold;
     }
 
@@ -556,34 +2699,465 @@ h4 {
         justify-content: start;
         padding: 30px;
     }
-}
 
-@media (max-width: 320px) {
+    /*************PRODUCTOS BUDINES*************/
 
-    footer {
+    /*NAV*/
+
+    .nav-principal-productosBudines {
+        width: auto;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .paginas-productosBudines {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo-productosBudines {
+        display: flex;
+        justify-content: start;
+    }
+
+    .barra-con-logo-productosBudines {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: default;
+    }
+
+    .productos-nav-productosBudines {
+        font-size: 20px;
+
+    }
+
+    /*MAIN*/
+
+    .productos-container-productosBudines {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .budin1-productosBudines,
+    .budin2-productosBudines,
+    .budin3-productosBudines {
+        width: 250px;
+        height: auto;
+    }
+
+    .budin-de-frutosrojos,
+    .budin-de-limonyamapola,
+    .budin-de-zanahoria {
+        width: 250px;
+        display: flex;
+        align-items: center;
+    }
+
+    .agregar-al-carrito-productosBudines {
+        width: 30px;
+        display: flex;
+        position: relative;
+        left: 210px;
+    }
+
+    /*FOOTER*/
+
+    .footer-productosBudines {
         width: auto;
         display: flex;
         flex-direction: column;
         align-items: start;
     }
 
-    .contacto {
+    .contacto-productosBudines {
         width: fit-content;
     }
 
-    .texto-contacto {
+    .texto-contacto-productosBudines {
         width: auto;
         margin-top: 10px;
         margin-left: 10px;
         font-weight: bold;
     }
 
-    h4 {
+    .h4-productosBudines {
         margin: 20px;
         text-align: center;
     }
 
-    .email .whatsapp .instagram {
+    .email-productosBudines .whatsapp-productosBudines .instagram-productosBudines {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+
+    /*************PRODUCTOS MUFFINS*************/
+    
+    /*NAV*/
+
+    .nav-principal-productosMuffins {
+        width: auto;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+   .paginas-productosMuffins {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo-productosMuffins {
+        display: flex;
+        justify-content: start;
+    }
+
+    .barra-con-logo-productosMuffins {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: default;
+    }
+
+    .productos-nav-productosMuffins {
+        font-size: 20px;
+        
+    }
+
+    /*MAIN*/
+
+    .productos-container-productosMuffins {      
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .muffin1-productosMuffins , .muffin2-productosMuffins , .muffin3-productosMuffins , .muffin4-productosMuffins , .muffin5-productosMuffins , .muffin6-productosMuffins {
+        width: 250px;
+        height: auto;
+    }
+
+    .muffin-banana , .muffin-coco , .muffin-frutosrojos , .muffin-frutossecos , .muffin-limonyamapola , .muffin-vainillaychips {
+        width: 250px;
+        display: flex;
+        align-items: center;
+    }
+
+    .agregar-al-carrito-productosMuffins {
+        width: 30px;
+        display: flex;
+        position: relative;
+        left: 210px;
+    }
+
+    /*FOOTER*/
+
+    .footer-productosMuffins {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .contacto-productosMuffins {
+        width: fit-content;
+    }
+
+    .texto-contacto-productosMuffins {
+        width: auto;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+
+    .h4-productosMuffins {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email-productosMuffins .whatsapp-productosMuffins .instagram-productosMuffins {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+
+    /*************PRODUCTOS CLICKEADOS*************/
+    
+    /*NAV*/
+
+    .nav-principal-productosClickeados {
+        width: auto;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+   .paginas-productosClickeados {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo-productosClickeados {
+        display: flex;
+        justify-content: start;
+    }
+
+    .barra-con-logo-productosClickeados {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: default;
+    }
+
+    .productos-nav-productosClickeados {
+        font-size: 20px;
+        
+    }
+
+    /*MAIN*/
+
+    .imagen-budin-productosClickeados , .imagen-muffin-productosClickeados {
+        width: 250px;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    .producto-container-productosClickeados {
+        margin: 40px;
+    }
+
+    .producto-productosClickeados {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+    }
+
+    .contenido-producto-productosClickeados .agregar-productosClickeados {
+        width: auto;
+        align-items: end;
+    }
+
+    .texto-productosClickeados {
+        width: 250px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .texto-productosClickeados .h2-productosClickeados {
+        font-size: 19px;
+    }
+    
+    .texto-productosClickeados p {
+        font-size: 15px;
+        padding: 5px;
+        margin: 0;
+        line-height: 20px;
+        width: 250px;
+        text-align: center;
+    }
+
+    .agregar-al-carrito-productosClickeados {
+        width: 30px;
+        height: 30px;
+        bottom: 13px;
+        align-items: center;
+    }
+
+    .boton-agregar-productosClickeados {
+        font-size: 15px;
+        margin: 5px;
+    }
+
+    /*FOOTER*/
+
+    .footer-productosClickeados {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .contacto-productosClickeados {
+        width: fit-content;
+    }
+
+    .texto-contacto-productosClickeados {
+        width: auto;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+
+    .h4-productosClickeados {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email-productosClickeados .whatsapp-productosClickeados .instagram-productosClickeados {
+        width: fit-content;
+        justify-content: start;
+        padding: 30px;
+    }
+
+    /*************CARRITO*************/
+    
+    /*NAV*/
+
+    .nav-principal-carrito {
+        width: auto;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .logo-carrito {
+        display: flex;
+        justify-content: start;
+    }
+
+    .barra-con-logo-carrito {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: default;
+    }
+
+    .barra-con-texto-carrito {
+        align-items: center;
+    }
+
+    .icono-carrito1-carrito {
+        width: 20px;
+        height: 20px;
+    }
+
+    .h1-carrito {
+        font-size: 20px;
+    }
+
+    /*MAIN*/
+
+    .compra1-carrito , .compra2-carrito , .compra3-carrito {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+    }
+    
+    .texto-carrito {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 250px;
+    }
+    
+    .texto-carrito .h2-carrito {
+        font-size: 20px;
+        margin: 10px;
+    }
+    
+    .compra3-carrito .texto-carrito .h2-carrito {
+        font-size: 17px;
+        margin: 10px;
+    }
+    
+    .texto-carrito p {
+        font-size: 16px;
+        padding: 5px;
+        width: 250px;
+        text-align: center;
+    }
+    
+    .budin-frutosrojos , .muffin-frutosrojos-carrito , .muffin-manzanaynuez{
+        width: 250px;
+        height: 300px;
+        margin: 0px;
+        border-radius: 5px;
+    }
+
+    .cantidad-carrito {
+        top: 0;
+        left: 130px;
+        justify-content: center;
+    }
+
+    .boton-cerrar-carrito {
+        top: -515px;
+        left: 105px;
+    }
+
+    .compra3-carrito .boton-cerrar-carrito {
+        top: -510px;
+    }
+
+    .cantidad-y-boton-cerrar-carrito {
+        display: flex;
+        flex: row;
+        justify-content: end;
+        position: relative;
+    }
+
+    .icono-cruz-carrito {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .cruz-carrito {
+        width: 20px;
+        height: 20px;
+    }
+
+    /*FOOTER*/
+
+    .footer-carrito {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .contacto-carrito {
+        width: fit-content;
+    }
+
+    .texto-contacto-carrito {
+        width: auto;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+
+    .h4-carrito {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .email-carrito .whatsapp-carrito .instagram-carrito {
         width: fit-content;
         justify-content: start;
         padding: 30px;
