@@ -718,13 +718,40 @@ h4 {
     margin: 10px;
 }
 
-.productos-container-productosMuffins {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 50px;
-    margin-bottom: 70px;
-    gap: 69px;
+.productos-container-productosMuffins {      
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "muffin1 muffin2 muffin3"
+                         "muffin4 muffin5 muffin6";
+    justify-items: center;
+    justify-content: space-around;
+    gap: 40px;
+    margin: 40px;
+}
+
+.muffin1-productosMuffins {
+    grid-area: muffin1;
+}
+
+.muffin2-productosMuffins {
+    grid-area: muffin2;
+}
+
+.muffin3-productosMuffins {
+    grid-area: muffin3;
+}
+
+.muffin4-productosMuffins {
+    grid-area: muffin4;
+}
+
+.muffin5-productosMuffins {
+    grid-area: muffin5;
+}
+
+.muffin6-productosMuffins {
+    grid-area: muffin6;
 }
 
 .muffin1-productosMuffins , .muffin2-productosMuffins, .muffin3-productosMuffins , .muffin4-productosMuffins , .muffin5-productosMuffins , .muffin6-productosMuffins {
@@ -1528,27 +1555,56 @@ h4 {
 
     /*MAIN*/
 
-    .productos-container-productosMuffins {
-        gap: 50px;
+    .productos-container-productosMuffins {      
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "muffin1 muffin2"
+                             "muffin3 muffin4"
+                             "muffin5 muffin6";
+        justify-items: center;
+    }
+
+    .muffin1-productosMuffins {
+        grid-area: muffin1;
+    }
+
+    .muffin2-productosMuffins {
+        grid-area: muffin2;
+    }
+
+    .muffin3-productosMuffins {
+        grid-area: muffin3;
+    }
+
+    .muffin4-productosMuffins {
+        grid-area: muffin4;
+    }
+
+    .muffin5-productosMuffins {
+        grid-area: muffin5;
+    }
+
+    .muffin6-productosMuffins {
+        grid-area: muffin6;
     }
 
     .muffin1-productosMuffins , .muffin2-productosMuffins , .muffin3-productosMuffins , .muffin4-productosMuffins , .muffin5-productosMuffins , .muffin6-productosMuffins {
-        width: 350px;
+        width: 400px;
         height: auto;
     }
 
     .muffin-banana , .muffin-coco , .muffin-frutosrojos , .muffin-frutossecos , .muffin-limonyamapola , .muffin-vainillaychips {
-        width: 350px;
+        width: 400px;
         display: flex;
         align-items: center;
     }
 
     .agregar-al-carrito-productosMuffins {
-        width: 30px;
-        display: flex;
-        position: relative;
-        left: 310px;
+        left: 350px;
     }
+
+    
 
     /*FOOTER*/
 
@@ -1737,19 +1793,46 @@ h4 {
     /*MAIN*/
 
     .productos-container-productosMuffins {      
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(1fr 1fr 1fr);
+        grid-template-areas: "muffin1 muffin2"
+                             "muffin3 muffin4"
+                             "muffin5 muffin6";
+        justify-items: center;
+    }
+
+    .muffin1-productosMuffins {
+        grid-area: muffin1;
+    }
+
+    .muffin2-productosMuffins {
+        grid-area: muffin2;
+    }
+
+    .muffin3-productosMuffins {
+        grid-area: muffin3;
+    }
+
+    .muffin4-productosMuffins {
+        grid-area: muffin4;
+    }
+
+    .muffin5-productosMuffins {
+        grid-area: muffin5;
+    }
+
+    .muffin6-productosMuffins {
+        grid-area: muffin6;
     }
 
     .muffin1-productosMuffins , .muffin2-productosMuffins , .muffin3-productosMuffins , .muffin4-productosMuffins , .muffin5-productosMuffins , .muffin6-productosMuffins {
-        width: 450px;
+        width: 350px;
         height: auto;
     }
 
     .muffin-banana , .muffin-coco , .muffin-frutosrojos , .muffin-frutossecos , .muffin-limonyamapola , .muffin-vainillaychips {
-        width: 450px;
+        width: 350px;
         display: flex;
         align-items: center;
     }
@@ -1758,7 +1841,7 @@ h4 {
         width: 30px;
         display: flex;
         position: relative;
-        left: 410px;
+        left: 310px;
     }
 
     /*FOOTER*/
@@ -2055,11 +2138,54 @@ h4 {
     /*MAIN*/
 
     .productos-container-productosMuffins {      
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(1fr 1fr 1fr);
+        grid-template-areas: "muffin1 muffin2"
+                             "muffin3 muffin4"
+                             "muffin5 muffin6";
+        justify-items: center;
     }
+
+    .muffin1-productosMuffins {
+        grid-area: muffin1;
+    }
+
+    .muffin2-productosMuffins {
+        grid-area: muffin2;
+    }
+
+    .muffin3-productosMuffins {
+        grid-area: muffin3;
+    }
+
+    .muffin4-productosMuffins {
+        grid-area: muffin4;
+    }
+
+    .muffin5-productosMuffins {
+        grid-area: muffin5;
+    }
+
+    .muffin6-productosMuffins {
+        grid-area: muffin6;
+    }
+
+    .muffin1-productosMuffins , .muffin2-productosMuffins , .muffin3-productosMuffins , .muffin4-productosMuffins , .muffin5-productosMuffins , .muffin6-productosMuffins {
+        width: 250px;
+        height: auto;
+    }
+
+    .muffin-banana , .muffin-coco , .muffin-frutosrojos , .muffin-frutossecos , .muffin-limonyamapola , .muffin-vainillaychips {
+        width: 250px;
+        display: flex;
+        align-items: center;
+    }
+
+    .agregar-al-carrito-productosMuffins {
+        left: 210px;
+    }
+
 
     /*FOOTER*/
 
@@ -2474,11 +2600,40 @@ h4 {
     /*MAIN*/
 
     .productos-container-productosMuffins {      
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(1fr 1fr 1fr 1fr 1fr 1fr);
+        grid-template-areas: "muffin1"
+                             "muffin2"
+                             "muffin3"
+                             "muffin4"
+                             "muffin5"
+                             "muffin6";
+        justify-items: center;
+    }
+
+    .muffin1-productosMuffins {
+        grid-area: muffin1;
+    }
+
+    .muffin2-productosMuffins {
+        grid-area: muffin2;
+    }
+
+    .muffin3-productosMuffins {
+        grid-area: muffin3;
+    }
+
+    .muffin4-productosMuffins {
+        grid-area: muffin4;
+    }
+
+    .muffin5-productosMuffins {
+        grid-area: muffin5;
+    }
+
+    .muffin6-productosMuffins {
+        grid-area: muffin6;
     }
 
     .muffin1-productosMuffins , .muffin2-productosMuffins , .muffin3-productosMuffins , .muffin4-productosMuffins , .muffin5-productosMuffins , .muffin6-productosMuffins {
@@ -3070,11 +3225,40 @@ h4 {
     /*MAIN*/
 
     .productos-container-productosMuffins {      
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(1fr 1fr 1fr 1fr 1fr 1fr);
+        grid-template-areas: "muffin1"
+                             "muffin2"
+                             "muffin3"
+                             "muffin4"
+                             "muffin5"
+                             "muffin6";
+        justify-items: center;
+    }
+
+    .muffin1-productosMuffins {
+        grid-area: muffin1;
+    }
+
+    .muffin2-productosMuffins {
+        grid-area: muffin2;
+    }
+
+    .muffin3-productosMuffins {
+        grid-area: muffin3;
+    }
+
+    .muffin4-productosMuffins {
+        grid-area: muffin4;
+    }
+
+    .muffin5-productosMuffins {
+        grid-area: muffin5;
+    }
+
+    .muffin6-productosMuffins {
+        grid-area: muffin6;
     }
 
     .muffin1-productosMuffins , .muffin2-productosMuffins , .muffin3-productosMuffins , .muffin4-productosMuffins , .muffin5-productosMuffins , .muffin6-productosMuffins {
