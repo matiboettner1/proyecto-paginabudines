@@ -1,0 +1,477 @@
+.body-carrito {
+	background-color: $background-color_2;
+}
+
+.compras-container-carrito {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.compra1-carrito {
+	background-color: $background-color_4;
+	display: flex;
+	width: 1000px;
+	justify-items: start;
+	margin: 20px;
+	padding: 0;
+	border-radius: 10px;
+}
+
+.compra2-carrito {
+	background-color: $background-color_4;
+	display: flex;
+	width: 1000px;
+	justify-items: start;
+	margin: 20px;
+	padding: 0;
+	border-radius: 10px;
+}
+
+.compra3-carrito {
+	background-color: $background-color_4;
+	display: flex;
+	width: 1000px;
+	justify-items: start;
+	margin: 20px;
+	padding: 0;
+	border-radius: 10px;
+}
+
+.texto-carrito {
+	display: flex;
+	flex-direction: column;
+	text-align: start;
+	width: 350px;
+
+	.h2-carrito {
+		font-size: 30px;
+		margin: 10px;
+	}
+
+	p {
+		font-size: 16px;
+		padding: 5px;
+		gap: 5px;
+		margin: 10px 0px;
+		line-height: 20px;
+		width: 350px;
+		text-align: start;
+	}
+}
+
+.budin-frutosrojos {
+	width: 250px;
+	height: 300px;
+	margin: 10px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.muffin-frutosrojos-carrito {
+	width: 250px;
+	height: 300px;
+	margin: 10px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.muffin-manzanaynuez {
+	width: 250px;
+	height: 300px;
+	margin: 10px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.boton-comprar-carrito {
+	color: $color_1;
+	background-color: $background-color_5;
+	width: fit-content;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 8px;
+	font-weight: bold;
+	font-size: 25px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+
+	&:hover {
+		background-color: $background-color_6;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	}
+}
+
+.botoncomprar-container-carrito {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.cantidad-carrito {
+	background-color: $background-color_4;
+	margin: 10px;
+	padding: 5px;
+	height: 60px;
+	width: fit-content;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+	text-align: center;
+	position: relative;
+	top: 238px;
+	left: 260px;
+}
+
+.boton-restar-carrito {
+	margin: 5px;
+}
+
+.cantidad-valor-carrito {
+	margin: 5px;
+}
+
+.boton-agregar-carrito {
+	margin: 5px;
+}
+
+.boton-cerrar-carrito {
+	display: inline;
+	position: relative;
+	width: 30px;
+	height: 30px;
+	top: -70px;
+	right: -340px;
+}
+
+.cruz-carrito {
+	width: 30px;
+	height: 30px;
+}
+
+.icono-cruz-carrito {
+	width: 30px;
+	height: 30px;
+}
+
+
+@media (max-width: 1400px) {
+	.muffin-frutosrojos-carrito {
+		width: 250px;
+		object-fit: cover;
+	}
+}
+
+@media (max-width: 1200px) {
+
+	.compra1-carrito {
+		width: 700px;
+	}
+
+	.compra2-carrito {
+		width: 700px;
+	}
+
+	.compra3-carrito {
+		width: 700px;
+	}
+
+	.budin-frutosrojos {
+		width: 200px;
+		object-fit: cover;
+	}
+
+	.muffin-frutosrojos-carrito {
+		width: 200px;
+		object-fit: cover;
+	}
+
+	.muffin-manzanaynuez {
+		width: 200px;
+		object-fit: cover;
+	}
+
+	.cantidad-y-boton-cerrar-carrito {
+		display: flex;
+	}
+
+	.cantidad-carrito {
+		top: 10;
+		left: 7px;
+		bottom: 0;
+	}
+
+	.boton-cerrar-carrito {
+		top: 5px;
+		left: -25px;
+		align-items: end;
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	.compra1-carrito {
+		width: 570px;
+	}
+
+	.compra2-carrito {
+		width: 570px;
+	}
+
+	.compra3-carrito {
+		width: 570px;
+	}
+
+	.budin-frutosrojos {
+		width: 200px;
+	}
+
+	.muffin-frutosrojos-carrito {
+		width: 200px;
+	}
+
+	.muffin-manzanaynuez {
+		width: 200px;
+	}
+
+	.texto-carrito {
+		width: 250px;
+
+		.h2-carrito {
+			font-size: 25px;
+			margin: 10px;
+		}
+
+		p {
+			font-size: 16px;
+			padding: 5px;
+			width: 250px;
+		}
+	}
+
+	.cantidad-y-boton-cerrar-carrito {
+		display: flex;
+		width: fit-content;
+	}
+
+	.cantidad-carrito {
+		top: 10;
+		left: -20px;
+		bottom: 0;
+	}
+
+	.boton-cerrar-carrito {
+		top: 5px;
+		left: -55px;
+		align-items: end;
+	}
+
+}
+
+@media (max-width: 576px) {
+
+	.compra1-carrito {
+		display: flex;
+		flex-direction: column;
+		width: 250px;
+	}
+
+	.compra2-carrito {
+		display: flex;
+		flex-direction: column;
+		width: 250px;
+	}
+
+	.compra3-carrito {
+		display: flex;
+		flex-direction: column;
+		width: 250px;
+
+		.texto-carrito {
+			.h2-carrito {
+				font-size: 17px;
+				margin: 10px;
+			}
+		}
+
+		.boton-cerrar-carrito {
+			top: -510px;
+		}
+	}
+
+	.texto-carrito {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		width: 250px;
+
+		.h2-carrito {
+			font-size: 20px;
+			margin: 10px;
+		}
+
+		p {
+			font-size: 16px;
+			padding: 5px;
+			width: 250px;
+			text-align: center;
+		}
+	}
+
+	.budin-frutosrojos {
+		width: 250px;
+		height: 300px;
+		margin: 0px;
+		border-radius: 5px;
+	}
+
+	.muffin-frutosrojos-carrito {
+		width: 250px;
+		height: 300px;
+		margin: 0px;
+		border-radius: 5px;
+	}
+
+	.muffin-manzanaynuez {
+		width: 250px;
+		height: 300px;
+		margin: 0px;
+		border-radius: 5px;
+	}
+
+	.cantidad-carrito {
+		top: 0;
+		left: 130px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.boton-cerrar-carrito {
+		top: -515px;
+		left: 105px;
+	}
+
+	.cantidad-y-boton-cerrar-carrito {
+		display: flex;
+		flex: row;
+		justify-content: end;
+		position: relative;
+	}
+
+	.icono-cruz-carrito {
+		width: 20px;
+		height: 20px;
+	}
+
+	.cruz-carrito {
+		width: 20px;
+		height: 20px;
+	}
+
+}
+
+@media (max-width: 320px) {
+
+	.compra1-carrito {
+		display: flex;
+		flex-direction: column;
+		width: 250px;
+	}
+
+	.compra2-carrito {
+		display: flex;
+		flex-direction: column;
+		width: 250px;
+	}
+
+	.compra3-carrito {
+		display: flex;
+		flex-direction: column;
+		width: 250px;
+
+		.texto-carrito {
+			.h2-carrito {
+				font-size: 17px;
+				margin: 10px;
+			}
+		}
+
+		.boton-cerrar-carrito {
+			top: -510px;
+		}
+	}
+
+	.texto-carrito {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		width: 250px;
+
+		.h2-carrito {
+			font-size: 20px;
+			margin: 10px;
+		}
+
+		p {
+			font-size: 16px;
+			padding: 5px;
+			width: 250px;
+			text-align: center;
+		}
+	}
+
+	.budin-frutosrojos {
+		width: 250px;
+		height: 300px;
+		margin: 0px;
+		border-radius: 5px;
+	}
+
+	.muffin-frutosrojos-carrito {
+		width: 250px;
+		height: 300px;
+		margin: 0px;
+		border-radius: 5px;
+	}
+
+	.muffin-manzanaynuez {
+		width: 250px;
+		height: 300px;
+		margin: 0px;
+		border-radius: 5px;
+	}
+
+	.cantidad-carrito {
+		top: 0;
+		left: 130px;
+		justify-content: center;
+	}
+
+	.boton-cerrar-carrito {
+		top: -515px;
+		left: 105px;
+	}
+
+	.cantidad-y-boton-cerrar-carrito {
+		display: flex;
+		flex: row;
+		justify-content: end;
+		position: relative;
+	}
+
+	.icono-cruz-carrito {
+		width: 20px;
+		height: 20px;
+	}
+
+	.cruz-carrito {
+		width: 20px;
+		height: 20px;
+	}
+
+}

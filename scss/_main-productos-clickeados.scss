@@ -1,0 +1,341 @@
+.body-productosClickeados {
+	background-color: $background-color_2;
+}
+
+.h1-productosClickeados {
+	text-align: center;
+	font-size: 12px;
+	margin: 10px;
+	font-weight: lighter;
+	cursor: default;
+}
+
+.imagen-budin-productosClickeados {
+	width: 400px;
+	border-radius: 10px;
+	border: none;
+	transition: box-shadow 0.3s ease-in-out;
+
+	&:hover {
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+	}
+}
+
+.imagen-muffin-productosClickeados {
+	width: 400px;
+	border-radius: 10px;
+	border: none;
+	transition: box-shadow 0.3s ease-in-out;
+
+	&:hover {
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+	}
+}
+
+.producto-container-productosClickeados {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 50px;
+}
+
+.contenido-producto-productosClickeados {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.agregar-productosClickeados {
+		width: auto;
+		justify-content: end;
+	}
+}
+
+.producto-productosClickeados {
+	background-color: $background-color_3;
+	display: flex;
+	justify-items: center;
+	margin: 20px;
+	margin-bottom: 35px;
+	padding: 0;
+	border-radius: 10px;
+}
+
+.texto-productosClickeados {
+	display: flex;
+	flex-direction: column;
+	text-align: start;
+	width: 450px;
+	margin-left: 10px;
+
+	.h2-productosClickeados {
+		font-size: 40px;
+		margin: 10px 0px;
+		padding: 5px;
+	}
+
+	p {
+		font-size: 20px;
+		padding: 5px;
+		gap: 5px;
+		margin: 10px 0px;
+		line-height: 20px;
+		width: 450px;
+		text-align: start;
+	}
+}
+
+.agregar-al-carrito-productosClickeados {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	position: relative;
+	bottom: 13px;
+}
+
+.boton-agregar-productosClickeados {
+	color: $color_1;
+	background-color: $background-color_5;
+	width: fit-content;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 8px;
+	font-weight: bold;
+	font-size: 25px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	display: flex;
+	justify-content: center;
+
+	&:hover {
+		background-color: $background-color_6;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	}
+}
+
+.agregar-productosClickeados {
+	width: fit-content;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	padding: 10px;
+}
+
+
+@media (max-width: 1200px) {
+
+	.imagen-budin-productosClickeados {
+		width: 280px;
+		border-radius: 5px;
+		object-fit: cover;
+	}
+
+	.imagen-muffin-productosClickeados {
+		width: 280px;
+		border-radius: 5px;
+		object-fit: cover;
+	}
+
+	.contenido-producto-productosClickeados {
+		display: flex;
+		flex-direction: column;
+
+		.agregar-productosClickeados {
+			width: auto;
+			justify-content: end;
+		}
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	.imagen-budin-productosClickeados {
+		width: 250px;
+		border-radius: 5px;
+		object-fit: cover;
+	}
+
+	.imagen-muffin-productosClickeados {
+		width: 250px;
+		border-radius: 5px;
+		object-fit: cover;
+	}
+
+	.contenido-producto-productosClickeados {
+		display: flex;
+		flex-direction: column;
+
+		.agregar-productosClickeados {
+			width: auto;
+			justify-content: end;
+		}
+	}
+
+	.texto-productosClickeados {
+		width: 250px;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+
+		.h2-productosClickeados {
+			font-size: 19px;
+		}
+
+		p {
+			font-size: 15px;
+			padding: 5px;
+			margin: 0;
+			line-height: 20px;
+			width: 250px;
+			text-align: center;
+		}
+	}
+
+	.agregar-al-carrito-productosClickeados {
+		width: 30px;
+		height: 30px;
+		bottom: 13px;
+		align-items: center;
+	}
+
+	.boton-agregar-productosClickeados {
+		font-size: 15px;
+		margin: 5px;
+	}
+
+}
+
+@media (max-width: 576px) {
+
+	.imagen-budin-productosClickeados {
+		width: 250px;
+		border-radius: 5px;
+		object-fit: cover;
+	}
+
+	.imagen-muffin-productosClickeados {
+		width: 250px;
+		border-radius: 5px;
+		object-fit: cover;
+	}
+
+	.producto-container-productosClickeados {
+		margin: 40px;
+	}
+
+	.producto-productosClickeados {
+		width: 250px;
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		align-items: center;
+	}
+
+	.contenido-producto-productosClickeados {
+		.agregar-productosClickeados {
+			width: auto;
+			justify-content: end;
+		}
+	}
+
+	.texto-productosClickeados {
+		width: 250px;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+
+		.h2-productosClickeados {
+			font-size: 19px;
+		}
+
+		p {
+			font-size: 15px;
+			padding: 5px;
+			margin: 0;
+			line-height: 20px;
+			width: 250px;
+			text-align: center;
+		}
+	}
+
+	.agregar-al-carrito-productosClickeados {
+		width: 30px;
+		height: 30px;
+		bottom: 13px;
+		align-items: center;
+	}
+
+	.boton-agregar-productosClickeados {
+		font-size: 15px;
+		margin: 5px;
+	}
+
+}
+
+@media (max-width: 320px) {
+
+	.imagen-budin-productosClickeados {
+		width: 250px;
+		border-radius: 5px;
+		object-fit: cover;
+	}
+
+	.imagen-muffin-productosClickeados {
+		width: 250px;
+		border-radius: 5px;
+		object-fit: cover;
+	}
+
+	.producto-container-productosClickeados {
+		margin: 40px;
+	}
+
+	.producto-productosClickeados {
+		width: 250px;
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		align-items: center;
+	}
+
+	.contenido-producto-productosClickeados {
+		.agregar-productosClickeados {
+			width: auto;
+			align-items: end;
+		}
+	}
+
+	.texto-productosClickeados {
+		width: 250px;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+
+		.h2-productosClickeados {
+			font-size: 19px;
+		}
+
+		p {
+			font-size: 15px;
+			padding: 5px;
+			margin: 0;
+			line-height: 20px;
+			width: 250px;
+			text-align: center;
+		}
+	}
+
+	.agregar-al-carrito-productosClickeados {
+		width: 30px;
+		height: 30px;
+		bottom: 13px;
+		align-items: center;
+	}
+
+	.boton-agregar-productosClickeados {
+		font-size: 15px;
+		margin: 5px;
+	}
+
+}

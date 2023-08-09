@@ -1,0 +1,172 @@
+nav {
+	background-color: $background-color_1;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 10px 10px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	z-index: 100;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.paginas {
+	padding: 0px;
+	display: flex;
+	justify-content: end;
+	font-size: 20px;
+}
+
+.index {
+	margin: 15px;
+	width: fit-content;
+	text-align: center;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: rgb(0, 0, 0);
+		transition: .3s;
+	}
+
+	&:hover {
+		&::before {
+			width: 100%;
+		}
+	}
+}
+
+.productos {
+	margin: 15px;
+	width: fit-content;
+	text-align: center;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: rgb(0, 0, 0);
+		transition: .3s;
+	}
+
+	&:hover {
+		&::before {
+			width: 100%;
+		}
+	}
+}
+
+.carrito {
+	margin: 15px;
+	width: fit-content;
+	text-align: center;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: rgb(0, 0, 0);
+		transition: .3s;
+	}
+
+	&:hover {
+		&::before {
+			width: 100%;
+		}
+	}
+}
+
+.logo-inicio {
+	display: flex;
+	position: relative;
+}
+
+.logo {
+	width: 50px;
+	object-fit: cover;
+	cursor: pointer;
+}
+
+.texto-logo {
+	display: flex;
+	position: relative;
+	top: 16px;
+	left: 9px;
+	cursor: default;
+}
+
+.icono-carrito {
+	width: 20px;
+	height: 20px;
+	display: flex;
+	position: relative;
+	top: 4px;
+}
+
+
+@media (max-width: 576px) {
+
+	nav {
+		width: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: sticky;
+	}
+
+	.paginas {
+		padding: 0px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	.logo {
+		display: flex;
+		justify-content: start;
+	}
+
+}
+
+@media (max-width: 320px) {
+
+	nav {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: sticky;
+    }
+
+    .paginas {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: start;
+    }
+}
