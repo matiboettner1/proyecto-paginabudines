@@ -1000,7 +1000,6 @@ nav {
   background-color: #fff8ea;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
   padding: 10px;
   cursor: default;
 }
@@ -1012,19 +1011,8 @@ nav {
 
 .h1-carrito {
   text-align: center;
-  font-size: 45px;
 }
 
-@media (max-width: 1200px) {
-  .h1-carrito {
-    font-size: 35px;
-  }
-}
-@media (max-width: 768px) {
-  .h1-carrito {
-    font-size: 30px;
-  }
-}
 @media (max-width: 576px) {
   .nav-principal-carrito {
     width: auto;
@@ -1059,7 +1047,7 @@ nav {
     height: 20px;
   }
   .h1-carrito {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 @media (max-width: 320px) {
@@ -1345,12 +1333,6 @@ h2 {
   .tarjeta-principal {
     margin-top: 30px;
     margin-bottom: 30px;
-  }
-  .muffins-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
   }
 }
 @media (max-width: 320px) {
@@ -2966,7 +2948,6 @@ h2 {
 .texto-carrito .h2-carrito {
   font-size: 30px;
   margin: 10px;
-  font-weight: bold;
 }
 .texto-carrito p {
   font-size: 16px;
@@ -2978,7 +2959,7 @@ h2 {
   text-align: start;
 }
 
-.budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-coco-carrito {
+.budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-manzanaynuez {
   width: 250px;
   height: 300px;
   margin: 10px;
@@ -3069,7 +3050,7 @@ h2 {
     padding: 0;
     border-radius: 10px;
   }
-  .budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-coco-carrito {
+  .budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-manzanaynuez {
     width: 200px;
     object-fit: cover;
   }
@@ -3108,7 +3089,7 @@ h2 {
     padding: 0;
     border-radius: 10px;
   }
-  .budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-coco-carrito {
+  .budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-manzanaynuez {
     width: 200px;
   }
   .texto-carrito {
@@ -3117,7 +3098,6 @@ h2 {
   .texto-carrito .h2-carrito {
     font-size: 25px;
     margin: 10px;
-    font-weight: bold;
   }
   .texto-carrito p {
     font-size: 16px;
@@ -3150,10 +3130,27 @@ h2 {
   }
 }
 @media (max-width: 576px) {
-  .compra1-carrito, .compra2-carrito, .compra3-carrito {
+  .compra1-carrito {
     display: flex;
     flex-direction: column;
     width: 250px;
+  }
+  .compra2-carrito {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+  }
+  .compra3-carrito {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+  }
+  .compra3-carrito .texto-carrito .h2-carrito {
+    font-size: 17px;
+    margin: 10px;
+  }
+  .compra3-carrito .boton-cerrar-carrito {
+    top: -510px;
   }
   .texto-carrito {
     display: flex;
@@ -3164,7 +3161,6 @@ h2 {
   .texto-carrito .h2-carrito {
     font-size: 20px;
     margin: 10px;
-    font-weight: bold;
   }
   .texto-carrito p {
     font-size: 16px;
@@ -3172,7 +3168,19 @@ h2 {
     width: 250px;
     text-align: center;
   }
-  .budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-coco-carrito {
+  .budin-frutosrojos {
+    width: 250px;
+    height: 300px;
+    margin: 0px;
+    border-radius: 5px;
+  }
+  .muffin-frutosrojos-carrito {
+    width: 250px;
+    height: 300px;
+    margin: 0px;
+    border-radius: 5px;
+  }
+  .muffin-manzanaynuez {
     width: 250px;
     height: 300px;
     margin: 0px;
@@ -3184,6 +3192,10 @@ h2 {
     justify-content: center;
     align-items: center;
   }
+  .boton-cerrar-carrito {
+    top: -515px;
+    left: 105px;
+  }
   .cantidad-y-boton-cerrar-carrito {
     display: flex;
     flex: row;
@@ -3191,18 +3203,36 @@ h2 {
     position: relative;
   }
   .icono-cruz-carrito {
-    display: flex;
-    position: relative;
     width: 20px;
     height: 20px;
-    top: -580px;
+  }
+  .cruz-carrito {
+    width: 20px;
+    height: 20px;
   }
 }
 @media (max-width: 320px) {
-  .compra1-carrito, .compra2-carrito, .compra3-carrito {
+  .compra1-carrito {
     display: flex;
     flex-direction: column;
     width: 250px;
+  }
+  .compra2-carrito {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+  }
+  .compra3-carrito {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+  }
+  .compra3-carrito .texto-carrito .h2-carrito {
+    font-size: 17px;
+    margin: 10px;
+  }
+  .compra3-carrito .boton-cerrar-carrito {
+    top: -510px;
   }
   .texto-carrito {
     display: flex;
@@ -3213,7 +3243,6 @@ h2 {
   .texto-carrito .h2-carrito {
     font-size: 20px;
     margin: 10px;
-    font-weight: bold;
   }
   .texto-carrito p {
     font-size: 16px;
@@ -3221,7 +3250,19 @@ h2 {
     width: 250px;
     text-align: center;
   }
-  .budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-coco-carrito {
+  .budin-frutosrojos {
+    width: 250px;
+    height: 300px;
+    margin: 0px;
+    border-radius: 5px;
+  }
+  .muffin-frutosrojos-carrito {
+    width: 250px;
+    height: 300px;
+    margin: 0px;
+    border-radius: 5px;
+  }
+  .muffin-manzanaynuez {
     width: 250px;
     height: 300px;
     margin: 0px;

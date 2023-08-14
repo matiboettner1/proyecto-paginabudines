@@ -1,4 +1,4 @@
-.body-productosClickeados {
+.body-carrito {
 	background-color: $background-color_2;
 }
 
@@ -14,6 +14,7 @@
 	width: 400px;
 	border-radius: 10px;
 	border: none;
+	object-fit: cover;
 	transition: box-shadow 0.3s ease-in-out;
 
 	&:hover {
@@ -76,10 +77,9 @@
 
 	p {
 		font-size: 20px;
-		padding: 5px;
-		gap: 5px;
+		padding: 5px 15px 5px 15px;
 		margin: 10px 0px;
-		line-height: 20px;
+		line-height: 25px;
 		width: 450px;
 		text-align: start;
 	}

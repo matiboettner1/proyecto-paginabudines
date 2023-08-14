@@ -1,4 +1,4 @@
-.body-productosMuffins {
+.body-carrito {
 	background-color: $background-color_2;
 }
 
@@ -27,118 +27,58 @@
 	margin: 40px;
 }
 
-.muffin1-productosMuffins {
-	grid-area: muffin1;
-	background-color: $background-color_4;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-	transition: box-shadow 0.3s ease-in-out;
-	width: 400px;
-	height: 650px;
+@mixin muffins-cajas ($ancho) {
+	@for $i from 1 through 6 {
+		$product-area: ();
 
-	&:hover {
-		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+		@if $i <=3 {
+			$product-area: muffin#{$i};
+		}
+
+		@else {
+			$product-area: muffin#{$i - 3};
+		}
+
+		.muffin#{$i}-productosMuffins {
+			grid-area: #{$product-area};
+			width: $ancho;
+			height: auto;
+		}
+
+		background-color: $background-color_4;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+		transition: box-shadow 0.3s ease-in-out;
+		width: $ancho;
+		height: auto;
+
+		&:hover {
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+		}
 	}
 }
 
-.muffin2-productosMuffins {
-	grid-area: muffin2;
-	background-color: $background-color_4;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-	transition: box-shadow 0.3s ease-in-out;
-	width: 400px;
-	height: 650px;
-
-	&:hover {
-		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	}
-}
-
-.muffin3-productosMuffins {
-	grid-area: muffin3;
-	background-color: $background-color_4;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-	transition: box-shadow 0.3s ease-in-out;
-	width: 400px;
-	height: 650px;
-
-	&:hover {
-		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	}
-}
-
-.muffin4-productosMuffins {
-	grid-area: muffin4;
-	background-color: $background-color_4;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-	transition: box-shadow 0.3s ease-in-out;
-	width: 400px;
-	height: 650px;
-
-	&:hover {
-		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	}
-}
-
-.muffin5-productosMuffins {
-	grid-area: muffin5;
-	background-color: $background-color_4;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-	transition: box-shadow 0.3s ease-in-out;
-	width: 400px;
-	height: 650px;
-
-	&:hover {
-		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	}
-}
-
+.muffin1-productosMuffins,
+.muffin2-productosMuffins,
+.muffin3-productosMuffins,
+.muffin4-productosMuffins,
+.muffin5-productosMuffins,
 .muffin6-productosMuffins {
-	grid-area: muffin6;
-	background-color: $background-color_4;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-	transition: box-shadow 0.3s ease-in-out;
-	width: 400px;
-	height: 650px;
-
-	&:hover {
-		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	}
+	@include muffins-cajas(400px);
 }
 
-.muffin-banana {
-	width: 400px;
+@mixin muffins-imagenes($ancho) {
+	width: $ancho;
 	display: flex;
 	align-items: center;
 }
 
-.muffin-coco {
-	width: 400px;
-	display: flex;
-	align-items: center;
-}
-
-.muffin-frutosrojos {
-	width: 400px;
-	display: flex;
-	align-items: center;
-}
-
-.muffin-frutossecos {
-	width: 400px;
-	display: flex;
-	align-items: center;
-}
-
-.muffin-limonyamapola {
-	width: 400px;
-	display: flex;
-	align-items: center;
-}
-
+.muffin-banana,
+.muffin-coco,
+.muffin-frutosrojos,
+.muffin-frutossecos,
+.muffin-limonyamapola,
 .muffin-vainillaychips {
-	width: 400px;
-	display: flex;
-	align-items: center;
+	@include muffins-imagenes(400px);
 }
 
 .descripcion-producto-productosMuffins {
@@ -148,11 +88,11 @@
 	margin: 0px 20px;
 }
 
-.agregar-al-carrito-productosMuffins {
+.img-agregar-al-carrito-productosMuffins {
 	width: 40px;
 	display: flex;
 	position: relative;
-	left: 340px;
+	left: 350px;
 }
 
 @media (max-width: 1400px) {
@@ -165,79 +105,25 @@
 		justify-items: center;
 	}
 
-	.muffin1-productosMuffins {
-		grid-area: muffin1;
-		width: 400px;
-		height: auto;
-	}
-
-	.muffin2-productosMuffins {
-		grid-area: muffin2;
-		width: 400px;
-		height: auto;
-	}
-
-	.muffin3-productosMuffins {
-		grid-area: muffin3;
-		width: 400px;
-		height: auto;
-	}
-
-	.muffin4-productosMuffins {
-		grid-area: muffin4;
-		width: 400px;
-		height: auto;
-	}
-
-	.muffin5-productosMuffins {
-		grid-area: muffin5;
-		width: 400px;
-		height: auto;
-	}
-
+	.muffin1-productosMuffins,
+	.muffin2-productosMuffins,
+	.muffin3-productosMuffins,
+	.muffin4-productosMuffins,
+	.muffin5-productosMuffins,
 	.muffin6-productosMuffins {
-		grid-area: muffin6;
-		width: 400px;
-		height: auto;
+		@include muffins-cajas(400px);
 	}
 
-	.muffin-banana {
-		width: 400px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-coco {
-		width: 400px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-frutosrojos {
-		width: 400px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-frutossecos {
-		width: 400px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-limonyamapola {
-		width: 400px;
-		display: flex;
-		align-items: center;
-	}
-
+	.muffin-banana,
+	.muffin-coco,
+	.muffin-frutosrojos,
+	.muffin-frutossecos,
+	.muffin-limonyamapola,
 	.muffin-vainillaychips {
-		width: 400px;
-		display: flex;
-		align-items: center;
+		@include muffins-imagenes(400px);
 	}
 
-	.agregar-al-carrito-productosMuffins {
+	.img-agregar-al-carrito-productosMuffins {
 		left: 350px;
 	}
 
@@ -248,88 +134,52 @@
 	.productos-container-productosMuffins {
 		display: grid;
 		grid-template-columns: repeat(2, 50%);
-		grid-template-rows: repeat(1fr 1fr 1fr);
+		grid-template-rows: 1fr 1fr 1fr;
 		grid-template-areas: "muffin1 muffin2" "muffin3 muffin4" "muffin5 muffin6";
 		justify-items: center;
 	}
 
-	.muffin1-productosMuffins {
-		grid-area: muffin1;
-		width: 350px;
-		height: auto;
-	}
-
-	.muffin2-productosMuffins {
-		grid-area: muffin2;
-		width: 350px;
-		height: auto;
-	}
-
-	.muffin3-productosMuffins {
-		grid-area: muffin3;
-		width: 350px;
-		height: auto;
-	}
-
-	.muffin4-productosMuffins {
-		grid-area: muffin4;
-		width: 350px;
-		height: auto;
-	}
-
-	.muffin5-productosMuffins {
-		grid-area: muffin5;
-		width: 350px;
-		height: auto;
-	}
-
+	.muffin1-productosMuffins,
+	.muffin2-productosMuffins,
+	.muffin3-productosMuffins,
+	.muffin4-productosMuffins,
+	.muffin5-productosMuffins,
 	.muffin6-productosMuffins {
-		grid-area: muffin6;
-		width: 350px;
-		height: auto;
+		@include muffins-cajas(350px);
 	}
 
-	.muffin-banana {
-		width: 350px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-coco {
-		width: 350px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-frutosrojos {
-		width: 350px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-frutossecos {
-		width: 350px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-limonyamapola {
-		width: 350px;
-		display: flex;
-		align-items: center;
-	}
-
+	.muffin-banana,
+	.muffin-coco,
+	.muffin-frutosrojos,
+	.muffin-frutossecos,
+	.muffin-limonyamapola,
 	.muffin-vainillaychips {
-		width: 350px;
-		display: flex;
-		align-items: center;
+		@include muffins-imagenes(350px);
 	}
 
-	.agregar-al-carrito-productosMuffins {
+	.img-agregar-al-carrito-productosMuffins {
 		width: 30px;
 		display: flex;
 		position: relative;
 		left: 310px;
+	}
+
+	.muffin1-productosMuffins {
+		.img-agregar-al-carrito-productosMuffins {
+			bottom: -20px;
+		}
+	}
+
+	.muffin2-productosMuffins {
+		.img-agregar-al-carrito-productosMuffins {
+			bottom: -20px;
+		}
+	}
+
+	.muffin6-productosMuffins {
+		.img-agregar-al-carrito-productosMuffins {
+			bottom: -20px;
+		}
 	}
 
 }
@@ -344,80 +194,50 @@
 		justify-items: center;
 	}
 
+	.muffin1-productosMuffins,
+	.muffin2-productosMuffins,
+	.muffin3-productosMuffins,
+	.muffin4-productosMuffins,
+	.muffin5-productosMuffins,
+	.muffin6-productosMuffins {
+		@include muffins-cajas(250px);
+	}
+
+	.muffin-banana,
+	.muffin-coco,
+	.muffin-frutosrojos,
+	.muffin-frutossecos,
+	.muffin-limonyamapola,
+	.muffin-vainillaychips {
+		@include muffins-imagenes(250px);
+	}
+
+	.img-agregar-al-carrito-productosMuffins {
+		left: 210px;
+	}
+
 	.muffin1-productosMuffins {
-		grid-area: muffin1;
-		width: 250px;
-		height: auto;
+		.img-agregar-al-carrito-productosMuffins {
+			bottom: -75px;
+		}
 	}
 
 	.muffin2-productosMuffins {
-		grid-area: muffin2;
-		width: 250px;
-		height: auto;
-	}
-
-	.muffin3-productosMuffins {
-		grid-area: muffin3;
-		width: 250px;
-		height: auto;
+		.img-agregar-al-carrito-productosMuffins {
+			bottom: -33px;
+		}
 	}
 
 	.muffin4-productosMuffins {
-		grid-area: muffin4;
-		width: 250px;
-		height: auto;
-	}
-
-	.muffin5-productosMuffins {
-		grid-area: muffin5;
-		width: 250px;
-		height: auto;
+		.img-agregar-al-carrito-productosMuffins {
+			bottom: -20px;
+		}
 	}
 
 	.muffin6-productosMuffins {
-		grid-area: muffin6;
-		width: 250px;
-		height: auto;
-	}
-
-	.muffin-banana {
-		width: 250px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-coco {
-		width: 250px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-frutosrojos {
-		width: 250px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-frutossecos {
-		width: 250px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-limonyamapola {
-		width: 250px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-vainillaychips {
-		width: 250px;
-		display: flex;
-		align-items: center;
-	}
-
-	.agregar-al-carrito-productosMuffins {
-		left: 210px;
+		.img-agregar-al-carrito-productosMuffins {
+			bottom: -20px;
+		}
 	}
 
 }
@@ -432,83 +252,41 @@
 		justify-items: center;
 	}
 
-	.muffin1-productosMuffins {
-		grid-area: muffin1;
-		width: 300px;
-		height: auto;
-	}
-
-	.muffin2-productosMuffins {
-		grid-area: muffin2;
-		width: 300px;
-		height: auto;
-	}
-
-	.muffin3-productosMuffins {
-		grid-area: muffin3;
-		width: 300px;
-		height: auto;
-	}
-
-	.muffin4-productosMuffins {
-		grid-area: muffin4;
-		width: 300px;
-		height: auto;
-	}
-
-	.muffin5-productosMuffins {
-		grid-area: muffin5;
-		width: 300px;
-		height: auto;
-	}
-
+	.muffin1-productosMuffins,
+	.muffin2-productosMuffins,
+	.muffin3-productosMuffins,
+	.muffin4-productosMuffins,
+	.muffin5-productosMuffins,
 	.muffin6-productosMuffins {
-		grid-area: muffin6;
-		width: 300px;
-		height: auto;
+		@include muffins-cajas(300px);
 	}
 
-	.muffin-banana {
-		width: 300px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-coco {
-		width: 300px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-frutosrojos {
-		width: 300px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-frutossecos {
-		width: 300px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-limonyamapola {
-		width: 300px;
-		display: flex;
-		align-items: center;
-	}
-
+	.muffin-banana,
+	.muffin-coco,
+	.muffin-frutosrojos,
+	.muffin-frutossecos,
+	.muffin-limonyamapola,
 	.muffin-vainillaychips {
-		width: 300px;
-		display: flex;
-		align-items: center;
+		@include muffins-imagenes(300px);
 	}
 
-	.agregar-al-carrito-productosMuffins {
+	.img-agregar-al-carrito-productosMuffins {
 		width: 30px;
 		display: flex;
 		position: relative;
 		left: 260px;
+	}
+
+	.muffin1-productosMuffins {
+		.img-agregar-al-carrito-productosMuffins {
+			bottom: -40px;
+		}
+	}
+
+	.muffin2-productosMuffins {
+		.img-agregar-al-carrito-productosMuffins {
+			bottom: -20px;
+		}
 	}
 
 }
@@ -523,83 +301,41 @@
 		justify-items: center;
 	}
 
-	.muffin1-productosMuffins {
-		grid-area: muffin1;
-		width: 250px;
-		height: auto;
-	}
-
-	.muffin2-productosMuffins {
-		grid-area: muffin2;
-		width: 250px;
-		height: auto;
-	}
-
-	.muffin3-productosMuffins {
-		grid-area: muffin3;
-		width: 250px;
-		height: auto;
-	}
-
-	.muffin4-productosMuffins {
-		grid-area: muffin4;
-		width: 250px;
-		height: auto;
-	}
-
-	.muffin5-productosMuffins {
-		grid-area: muffin5;
-		width: 250px;
-		height: auto;
-	}
-
+	.muffin1-productosMuffins,
+	.muffin2-productosMuffins,
+	.muffin3-productosMuffins,
+	.muffin4-productosMuffins,
+	.muffin5-productosMuffins,
 	.muffin6-productosMuffins {
-		grid-area: muffin6;
-		width: 250px;
-		height: auto;
+		@include muffins-cajas(250px);
 	}
 
-	.muffin-banana {
-		width: 250px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-coco {
-		width: 250px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-frutosrojos {
-		width: 250px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-frutossecos {
-		width: 250px;
-		display: flex;
-		align-items: center;
-	}
-
-	.muffin-limonyamapola {
-		width: 250px;
-		display: flex;
-		align-items: center;
-	}
-
+	.muffin-banana,
+	.muffin-coco,
+	.muffin-frutosrojos,
+	.muffin-frutossecos,
+	.muffin-limonyamapola,
 	.muffin-vainillaychips {
-		width: 250px;
-		display: flex;
-		align-items: center;
+		@include muffins-imagenes(250px);
 	}
 
-	.agregar-al-carrito-productosMuffins {
+	.img-agregar-al-carrito-productosMuffins {
 		width: 30px;
 		display: flex;
 		position: relative;
 		left: 210px;
+	}
+
+	.muffin1-productosMuffins {
+		.img-agregar-al-carrito-productosMuffins {
+			bottom: -75px;
+		}
+	}
+
+	.muffin2-productosMuffins {
+		.img-agregar-al-carrito-productosMuffins {
+			bottom: -30px;
+		}
 	}
 
 }

@@ -1,5 +1,5 @@
-.body-productosBudines {
-    background-color: $background-color_2;
+.body-carrito {
+	background-color: $background-color_2;
 }
 
 .h1-productosBudines {
@@ -24,7 +24,7 @@
     gap: 69px;
 }
 
-.budin1-productosBudines {
+@mixin budines-cajas {
     background-color: $background-color_4;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease-in-out;
@@ -36,46 +36,18 @@
     }
 }
 
-.budin2-productosBudines {
-    background-color: $background-color_4;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
-    width: 400px;
-    height: 650px;
-
-    &:hover {
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    }
+.budin1-productosBudines , .budin2-productosBudines , .budin3-productosBudines {
+    @include budines-cajas;
 }
 
-.budin3-productosBudines {
-    background-color: $background-color_4;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
-    width: 400px;
-    height: 650px;
-
-    &:hover {
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    }
-}
-
-.budin-de-frutosrojos {
+@mixin budines-imagenes {
     width: 400px;
     display: flex;
     align-items: center;
 }
 
-.budin-de-limonyamapola {
-    width: 400px;
-    display: flex;
-    align-items: center;
-}
-
-.budin-de-zanahoria {
-    width: 400px;
-    display: flex;
-    align-items: center;
+.budin-de-frutosrojos , .budin-de-limonyamapola , .budin-de-zanahoria {
+    @include budines-imagenes;
 }
 
 .descripcion-productosBudines {
@@ -85,11 +57,18 @@
     margin: 0px 20px;
 }
 
-.agregar-al-carrito-productosBudines {
-    width: 40px;
-    display: flex;
-    position: relative;
-    left: 340px;
+.budin1-productosBudines {
+    .descripcion-productosBudines {
+        margin-bottom: 20px;
+    }
+}
+
+.img-agregar-al-carrito-productosBudines {
+        width: 40px;
+        display: flex;
+        position: relative;
+        left: 350px;
+        top: 10px;
 }
 
 @media (max-width: 1400px) {
@@ -98,46 +77,24 @@
         gap: 50px;
     }
 
-    .budin1-productosBudines {
+    .budin1-productosBudines , .budin2-productosBudines , .budin3-productosBudines {
         width: 350px;
         height: auto;
     }
 
-    .budin2-productosBudines {
-        width: 350px;
-        height: auto;
-    }
-
-    .budin3-productosBudines {
-        width: 350px;
-        height: auto;
-    }
-
-    .budin-de-frutosrojos {
+    .budin-de-frutosrojos , .budin-de-limonyamapola ,  .budin-de-zanahoria {
         width: 350px;
         display: flex;
         align-items: center;
     }
 
-    .budin-de-limonyamapola {
-        width: 350px;
-        display: flex;
-        align-items: center;
-    }
-
-    .budin-de-zanahoria {
-        width: 350px;
-        display: flex;
-        align-items: center;
-    }
-
-    .agregar-al-carrito-productosBudines {
+    .img-agregar-al-carrito-productosBudines {
         width: 30px;
         display: flex;
         position: relative;
         left: 310px;
+        top: 0px;
     }
-
 }
 
 @media (max-width: 1200px) {
@@ -149,40 +106,18 @@
         margin-bottom: 40px;
     }
 
-    .budin1-productosBudines {
+    .budin1-productosBudines , .budin2-productosBudines , .budin3-productosBudines {
         width: 450px;
         height: auto;
     }
 
-    .budin2-productosBudines {
-        width: 450px;
-        height: auto;
-    }
-
-    .budin3-productosBudines {
-        width: 450px;
-        height: auto;
-    }
-
-    .budin-de-frutosrojos {
+    .budin-de-frutosrojos , .budin-de-limonyamapola , .budin-de-zanahoria  {
         width: 450px;
         display: flex;
         align-items: center;
     }
 
-    .budin-de-limonyamapola {
-        width: 450px;
-        display: flex;
-        align-items: center;
-    }
-
-    .budin-de-zanahoria {
-        width: 450px;
-        display: flex;
-        align-items: center;
-    }
-
-    .agregar-al-carrito-productosBudines {
+    .img-agregar-al-carrito-productosBudines {
         width: 30px;
         display: flex;
         position: relative;
@@ -209,53 +144,23 @@
         margin-bottom: 40px;
     }
 
-    .muffins-container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .budin1-productosBudines {
+    .budin1-productosBudines , .budin2-productosBudines , .budin3-productosBudines {
         width: 300px;
         height: auto;
     }
 
-    .budin2-productosBudines {
-        width: 300px;
-        height: auto;
-    }
-
-    .budin3-productosBudines {
-        width: 300px;
-        height: auto;
-    }
-
-    .budin-de-frutosrojos {
+    .budin-de-frutosrojos , .budin-de-limonyamapola , .budin-de-zanahoria {
         width: 300px;
         display: flex;
         align-items: center;
     }
 
-    .budin-de-limonyamapola {
-        width: 300px;
-        display: flex;
-        align-items: center;
-    }
-
-    .budin-de-zanahoria {
-        width: 300px;
-        display: flex;
-        align-items: center;
-    }
-
-    .agregar-al-carrito-productosBudines {
-        width: 30px;
-        display: flex;
-        position: relative;
-        left: 260px;
-    }
+    .img-agregar-al-carrito-productosBudines {
+            width: 30px;
+            display: flex;
+            position: relative;
+            left: 260px;
+        }
 
 }
 
@@ -268,44 +173,21 @@
         margin-bottom: 40px;
     }
 
-    .budin1-productosBudines {
+    .budin1-productosBudines , .budin2-productosBudines , .budin3-productosBudines {
         width: 250px;
         height: auto;
     }
 
-    .budin2-productosBudines {
-        width: 250px;
-        height: auto;
-    }
-
-    .budin3-productosBudines {
-        width: 250px;
-        height: auto;
-    }
-
-    .budin-de-frutosrojos {
+    .budin-de-frutosrojos, .budin-de-limonyamapola , .budin-de-zanahoria {
         width: 250px;
         display: flex;
         align-items: center;
     }
 
-    .budin-de-limonyamapola {
-        width: 250px;
-        display: flex;
-        align-items: center;
-    }
-
-    .budin-de-zanahoria {
-        width: 250px;
-        display: flex;
-        align-items: center;
-    }
-
-    .agregar-al-carrito-productosBudines {
+    .img-agregar-al-carrito-productosBudines {
         width: 30px;
         display: flex;
         position: relative;
         left: 210px;
     }
-
 }
