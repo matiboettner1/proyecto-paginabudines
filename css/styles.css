@@ -1437,12 +1437,15 @@ h2 {
 .budin1-productosBudines, .budin2-productosBudines, .budin3-productosBudines {
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   width: 400px;
   height: 650px;
 }
 .budin1-productosBudines:hover, .budin2-productosBudines:hover, .budin3-productosBudines:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .budin-de-frutosrojos, .budin-de-limonyamapola, .budin-de-zanahoria {
@@ -1605,32 +1608,44 @@ h2 {
 .muffin6-productosMuffins {
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   width: 400px;
   height: auto;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   width: 400px;
   height: auto;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   width: 400px;
   height: auto;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   width: 400px;
   height: auto;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   width: 400px;
   height: auto;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   width: 400px;
   height: auto;
 }
@@ -1650,7 +1665,8 @@ h2 {
 .muffin4-productosMuffins:hover,
 .muffin5-productosMuffins:hover,
 .muffin6-productosMuffins:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .muffin1-productosMuffins .muffin2-productosMuffins,
 .muffin2-productosMuffins .muffin2-productosMuffins,
@@ -1668,7 +1684,8 @@ h2 {
 .muffin4-productosMuffins:hover,
 .muffin5-productosMuffins:hover,
 .muffin6-productosMuffins:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .muffin1-productosMuffins .muffin3-productosMuffins,
 .muffin2-productosMuffins .muffin3-productosMuffins,
@@ -1686,7 +1703,8 @@ h2 {
 .muffin4-productosMuffins:hover,
 .muffin5-productosMuffins:hover,
 .muffin6-productosMuffins:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .muffin1-productosMuffins .muffin4-productosMuffins,
 .muffin2-productosMuffins .muffin4-productosMuffins,
@@ -1704,7 +1722,8 @@ h2 {
 .muffin4-productosMuffins:hover,
 .muffin5-productosMuffins:hover,
 .muffin6-productosMuffins:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .muffin1-productosMuffins .muffin5-productosMuffins,
 .muffin2-productosMuffins .muffin5-productosMuffins,
@@ -1722,7 +1741,8 @@ h2 {
 .muffin4-productosMuffins:hover,
 .muffin5-productosMuffins:hover,
 .muffin6-productosMuffins:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .muffin1-productosMuffins .muffin6-productosMuffins,
 .muffin2-productosMuffins .muffin6-productosMuffins,
@@ -1740,7 +1760,8 @@ h2 {
 .muffin4-productosMuffins:hover,
 .muffin5-productosMuffins:hover,
 .muffin6-productosMuffins:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .muffin-banana,
@@ -1784,32 +1805,44 @@ h2 {
   .muffin6-productosMuffins {
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 400px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 400px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 400px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 400px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 400px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 400px;
     height: auto;
   }
@@ -1829,7 +1862,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin2-productosMuffins,
   .muffin2-productosMuffins .muffin2-productosMuffins,
@@ -1847,7 +1881,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin3-productosMuffins,
   .muffin2-productosMuffins .muffin3-productosMuffins,
@@ -1865,7 +1900,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin4-productosMuffins,
   .muffin2-productosMuffins .muffin4-productosMuffins,
@@ -1883,7 +1919,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin5-productosMuffins,
   .muffin2-productosMuffins .muffin5-productosMuffins,
@@ -1901,7 +1938,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin6-productosMuffins,
   .muffin2-productosMuffins .muffin6-productosMuffins,
@@ -1919,7 +1957,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin-banana,
   .muffin-coco,
@@ -1951,32 +1990,44 @@ h2 {
   .muffin6-productosMuffins {
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 350px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 350px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 350px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 350px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 350px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 350px;
     height: auto;
   }
@@ -1996,7 +2047,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin2-productosMuffins,
   .muffin2-productosMuffins .muffin2-productosMuffins,
@@ -2014,7 +2066,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin3-productosMuffins,
   .muffin2-productosMuffins .muffin3-productosMuffins,
@@ -2032,7 +2085,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin4-productosMuffins,
   .muffin2-productosMuffins .muffin4-productosMuffins,
@@ -2050,7 +2104,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin5-productosMuffins,
   .muffin2-productosMuffins .muffin5-productosMuffins,
@@ -2068,7 +2123,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin6-productosMuffins,
   .muffin2-productosMuffins .muffin6-productosMuffins,
@@ -2086,7 +2142,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin-banana,
   .muffin-coco,
@@ -2130,32 +2187,44 @@ h2 {
   .muffin6-productosMuffins {
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
   }
@@ -2175,7 +2244,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin2-productosMuffins,
   .muffin2-productosMuffins .muffin2-productosMuffins,
@@ -2193,7 +2263,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin3-productosMuffins,
   .muffin2-productosMuffins .muffin3-productosMuffins,
@@ -2211,7 +2282,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin4-productosMuffins,
   .muffin2-productosMuffins .muffin4-productosMuffins,
@@ -2229,7 +2301,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin5-productosMuffins,
   .muffin2-productosMuffins .muffin5-productosMuffins,
@@ -2247,7 +2320,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin6-productosMuffins,
   .muffin2-productosMuffins .muffin6-productosMuffins,
@@ -2265,7 +2339,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin-banana,
   .muffin-coco,
@@ -2309,32 +2384,44 @@ h2 {
   .muffin6-productosMuffins {
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 300px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 300px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 300px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 300px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 300px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 300px;
     height: auto;
   }
@@ -2354,7 +2441,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin2-productosMuffins,
   .muffin2-productosMuffins .muffin2-productosMuffins,
@@ -2372,7 +2460,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin3-productosMuffins,
   .muffin2-productosMuffins .muffin3-productosMuffins,
@@ -2390,7 +2479,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin4-productosMuffins,
   .muffin2-productosMuffins .muffin4-productosMuffins,
@@ -2408,7 +2498,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin5-productosMuffins,
   .muffin2-productosMuffins .muffin5-productosMuffins,
@@ -2426,7 +2517,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin6-productosMuffins,
   .muffin2-productosMuffins .muffin6-productosMuffins,
@@ -2444,7 +2536,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin-banana,
   .muffin-coco,
@@ -2485,32 +2578,44 @@ h2 {
   .muffin6-productosMuffins {
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
   }
@@ -2530,7 +2635,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin2-productosMuffins,
   .muffin2-productosMuffins .muffin2-productosMuffins,
@@ -2548,7 +2654,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin3-productosMuffins,
   .muffin2-productosMuffins .muffin3-productosMuffins,
@@ -2566,7 +2673,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin4-productosMuffins,
   .muffin2-productosMuffins .muffin4-productosMuffins,
@@ -2584,7 +2692,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin5-productosMuffins,
   .muffin2-productosMuffins .muffin5-productosMuffins,
@@ -2602,7 +2711,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin6-productosMuffins,
   .muffin2-productosMuffins .muffin6-productosMuffins,
@@ -2620,7 +2730,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin-banana,
   .muffin-coco,
