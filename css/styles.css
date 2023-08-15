@@ -2561,6 +2561,12 @@ h2 {
   .muffin2-productosMuffins .img-agregar-al-carrito-productosMuffins {
     bottom: -20px;
   }
+  .muffin4-productosMuffins .img-agregar-al-carrito-productosMuffins {
+    bottom: 0px;
+  }
+  .muffin6-productosMuffins .img-agregar-al-carrito-productosMuffins {
+    bottom: 0px;
+  }
 }
 @media (max-width: 320px) {
   .productos-container-productosMuffins {
