@@ -1300,7 +1300,7 @@ h2 {
     height: 150px;
   }
   h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
   h2 {
     font-size: 25px;
@@ -3647,6 +3647,11 @@ h4 {
   width: 100%;
 }
 
+.texto-contacto-productosBudines {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
 .contacto-productosBudines p {
   font-weight: lighter;
   position: relative;
@@ -3814,6 +3819,11 @@ h4 {
 }
 .instagram-productosMuffins p:hover::before {
   width: 100%;
+}
+
+.texto-contacto-productosMuffins {
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 .contacto-productosMuffins p {
@@ -4011,6 +4021,11 @@ h4 {
   width: 100%;
 }
 
+.texto-contacto-productosClickeados {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
 .contacto-productosClickeados p {
   font-weight: lighter;
   position: relative;
@@ -4204,6 +4219,11 @@ h4 {
 }
 .instagram-carrito p:hover::before {
   width: 100%;
+}
+
+.texto-contacto-carrito {
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 .contacto-carrito p {
