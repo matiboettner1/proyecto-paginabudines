@@ -4,46 +4,50 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name="description" content="Descubre el deleite de los sabores caseros con nuestros exquisitos budines y muffins. En HechoEnCasa.cb, te ofrecemos una irresistible selección de delicias horneadas con amor. Disfruta de la frescura y calidad en cada bocado. ¡Explora nuestra variedad de recetas y regálate momentos de dulce felicidad en cada mordisco!">
+    <meta name="description"
+        content="Descubre el deleite de los sabores caseros con nuestros exquisitos budines y muffins. En HechoEnCasa.cb, te ofrecemos una irresistible selección de delicias horneadas con amor. Disfruta de la frescura y calidad en cada bocado. ¡Explora nuestra variedad de recetas y regálate momentos de dulce felicidad en cada mordisco!">
     <title>Hecho En Casa</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/styles.css'>
 </head>
 
 <body class="body-index">
-    
+
     <header>
-        <nav>
-            <div class="logo-inicio">
-                <a href="index.html"><img src="./media/img/logo-hechoencasa.png" class="logo" alt="logo de hecho en casa" /></a>
-                <div class="texto-logo">
-                    <p>hechoencasa.cb</p>
-                </div>
-            </div>
-            <div>
-                <ul class="paginas">
-                    <li class="index">
-                        <a href="./index.html">Inicio</a>
-                    </li>
-                    <li class="productos">
-                        <a href="./pages/productos-budines.html">Productos</a>
-                    </li>
-                    <li class="carrito">
-                        <img src="./media/img/carrito-de-compras.png" class="icono-carrito" alt="icono de un carrito" />
-                        <a href="./pages/carrito.html">Carrito</a>
-                    </li>
-                </ul>
-            </div>
+        <nav class="nav">
+            <input type="checkbox" id="nav__checkbox" class="nav__checkbox">
+            <label for="nav__checkbox" class="nav__toggle">
+                <img src="./media/img/menu-hamburguesa.png" class="hamburger" />
+                <img src="./media/img/menu-hamburguesa-cerrar.png" class="close" />
+            </label>
+
+            <ul class="nav__menu">
+                <li class="logo-inicio">
+                    <a href="index.html">
+                        <img src="./media/img/logo-hechoencasa.png" class="logo" alt="logo de hecho en casa">
+                    </a>
+                    <p class="texto-logo">hechoencasa.cb</p>
+                </li>
+                <li class="index">
+                    <a href="./index.html">Inicio</a>
+                </li>
+                <li class="productos">
+                    <a href="./pages/productos-budines.html">Productos</a>
+                </li>
+                <li class="carrito">
+                    <a href="./pages/carrito.html">Carrito</a>
+                </li>
+            </ul>
         </nav>
     </header>
-    
+
     <main>
         <div class="budines-container">
-            <img src="./media/img/budin1.jpg" class="img-container-1" alt="imagen de un budin"/>
-            <img src="./media/img/muffin-frutosrojos-arriba.jpg" class="img-container-2" alt="imagen de un muffin"/>
-            <img src="./media/img/budin-limonyamapola1.jpg" class="img-container-3" alt="imagen de un budin"/>
-            <img src="./media/img/muffin-frutossecos-costado.jpg" class="img-container-4" alt="imagen de un muffin"/>
-            <img src="./media/img/budin-portada1.jpg" class="img-container-5" alt="imagen de un budin"/>
+            <img src="./media/img/budin1.jpg" class="img-container-1" alt="imagen de un budin" />
+            <img src="./media/img/muffin-frutosrojos-arriba.jpg" class="img-container-2" alt="imagen de un muffin" />
+            <img src="./media/img/budin-limonyamapola1.jpg" class="img-container-3" alt="imagen de un budin" />
+            <img src="./media/img/muffin-frutossecos-costado.jpg" class="img-container-4" alt="imagen de un muffin" />
+            <img src="./media/img/budin-portada1.jpg" class="img-container-5" alt="imagen de un budin" />
         </div>
         <div class="tarjeta-principal">
             <h1>BIENVENIDOS/AS A HECHOENCASA.CB</h1>
@@ -59,7 +63,7 @@
                 budines, muffins y demas dirigíte a la sección productos.</p>
         </div>
     </main>
-    
+
     <footer>
         <div>
             <p class="texto-contacto">Contacto:</p>

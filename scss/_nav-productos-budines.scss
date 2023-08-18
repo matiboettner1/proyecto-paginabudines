@@ -1,133 +1,138 @@
-.nav-principal-productosBudines {
+.nav-productosBudines {
     background-color: $background-color_1;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    position: fixed;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	position: fixed;
     top: 0;
-    left: 0;
-    padding: 10px 10px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    z-index: 100;
-    font-weight: bold;
-    text-decoration: none;
+	left: 0;
+	padding: 10px 10px;
+	width: 100%;
+	z-index: 100;
+	font-weight: bold;
+	text-decoration: none;
+	li {
+		list-style: none;
+	}
 }
 
-.paginas-productosBudines {
-    padding: 0px;
-    display: flex;
-    justify-content: end;
-    font-size: 20px;
+@mixin animacion-paginas-productosBudines {
+	margin: 15px;
+	width: fit-content;
+	text-align: center;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: rgb(0, 0, 0);
+		transition: .3s;
+	}
+
+	&:hover {
+		&::before {
+			width: 100%;
+		}
+	}
 }
 
-.index-productosBudines {
-    margin: 15px;
-    width: fit-content;
-    text-align: center;
-    position: relative;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: black;
-        transition: .3s;
-    }
-
-    &:hover {
-        &::before {
-            width: 100%;
-        }
-    }
+.index-productosBudines , .productos-productosBudines , .carrito-productosBudines{
+	@include animacion-paginas-productosBudines();
 }
 
-.productos-productosBudines {
-    margin: 15px;
-    width: fit-content;
-    text-align: center;
-    position: relative;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: black;
-        transition: .3s;
-    }
-
-    &:hover {
-        &::before {
-            width: 100%;
-        }
-    }
+.nav__toggle {
+	position: absolute;
+	cursor: pointer;
+	margin: 0rem 1rem;
+	right: 0;
 }
 
-.carrito-productosBudines {
-    margin: 15px;
-    width: fit-content;
-    text-align: center;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
+.close,
+input[type="checkbox"] {
+	display: none;
+}
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: black;
-        transition: .3s;
-    }
+.hamburger {
+	width: 30px;
+	margin: 30px;
+	margin-right: 10px;
+}
 
-    &:hover {
-        &::before {
-            width: 100%;
-        }
-    }
+.nav__menu {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	align-items: center;
+	margin: 1rem;
 }
 
 .logo-inicio-productosBudines {
-    display: flex;
-    position: relative;
+	margin-right: auto;
+	display: flex;
+	position: relative;
 }
 
 .logo-productosBudines {
-    width: 50px;
-    object-fit: cover;
-    cursor: pointer;
+	width: 50px;
+	object-fit: cover;
+	cursor: pointer;
 }
 
 .texto-logo-productosBudines {
-    display: flex;
-    position: relative;
-    top: 16px;
-    left: 9px;
-    cursor: default;
+	display: flex;
+	position: relative;
+	top: 16px;
+	left: 9px;
+	cursor: default;
 }
 
-.icono-carrito-productosBudines {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    position: relative;
-    top: 4px;
+.nav__menu a {
+	text-decoration: none;
+	color: initial;
+	font-size: 1.2rem;
+}
+
+#nav__checkbox:checked~ul.nav__menu li {
+	display: flex;
+}
+
+#nav__checkbox:checked~label.nav__toggle .hamburger {
+	display: none;
+}
+
+
+#nav__checkbox:checked~label.nav__toggle .close {
+	display: flex;
+	width: 30px;
+	margin: 30px;
+	margin-right: 10px;
+}
+
+
+@media (min-width: 768px) {
+	.nav__toggle {
+		display: none;
+	}
+
+	.nav__menu {
+		flex-direction: row;
+	}
+
+	.nav__menu li {
+		display: flex;
+	}
 }
 
 .barra-con-logo-productosBudines {
-    margin-top: 95px;
+    margin-top: 125px;
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: default;
+    z-index: 0;
 }
 
 .productos-nav-productosBudines {
@@ -143,7 +148,7 @@
     display: flex;
 }
 
-.budines-productosBudines {
+@mixin animacion-paginas-productos {
     margin: 10px;
     width: fit-content;
     text-align: center;
@@ -167,55 +172,13 @@
     }
 }
 
-.muffins-productosBudines {
-    margin: 10px;
-    width: fit-content;
-    text-align: center;
-    position: relative;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: rgb(0, 0, 0);
-        transition: .3s;
-    }
-
-    &:hover {
-        &::before {
-            width: 100%;
-        }
-    }
+.budines-productosBudines , .muffins-productosBudines {
+    @include animacion-paginas-productos;
 }
 
 @media (max-width: 576px) {
 
-    .nav-principal-productosBudines {
-        width: auto;
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .paginas-productosBudines {
-        padding: 0px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .logo-productosBudines {
-        display: flex;
-        justify-content: flex-start;
-    }
-
     .barra-con-logo-productosBudines {
-        margin: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -230,30 +193,7 @@
 
 @media (max-width: 320px) {
 
-
-    .nav-principal-productosBudines {
-        width: auto;
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .paginas-productosBudines {
-        padding: 0px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .logo-productosBudines {
-        display: flex;
-        justify-content: flex-start;
-    }
-
     .barra-con-logo-productosBudines {
-        margin: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;

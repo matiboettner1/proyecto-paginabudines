@@ -34,83 +34,67 @@ nav {
   left: 0;
   padding: 10px 10px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
   z-index: 100;
   font-weight: bold;
   text-decoration: none;
 }
+nav li {
+  list-style: none;
+  display: none;
+}
 
-.paginas {
-  padding: 0px;
+.index, .productos, .carrito {
+  margin: 15px;
+  width: fit-content;
+  text-align: center;
+  position: relative;
+}
+.index::before, .productos::before, .carrito::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(0, 0, 0);
+  transition: 0.3s;
+}
+.index:hover::before, .productos:hover::before, .carrito:hover::before {
+  width: 100%;
+}
+
+.nav {
+  border-bottom: 1px solid grey;
+}
+
+.nav__toggle {
+  position: absolute;
+  cursor: pointer;
+  margin: 0rem 1rem;
+  right: 0;
+}
+
+.close,
+input[type=checkbox] {
+  display: none;
+}
+
+.hamburger {
+  width: 30px;
+  margin: 30px;
+  margin-right: 10px;
+}
+
+.nav__menu {
   display: flex;
-  justify-content: end;
-  font-size: 20px;
-}
-
-.index {
-  margin: 15px;
-  width: fit-content;
-  text-align: center;
-  position: relative;
-}
-.index::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.index:hover::before {
-  width: 100%;
-}
-
-.productos {
-  margin: 15px;
-  width: fit-content;
-  text-align: center;
-  position: relative;
-}
-.productos::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.productos:hover::before {
-  width: 100%;
-}
-
-.carrito {
-  margin: 15px;
-  width: fit-content;
-  text-align: center;
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-}
-.carrito::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.carrito:hover::before {
-  width: 100%;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin: 1rem;
 }
 
 .logo-inicio {
+  margin-right: auto;
   display: flex;
   position: relative;
 }
@@ -129,55 +113,40 @@ nav {
   cursor: default;
 }
 
-.icono-carrito {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  position: relative;
-  top: 4px;
+.nav__menu a {
+  text-decoration: none;
+  color: initial;
+  font-size: 1.2rem;
 }
 
-@media (max-width: 576px) {
-  nav {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: sticky;
+#nav__checkbox:checked ~ ul.nav__menu li {
+  display: flex;
+  transition: top 0.3s ease-in-out;
+}
+
+#nav__checkbox:checked ~ label.nav__toggle .hamburger {
+  display: none;
+}
+
+#nav__checkbox:checked ~ label.nav__toggle .close {
+  display: flex;
+  width: 30px;
+  margin: 30px;
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .nav__toggle {
+    display: none;
   }
-  .paginas {
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  .nav__menu {
+    flex-direction: row;
   }
-  .logo {
+  .nav__menu li {
     display: flex;
-    justify-content: start;
   }
 }
-@media (max-width: 320px) {
-  nav {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: sticky;
-  }
-  .paginas {
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  .logo {
-    display: flex;
-    justify-content: start;
-  }
-}
-.nav-principal-productosBudines {
+.nav-productosBudines {
   background-color: #fff8ea;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -185,83 +154,63 @@ nav {
   left: 0;
   padding: 10px 10px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
   z-index: 100;
   font-weight: bold;
   text-decoration: none;
 }
+.nav-productosBudines li {
+  list-style: none;
+  display: none;
+}
 
-.paginas-productosBudines {
-  padding: 0px;
+.index-productosBudines, .productos-productosBudines, .carrito-productosBudines {
+  margin: 15px;
+  width: fit-content;
+  text-align: center;
+  position: relative;
+}
+.index-productosBudines::before, .productos-productosBudines::before, .carrito-productosBudines::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(0, 0, 0);
+  transition: 0.3s;
+}
+.index-productosBudines:hover::before, .productos-productosBudines:hover::before, .carrito-productosBudines:hover::before {
+  width: 100%;
+}
+
+.nav__toggle-productosBudines {
+  position: absolute;
+  cursor: pointer;
+  margin: 0rem 1rem;
+  right: 0;
+}
+
+.close,
+input[type=checkbox] {
+  display: none;
+}
+
+.hamburger {
+  width: 30px;
+  margin: 30px;
+  margin-right: 10px;
+}
+
+.nav__menu-productosBudines {
   display: flex;
-  justify-content: end;
-  font-size: 20px;
-}
-
-.index-productosBudines {
-  margin: 15px;
-  width: fit-content;
-  text-align: center;
-  position: relative;
-}
-.index-productosBudines::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: black;
-  transition: 0.3s;
-}
-.index-productosBudines:hover::before {
-  width: 100%;
-}
-
-.productos-productosBudines {
-  margin: 15px;
-  width: fit-content;
-  text-align: center;
-  position: relative;
-}
-.productos-productosBudines::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: black;
-  transition: 0.3s;
-}
-.productos-productosBudines:hover::before {
-  width: 100%;
-}
-
-.carrito-productosBudines {
-  margin: 15px;
-  width: fit-content;
-  text-align: center;
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-}
-.carrito-productosBudines::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: black;
-  transition: 0.3s;
-}
-.carrito-productosBudines:hover::before {
-  width: 100%;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin: 1rem;
 }
 
 .logo-inicio-productosBudines {
+  margin-right: auto;
   display: flex;
   position: relative;
 }
@@ -280,16 +229,41 @@ nav {
   cursor: default;
 }
 
-.icono-carrito-productosBudines {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  position: relative;
-  top: 4px;
+.nav__menu-productosBudines a {
+  text-decoration: none;
+  color: initial;
+  font-size: 1.2rem;
 }
 
-.barra-con-logo-productosBudines {
-  margin-top: 95px;
+#nav__checkbox-productosBudines:checked ~ ul.nav__menu-productosBudines li {
+  display: flex;
+  transition: top 0.3s ease-in-out;
+}
+
+#nav__checkbox-productosBudines:checked ~ label.nav__toggle-productosBudines .hamburger {
+  display: none;
+}
+
+#nav__checkbox-productosBudines:checked ~ label.nav__toggle-productosBudines .close {
+  display: flex;
+  width: 30px;
+  margin: 30px;
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .nav__toggle-productosBudines {
+    display: none;
+  }
+  .nav__menu-productosBudines {
+    flex-direction: row;
+  }
+  .nav__menu-productosBudines li {
+    display: flex;
+  }
+}
+---------------------------------------------------------- .barra-con-logo-productosBudines {
+  /*margin-top: 95px;*/
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -310,13 +284,13 @@ nav {
   display: flex;
 }
 
-.budines-productosBudines {
+.budines-productosBudines, .muffins-productosBudines {
   margin: 10px;
   width: fit-content;
   text-align: center;
   position: relative;
 }
-.budines-productosBudines::before {
+.budines-productosBudines::before, .muffins-productosBudines::before {
   content: "";
   position: absolute;
   top: 100%;
@@ -326,49 +300,11 @@ nav {
   background: rgb(0, 0, 0);
   transition: 0.3s;
 }
-.budines-productosBudines:hover::before {
-  width: 100%;
-}
-
-.muffins-productosBudines {
-  margin: 10px;
-  width: fit-content;
-  text-align: center;
-  position: relative;
-}
-.muffins-productosBudines::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.muffins-productosBudines:hover::before {
+.budines-productosBudines:hover::before, .muffins-productosBudines:hover::before {
   width: 100%;
 }
 
 @media (max-width: 576px) {
-  .nav-principal-productosBudines {
-    width: auto;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .paginas-productosBudines {
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  .logo-productosBudines {
-    display: flex;
-    justify-content: flex-start;
-  }
   .barra-con-logo-productosBudines {
     margin: 10px;
     display: flex;
@@ -381,24 +317,6 @@ nav {
   }
 }
 @media (max-width: 320px) {
-  .nav-principal-productosBudines {
-    width: auto;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .paginas-productosBudines {
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  .logo-productosBudines {
-    display: flex;
-    justify-content: flex-start;
-  }
   .barra-con-logo-productosBudines {
     margin: 10px;
     display: flex;
@@ -1000,6 +918,7 @@ nav {
   background-color: #fff8ea;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   padding: 10px;
   cursor: default;
 }
@@ -1011,8 +930,19 @@ nav {
 
 .h1-carrito {
   text-align: center;
+  font-size: 45px;
 }
 
+@media (max-width: 1200px) {
+  .h1-carrito {
+    font-size: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .h1-carrito {
+    font-size: 30px;
+  }
+}
 @media (max-width: 576px) {
   .nav-principal-carrito {
     width: auto;
@@ -1047,7 +977,7 @@ nav {
     height: 20px;
   }
   .h1-carrito {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 @media (max-width: 320px) {
@@ -1288,7 +1218,7 @@ h2 {
     height: 150px;
   }
   h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
   h2 {
     font-size: 25px;
@@ -1333,6 +1263,12 @@ h2 {
   .tarjeta-principal {
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+  .muffins-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 }
 @media (max-width: 320px) {
@@ -1419,12 +1355,15 @@ h2 {
 .budin1-productosBudines, .budin2-productosBudines, .budin3-productosBudines {
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   width: 400px;
   height: 650px;
 }
 .budin1-productosBudines:hover, .budin2-productosBudines:hover, .budin3-productosBudines:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .budin-de-frutosrojos, .budin-de-limonyamapola, .budin-de-zanahoria {
@@ -1587,32 +1526,44 @@ h2 {
 .muffin6-productosMuffins {
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   width: 400px;
   height: auto;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   width: 400px;
   height: auto;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   width: 400px;
   height: auto;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   width: 400px;
   height: auto;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   width: 400px;
   height: auto;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   width: 400px;
   height: auto;
 }
@@ -1632,7 +1583,8 @@ h2 {
 .muffin4-productosMuffins:hover,
 .muffin5-productosMuffins:hover,
 .muffin6-productosMuffins:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .muffin1-productosMuffins .muffin2-productosMuffins,
 .muffin2-productosMuffins .muffin2-productosMuffins,
@@ -1650,7 +1602,8 @@ h2 {
 .muffin4-productosMuffins:hover,
 .muffin5-productosMuffins:hover,
 .muffin6-productosMuffins:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .muffin1-productosMuffins .muffin3-productosMuffins,
 .muffin2-productosMuffins .muffin3-productosMuffins,
@@ -1668,7 +1621,8 @@ h2 {
 .muffin4-productosMuffins:hover,
 .muffin5-productosMuffins:hover,
 .muffin6-productosMuffins:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .muffin1-productosMuffins .muffin4-productosMuffins,
 .muffin2-productosMuffins .muffin4-productosMuffins,
@@ -1686,7 +1640,8 @@ h2 {
 .muffin4-productosMuffins:hover,
 .muffin5-productosMuffins:hover,
 .muffin6-productosMuffins:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .muffin1-productosMuffins .muffin5-productosMuffins,
 .muffin2-productosMuffins .muffin5-productosMuffins,
@@ -1704,7 +1659,8 @@ h2 {
 .muffin4-productosMuffins:hover,
 .muffin5-productosMuffins:hover,
 .muffin6-productosMuffins:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .muffin1-productosMuffins .muffin6-productosMuffins,
 .muffin2-productosMuffins .muffin6-productosMuffins,
@@ -1722,7 +1678,8 @@ h2 {
 .muffin4-productosMuffins:hover,
 .muffin5-productosMuffins:hover,
 .muffin6-productosMuffins:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .muffin-banana,
@@ -1766,32 +1723,44 @@ h2 {
   .muffin6-productosMuffins {
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 400px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 400px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 400px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 400px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 400px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 400px;
     height: auto;
   }
@@ -1811,7 +1780,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin2-productosMuffins,
   .muffin2-productosMuffins .muffin2-productosMuffins,
@@ -1829,7 +1799,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin3-productosMuffins,
   .muffin2-productosMuffins .muffin3-productosMuffins,
@@ -1847,7 +1818,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin4-productosMuffins,
   .muffin2-productosMuffins .muffin4-productosMuffins,
@@ -1865,7 +1837,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin5-productosMuffins,
   .muffin2-productosMuffins .muffin5-productosMuffins,
@@ -1883,7 +1856,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin6-productosMuffins,
   .muffin2-productosMuffins .muffin6-productosMuffins,
@@ -1901,7 +1875,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin-banana,
   .muffin-coco,
@@ -1933,32 +1908,44 @@ h2 {
   .muffin6-productosMuffins {
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 350px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 350px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 350px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 350px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 350px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 350px;
     height: auto;
   }
@@ -1978,7 +1965,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin2-productosMuffins,
   .muffin2-productosMuffins .muffin2-productosMuffins,
@@ -1996,7 +1984,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin3-productosMuffins,
   .muffin2-productosMuffins .muffin3-productosMuffins,
@@ -2014,7 +2003,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin4-productosMuffins,
   .muffin2-productosMuffins .muffin4-productosMuffins,
@@ -2032,7 +2022,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin5-productosMuffins,
   .muffin2-productosMuffins .muffin5-productosMuffins,
@@ -2050,7 +2041,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin6-productosMuffins,
   .muffin2-productosMuffins .muffin6-productosMuffins,
@@ -2068,7 +2060,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin-banana,
   .muffin-coco,
@@ -2112,32 +2105,44 @@ h2 {
   .muffin6-productosMuffins {
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
   }
@@ -2157,7 +2162,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin2-productosMuffins,
   .muffin2-productosMuffins .muffin2-productosMuffins,
@@ -2175,7 +2181,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin3-productosMuffins,
   .muffin2-productosMuffins .muffin3-productosMuffins,
@@ -2193,7 +2200,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin4-productosMuffins,
   .muffin2-productosMuffins .muffin4-productosMuffins,
@@ -2211,7 +2219,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin5-productosMuffins,
   .muffin2-productosMuffins .muffin5-productosMuffins,
@@ -2229,7 +2238,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin6-productosMuffins,
   .muffin2-productosMuffins .muffin6-productosMuffins,
@@ -2247,7 +2257,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin-banana,
   .muffin-coco,
@@ -2291,32 +2302,44 @@ h2 {
   .muffin6-productosMuffins {
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 300px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 300px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 300px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 300px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 300px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 300px;
     height: auto;
   }
@@ -2336,7 +2359,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin2-productosMuffins,
   .muffin2-productosMuffins .muffin2-productosMuffins,
@@ -2354,7 +2378,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin3-productosMuffins,
   .muffin2-productosMuffins .muffin3-productosMuffins,
@@ -2372,7 +2397,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin4-productosMuffins,
   .muffin2-productosMuffins .muffin4-productosMuffins,
@@ -2390,7 +2416,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin5-productosMuffins,
   .muffin2-productosMuffins .muffin5-productosMuffins,
@@ -2408,7 +2435,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin6-productosMuffins,
   .muffin2-productosMuffins .muffin6-productosMuffins,
@@ -2426,7 +2454,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin-banana,
   .muffin-coco,
@@ -2450,6 +2479,12 @@ h2 {
   .muffin2-productosMuffins .img-agregar-al-carrito-productosMuffins {
     bottom: -20px;
   }
+  .muffin4-productosMuffins .img-agregar-al-carrito-productosMuffins {
+    bottom: 0px;
+  }
+  .muffin6-productosMuffins .img-agregar-al-carrito-productosMuffins {
+    bottom: 0px;
+  }
 }
 @media (max-width: 320px) {
   .productos-container-productosMuffins {
@@ -2467,32 +2502,44 @@ h2 {
   .muffin6-productosMuffins {
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 250px;
     height: auto;
   }
@@ -2512,7 +2559,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin2-productosMuffins,
   .muffin2-productosMuffins .muffin2-productosMuffins,
@@ -2530,7 +2578,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin3-productosMuffins,
   .muffin2-productosMuffins .muffin3-productosMuffins,
@@ -2548,7 +2597,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin4-productosMuffins,
   .muffin2-productosMuffins .muffin4-productosMuffins,
@@ -2566,7 +2616,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin5-productosMuffins,
   .muffin2-productosMuffins .muffin5-productosMuffins,
@@ -2584,7 +2635,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin1-productosMuffins .muffin6-productosMuffins,
   .muffin2-productosMuffins .muffin6-productosMuffins,
@@ -2602,7 +2654,8 @@ h2 {
   .muffin4-productosMuffins:hover,
   .muffin5-productosMuffins:hover,
   .muffin6-productosMuffins:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin-banana,
   .muffin-coco,
@@ -2948,6 +3001,7 @@ h2 {
 .texto-carrito .h2-carrito {
   font-size: 30px;
   margin: 10px;
+  font-weight: bold;
 }
 .texto-carrito p {
   font-size: 16px;
@@ -2959,7 +3013,7 @@ h2 {
   text-align: start;
 }
 
-.budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-manzanaynuez {
+.budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-coco-carrito {
   width: 250px;
   height: 300px;
   margin: 10px;
@@ -3050,7 +3104,7 @@ h2 {
     padding: 0;
     border-radius: 10px;
   }
-  .budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-manzanaynuez {
+  .budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-coco-carrito {
     width: 200px;
     object-fit: cover;
   }
@@ -3089,7 +3143,7 @@ h2 {
     padding: 0;
     border-radius: 10px;
   }
-  .budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-manzanaynuez {
+  .budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-coco-carrito {
     width: 200px;
   }
   .texto-carrito {
@@ -3098,6 +3152,7 @@ h2 {
   .texto-carrito .h2-carrito {
     font-size: 25px;
     margin: 10px;
+    font-weight: bold;
   }
   .texto-carrito p {
     font-size: 16px;
@@ -3130,27 +3185,10 @@ h2 {
   }
 }
 @media (max-width: 576px) {
-  .compra1-carrito {
+  .compra1-carrito, .compra2-carrito, .compra3-carrito {
     display: flex;
     flex-direction: column;
     width: 250px;
-  }
-  .compra2-carrito {
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-  }
-  .compra3-carrito {
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-  }
-  .compra3-carrito .texto-carrito .h2-carrito {
-    font-size: 17px;
-    margin: 10px;
-  }
-  .compra3-carrito .boton-cerrar-carrito {
-    top: -510px;
   }
   .texto-carrito {
     display: flex;
@@ -3161,6 +3199,7 @@ h2 {
   .texto-carrito .h2-carrito {
     font-size: 20px;
     margin: 10px;
+    font-weight: bold;
   }
   .texto-carrito p {
     font-size: 16px;
@@ -3168,19 +3207,7 @@ h2 {
     width: 250px;
     text-align: center;
   }
-  .budin-frutosrojos {
-    width: 250px;
-    height: 300px;
-    margin: 0px;
-    border-radius: 5px;
-  }
-  .muffin-frutosrojos-carrito {
-    width: 250px;
-    height: 300px;
-    margin: 0px;
-    border-radius: 5px;
-  }
-  .muffin-manzanaynuez {
+  .budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-coco-carrito {
     width: 250px;
     height: 300px;
     margin: 0px;
@@ -3192,10 +3219,6 @@ h2 {
     justify-content: center;
     align-items: center;
   }
-  .boton-cerrar-carrito {
-    top: -515px;
-    left: 105px;
-  }
   .cantidad-y-boton-cerrar-carrito {
     display: flex;
     flex: row;
@@ -3203,36 +3226,18 @@ h2 {
     position: relative;
   }
   .icono-cruz-carrito {
+    display: flex;
+    position: relative;
     width: 20px;
     height: 20px;
-  }
-  .cruz-carrito {
-    width: 20px;
-    height: 20px;
+    top: -580px;
   }
 }
 @media (max-width: 320px) {
-  .compra1-carrito {
+  .compra1-carrito, .compra2-carrito, .compra3-carrito {
     display: flex;
     flex-direction: column;
     width: 250px;
-  }
-  .compra2-carrito {
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-  }
-  .compra3-carrito {
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-  }
-  .compra3-carrito .texto-carrito .h2-carrito {
-    font-size: 17px;
-    margin: 10px;
-  }
-  .compra3-carrito .boton-cerrar-carrito {
-    top: -510px;
   }
   .texto-carrito {
     display: flex;
@@ -3243,6 +3248,7 @@ h2 {
   .texto-carrito .h2-carrito {
     font-size: 20px;
     margin: 10px;
+    font-weight: bold;
   }
   .texto-carrito p {
     font-size: 16px;
@@ -3250,19 +3256,7 @@ h2 {
     width: 250px;
     text-align: center;
   }
-  .budin-frutosrojos {
-    width: 250px;
-    height: 300px;
-    margin: 0px;
-    border-radius: 5px;
-  }
-  .muffin-frutosrojos-carrito {
-    width: 250px;
-    height: 300px;
-    margin: 0px;
-    border-radius: 5px;
-  }
-  .muffin-manzanaynuez {
+  .budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-coco-carrito {
     width: 250px;
     height: 300px;
     margin: 0px;
@@ -3571,6 +3565,11 @@ h4 {
   width: 100%;
 }
 
+.texto-contacto-productosBudines {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
 .contacto-productosBudines p {
   font-weight: lighter;
   position: relative;
@@ -3738,6 +3737,11 @@ h4 {
 }
 .instagram-productosMuffins p:hover::before {
   width: 100%;
+}
+
+.texto-contacto-productosMuffins {
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 .contacto-productosMuffins p {
@@ -3935,6 +3939,11 @@ h4 {
   width: 100%;
 }
 
+.texto-contacto-productosClickeados {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
 .contacto-productosClickeados p {
   font-weight: lighter;
   position: relative;
@@ -4128,6 +4137,11 @@ h4 {
 }
 .instagram-carrito p:hover::before {
   width: 100%;
+}
+
+.texto-contacto-carrito {
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 .contacto-carrito p {
