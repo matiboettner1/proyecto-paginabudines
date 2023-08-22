@@ -12,7 +12,7 @@
 <body class="body-carrito">
     <header>
         <nav class="nav-carrito">
-            <input type="checkbox" id="nav__checkbox" class="nav__checkbox"/>
+            <input type="checkbox" id="nav__checkbox" class="nav__checkbox" />
             <label for="nav__checkbox" class="nav__toggle">
                 <img src="../media/img/menu-hamburguesa.png" class="hamburger" />
                 <img src="../media/img/menu-hamburguesa-cerrar.png" class="close" />
@@ -21,7 +21,8 @@
             <ul class="nav__menu">
                 <li class="logo-inicio-carrito">
                     <a href="../index.html">
-                        <img src="../media/img/logo-hechoencasa.png" class="logo-productosBudines" alt="logo de hecho en casa">
+                        <img src="../media/img/logo-hechoencasa.png" class="logo-productosBudines"
+                            alt="logo de hecho en casa">
                     </a>
                     <p class="texto-logo-carrito">hechoencasa.cb</p>
                 </li>
@@ -51,18 +52,14 @@
     </header>
 
     <main>
-        <div>
+        <div class="grilla-main">
             <ul class="compras-container-carrito">
                 <li class="compra1-carrito">
                     <img src="../media/img/budin-frutosrojos2.jpg" class="budin-frutosrojos"
                         alt="imagen de un budin de frutos rojos" />
                     <div class="texto-carrito">
                         <h2 class="h2-carrito">Budín de Frutos Rojos</h2>
-                        <p class="descripcion-producto-carrito">Nuestro budín combina la suavidad artesanal con la
-                            frescura de frambuesas, fresas y moras. Cada rebanada es una explosión de color y sabor,
-                            perfecta para cualquier ocasión. Deléitate con un dulce que cautiva tus sentidos y endulza
-                            tu día.
-                        </p>
+                        <h3 class="precio-producto">$1500</h3>
                     </div>
                     <div class="cantidad-y-boton-cerrar-carrito">
                         <div class="cantidad-carrito">
@@ -82,11 +79,7 @@
                         alt="imagen de un muffin de frutos rojos" />
                     <div class="texto-carrito">
                         <h2 class="h2-carrito">Muffin de Frutos Rojos</h2>
-                        <p class="descripcion-producto-carrito">Explora la explosión de sabores con nuestro muffin de
-                            frutos rojos. Es una mezcla armoniosa de jugosos frutos en una base esponjosa. Cada mordisco
-                            es una sinfonía de dulzura y frescura. ¡Probalo y saborea la delicia de los frutos rojos
-                            combinada con esponjosidad!
-                        </p>
+                        <h3 class="precio-producto">$500</h3>
                     </div>
                     <div class="cantidad-y-boton-cerrar-carrito">
                         <div class="cantidad-carrito">
@@ -106,11 +99,7 @@
                         alt="imagen de un muffin de coco" />
                     <div class="texto-carrito">
                         <h2 class="h2-carrito">Muffin de Coco</h2>
-                        <p class="descripcion-producto-carrito">Sumérgete en la delicia tropical de nuestro muffin de
-                            coco. Su textura esponjosa y su sabor embriagador te transportarán a playas paradisíacas en
-                            cada mordisco. Descubre el auténtico sabor del coco. ¡Pide ahora y lleva el paraíso a tu
-                            paladar!
-                        </p>
+                        <h3 class="precio-producto">$500</h3>
                     </div>
                     <div class="cantidad-y-boton-cerrar-carrito">
                         <div class="cantidad-carrito">
@@ -126,10 +115,40 @@
                     </div>
                 </li>
             </ul>
+            <div class="total-container-carrito">
+                <h3>Resumen de compra</h3>
+                <hr>
+                <div class="precios">
+                    <div class="productos-precios">
+                        <h4>Productos</h4>
+                        <h4>$2500</h4>
+                    </div>
+                    <div class="envio-precios">
+                        <h4>Envío</h4>
+                        <h4>$500</h4>
+                    </div>
+                    <div class="codigo-cupon">
+                        <h4>Código de cupón</h4>
+                        <form class="form">
+                            <input type="text" required />
+                            <label class="texto-label">
+                                <span class="placeholder">Ingrese el código</span>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <hr>
+                <div class="total">
+                    <h4>Total</h4>
+                    <h4>$3000</h4>
+                </div>
+                <hr>
+                <div class="botoncomprar-container-carrito">
+                    <button type="submit" class="boton-comprar-carrito">Comprar</button>
+                </div>
+            </div>
         </div>
-        <div class="botoncomprar-container-carrito">
-            <button type="submit" class="boton-comprar-carrito">Comprar</button>
-        </div>
+
     </main>
 
     <footer>

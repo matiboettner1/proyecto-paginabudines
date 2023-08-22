@@ -2,13 +2,186 @@
 	background-color: $background-color_2;
 }
 
+.grilla-main {
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	grid-template-rows: 1fr;
+	grid-template-areas: "compras total";
+	justify-items: center;
+
+	@media (max-width: 1500px) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 70% 30%;
+		grid-template-areas: "compras" "total";
+		margin-bottom: 100px;
+	}
+
+	@media (max-width: 576px) {
+		grid-template-rows: 80% 20%;
+	}
+
+}
+
 .compras-container-carrito {
+	grid-area: compras;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 20px;
+	margin: 50px 0px 50px 0px;
+
+	@media (max-width: 1500px) {
+		margin: 0;
+	}
 }
+
+.total-container-carrito {
+	grid-area: total;
+	padding: 50px;
+	width: 750px;
+
+	@media (max-width: 1500px) {
+		width: 730px;
+		justify-items: center;
+		padding: 0;
+	}
+
+	@media (max-width: 1200px) {
+		width: 680px;
+	}
+
+	@media (max-width: 768px) {
+		width: 580px;
+		
+	}
+
+	@media (max-width: 576px) {
+		width: 350px;
+	}
+
+	@media (max-width: 400px) {
+		width: 300px;
+	}
+
+	@media (max-width: 320px) {
+		width: 280px;
+	}
+
+	h3 {
+		font-size: 40px;
+		margin: 10px 0px 10px 0px;
+		padding: 0;
+
+		@media (max-width: 576px) {
+			font-size: 30px;
+		}
+
+		@media (max-width: 400px) {
+			font-size: 25px;
+		}
+
+	}
+
+	h4 {
+		margin: 10px 0px 10px 0px;
+		padding: 0;
+		font-size: 25px;
+		@media (max-width: 576px) {
+			font-size: 18px;
+			display: flex;
+			align-items: center;
+		}
+		@media (max-width: 400px) {
+			font-size: 15px;
+		}
+	}
+
+	.precios {
+
+		.productos-precios,
+		.envio-precios {
+			display: flex;
+			justify-content: space-between;
+		}
+
+
+		.codigo-cupon {
+			display: flex;
+			justify-content: space-between;
+			@media (max-width: 576px) {
+				flex-direction: column;;
+			}
+
+			.form {
+				width: fit-content;
+				height: 58px;
+				max-width: 400px;
+				position: relative;
+				overflow: hidden;
+
+				input {
+					width: 100%;
+					height: 100%;
+					background: none;
+					color: black;
+					padding-top: 20px;
+					border: none;
+					outline: 0px;
+
+					&:focus+.texto-label .placeholder,
+					&:valid+.texto-label .placeholder {
+						transform: translateY(-110%);
+						font-size: 15px;
+						color: #383838;
+					}
+
+					&:focus+.texto-label::after,
+					&:valid+.texto-label::after {
+						transform: translateX(0%);
+					}
+				}
+
+				.texto-label {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					pointer-events: none;
+					border-bottom: 1px solid #383838;
+
+					&::after {
+						content: "";
+						position: absolute;
+						left: 0;
+						bottom: -1px;
+						width: 100%;
+						height: 100%;
+						border-bottom: 2px solid #666666;
+						transform: translateX(-100%);
+						transition: all 0.3s ease;
+					}
+
+					.placeholder {
+						position: absolute;
+						bottom: 5px;
+						left: 0;
+						transition: all 0.3s ease;
+						color: black;
+					}
+				}
+			}
+		}
+	}
+
+	.total {
+		display: flex;
+		justify-content: space-between;
+	}
+
+}
+
+
 
 @mixin compras-cajas($ancho) {
 	background-color: $background-color_4;
@@ -20,7 +193,9 @@
 	border-radius: 10px;
 }
 
-.compra1-carrito , .compra2-carrito , .compra3-carrito {
+.compra1-carrito,
+.compra2-carrito,
+.compra3-carrito {
 	@include compras-cajas(auto);
 }
 
@@ -36,14 +211,10 @@
 		font-weight: bold;
 	}
 
-	p {
-		font-size: 16px;
-		padding: 5px;
-		gap: 5px;
-		margin: 10px 0px;
-		line-height: 20px;
-		width: 350px;
-		text-align: start;
+	.precio-producto {
+		font-size: 30px;
+		margin: 10px;
+		color: #00000081;
 	}
 }
 
@@ -55,7 +226,9 @@
 	object-fit: cover;
 }
 
-.budin-frutosrojos , .muffin-frutosrojos-carrito , .muffin-coco-carrito {
+.budin-frutosrojos,
+.muffin-frutosrojos-carrito,
+.muffin-coco-carrito {
 	@include imagenes-compras(250px);
 }
 
@@ -98,7 +271,9 @@
 	position: relative;
 }
 
-.boton-restar-carrito , .cantidad-valor-carrito , .boton-agregar-carrito {
+.boton-restar-carrito,
+.cantidad-valor-carrito,
+.boton-agregar-carrito {
 	margin: 5px;
 }
 
@@ -113,7 +288,7 @@
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr;
 	grid-template-areas: "cerrar"
-						 "cantidad";
+		"cantidad";
 	gap: 160px;
 }
 
@@ -138,41 +313,47 @@
 
 @media (max-width: 1200px) {
 
-	.compra1-carrito , .compra2-carrito , .compra3-carrito {
+	.compra1-carrito,
+	.compra2-carrito,
+	.compra3-carrito {
 		@include compras-cajas(auto);
 	}
 
-	.budin-frutosrojos , .muffin-frutosrojos-carrito , .muffin-coco-carrito {
+	.budin-frutosrojos,
+	.muffin-frutosrojos-carrito,
+	.muffin-coco-carrito {
 		width: 200px;
 		object-fit: cover;
 	}
 
-	.boton-restar-carrito , .cantidad-valor-carrito , .boton-agregar-carrito {
+	.boton-restar-carrito,
+	.cantidad-valor-carrito,
+	.boton-agregar-carrito {
 		margin: 5px;
 	}
-	
+
 	.icono-cruz-carrito {
 		width: 30px;
 		height: 30px;
 		margin: 5px;
 	}
-	
+
 	.cantidad-y-boton-cerrar-carrito {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 1fr;
 		grid-template-areas: "cerrar"
-							 "cantidad";
+			"cantidad";
 		gap: 160px;
 	}
-	
+
 	.boton-cerrar-carrito {
 		grid-area: cerrar;
 		display: flex;
 		justify-content: flex-end;
 		align-items: flex-start;
 	}
-	
+
 	.cantidad-carrito {
 		grid-area: cantidad;
 	}
@@ -181,11 +362,15 @@
 
 @media (max-width: 768px) {
 
-	.compra1-carrito , .compra2-carrito , .compra3-carrito {
+	.compra1-carrito,
+	.compra2-carrito,
+	.compra3-carrito {
 		@include compras-cajas(auto);
 	}
 
-	.budin-frutosrojos , .muffin-frutosrojos-carrito , .muffin-coco-carrito {
+	.budin-frutosrojos,
+	.muffin-frutosrojos-carrito,
+	.muffin-coco-carrito {
 		width: 200px;
 	}
 
@@ -205,32 +390,34 @@
 		}
 	}
 
-	.boton-restar-carrito , .cantidad-valor-carrito , .boton-agregar-carrito {
+	.boton-restar-carrito,
+	.cantidad-valor-carrito,
+	.boton-agregar-carrito {
 		margin: 5px;
 	}
-	
+
 	.icono-cruz-carrito {
 		width: 30px;
 		height: 30px;
 		margin: 5px;
 	}
-	
+
 	.cantidad-y-boton-cerrar-carrito {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 1fr;
 		grid-template-areas: "cerrar"
-							 "cantidad";
+			"cantidad";
 		gap: 160px;
 	}
-	
+
 	.boton-cerrar-carrito {
 		grid-area: cerrar;
 		display: flex;
 		justify-content: flex-end;
 		align-items: flex-start;
 	}
-	
+
 	.cantidad-carrito {
 		grid-area: cantidad;
 	}
@@ -239,7 +426,9 @@
 
 @media (max-width: 576px) {
 
-	.compra1-carrito , .compra2-carrito , .compra3-carrito {
+	.compra1-carrito,
+	.compra2-carrito,
+	.compra3-carrito {
 		display: flex;
 		flex-direction: column;
 		width: 250px;
@@ -265,7 +454,9 @@
 		}
 	}
 
-	.budin-frutosrojos , .muffin-frutosrojos-carrito , .muffin-coco-carrito {
+	.budin-frutosrojos,
+	.muffin-frutosrojos-carrito,
+	.muffin-coco-carrito {
 		width: 250px;
 		height: 300px;
 		margin: 0px;
@@ -291,13 +482,15 @@
 		position: relative;
 		width: 20px;
 		height: 20px;
-		top: -580px;
+		top: -415px;
 	}
 }
 
 @media (max-width: 320px) {
 
-	.compra1-carrito , .compra2-carrito , .compra3-carrito {
+	.compra1-carrito,
+	.compra2-carrito,
+	.compra3-carrito {
 		display: flex;
 		flex-direction: column;
 		width: 250px;
@@ -323,7 +516,9 @@
 		}
 	}
 
-	.budin-frutosrojos , .muffin-frutosrojos-carrito , .muffin-coco-carrito {
+	.budin-frutosrojos,
+	.muffin-frutosrojos-carrito,
+	.muffin-coco-carrito {
 		width: 250px;
 		height: 300px;
 		margin: 0px;

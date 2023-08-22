@@ -882,29 +882,22 @@ input[type=checkbox] {
 }
 
 .imagen-con-texto-presentacion {
-  display: inline-block;
-  margin-top: 37px;
-}
-.imagen-con-texto-presentacion img {
+  margin-top: 75px;
   width: 100%;
   height: 650px;
-  object-fit: cover;
-  margin-top: 75px;
-  background-color: rgba(0, 0, 0, 0.096);
-  filter: brightness(0.6);
+  background-image: url(../media/img/budin-background.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
 }
 @media (max-width: 576px) {
-  .imagen-con-texto-presentacion img {
+  .imagen-con-texto-presentacion {
     height: 450px;
   }
 }
 .imagen-con-texto-presentacion h1 {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 60px;
-  display: flex;
   color: white;
   animation: cambiarColor 3s infinite alternate;
   font-weight: 900;
@@ -913,7 +906,7 @@ input[type=checkbox] {
 @media (max-width: 576px) {
   .imagen-con-texto-presentacion h1 {
     font-size: 30px;
-    top: 35%;
+    margin: 13px;
   }
 }
 
@@ -2581,7 +2574,7 @@ hr {
 }
 
 .producto-productosClickeados {
-  background-color: #f0efef;
+  background-color: whitesmoke;
   display: flex;
   justify-items: center;
   margin: 20px;
@@ -2621,7 +2614,7 @@ hr {
 
 .boton-agregar-productosClickeados {
   color: white;
-  background-color: greenyellow;
+  background-color: rgb(255, 226, 163);
   width: fit-content;
   margin: 10px;
   padding: 10px;
@@ -2634,7 +2627,7 @@ hr {
   justify-content: center;
 }
 .boton-agregar-productosClickeados:hover {
-  background-color: rgb(137, 224, 6);
+  background-color: rgb(241, 200, 112);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -2823,15 +2816,183 @@ hr {
   background-color: #f7f6f6;
 }
 
+.grilla-main {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 1fr;
+  grid-template-areas: "compras total";
+  justify-items: center;
+}
+@media (max-width: 1500px) {
+  .grilla-main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 70% 30%;
+    grid-template-areas: "compras" "total";
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 576px) {
+  .grilla-main {
+    grid-template-rows: 80% 20%;
+  }
+}
+
 .compras-container-carrito {
+  grid-area: compras;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin: 50px 0px 50px 0px;
+}
+@media (max-width: 1500px) {
+  .compras-container-carrito {
+    margin: 0;
+  }
 }
 
-.compra1-carrito, .compra2-carrito, .compra3-carrito {
+.total-container-carrito {
+  grid-area: total;
+  padding: 50px;
+  width: 750px;
+}
+@media (max-width: 1500px) {
+  .total-container-carrito {
+    width: 730px;
+    justify-items: center;
+    padding: 0;
+  }
+}
+@media (max-width: 1200px) {
+  .total-container-carrito {
+    width: 680px;
+  }
+}
+@media (max-width: 768px) {
+  .total-container-carrito {
+    width: 580px;
+  }
+}
+@media (max-width: 576px) {
+  .total-container-carrito {
+    width: 350px;
+  }
+}
+@media (max-width: 400px) {
+  .total-container-carrito {
+    width: 300px;
+  }
+}
+@media (max-width: 320px) {
+  .total-container-carrito {
+    width: 280px;
+  }
+}
+.total-container-carrito h3 {
+  font-size: 40px;
+  margin: 10px 0px 10px 0px;
+  padding: 0;
+}
+@media (max-width: 576px) {
+  .total-container-carrito h3 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 400px) {
+  .total-container-carrito h3 {
+    font-size: 25px;
+  }
+}
+.total-container-carrito h4 {
+  margin: 10px 0px 10px 0px;
+  padding: 0;
+  font-size: 25px;
+}
+@media (max-width: 576px) {
+  .total-container-carrito h4 {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 400px) {
+  .total-container-carrito h4 {
+    font-size: 15px;
+  }
+}
+.total-container-carrito .precios .productos-precios,
+.total-container-carrito .precios .envio-precios {
+  display: flex;
+  justify-content: space-between;
+}
+.total-container-carrito .precios .codigo-cupon {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 576px) {
+  .total-container-carrito .precios .codigo-cupon {
+    flex-direction: column;
+  }
+}
+.total-container-carrito .precios .codigo-cupon .form {
+  width: fit-content;
+  height: 58px;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.total-container-carrito .precios .codigo-cupon .form input {
+  width: 100%;
+  height: 100%;
+  background: none;
+  color: black;
+  padding-top: 20px;
+  border: none;
+  outline: 0px;
+}
+.total-container-carrito .precios .codigo-cupon .form input:focus + .texto-label .placeholder, .total-container-carrito .precios .codigo-cupon .form input:valid + .texto-label .placeholder {
+  transform: translateY(-110%);
+  font-size: 15px;
+  color: #383838;
+}
+.total-container-carrito .precios .codigo-cupon .form input:focus + .texto-label::after, .total-container-carrito .precios .codigo-cupon .form input:valid + .texto-label::after {
+  transform: translateX(0%);
+}
+.total-container-carrito .precios .codigo-cupon .form .texto-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #383838;
+}
+.total-container-carrito .precios .codigo-cupon .form .texto-label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid #666666;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+.total-container-carrito .precios .codigo-cupon .form .texto-label .placeholder {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s ease;
+  color: black;
+}
+.total-container-carrito .total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.compra1-carrito,
+.compra2-carrito,
+.compra3-carrito {
   background-color: white;
   display: flex;
   width: auto;
@@ -2852,17 +3013,15 @@ hr {
   margin: 10px;
   font-weight: bold;
 }
-.texto-carrito p {
-  font-size: 16px;
-  padding: 5px;
-  gap: 5px;
-  margin: 10px 0px;
-  line-height: 20px;
-  width: 350px;
-  text-align: start;
+.texto-carrito .precio-producto {
+  font-size: 30px;
+  margin: 10px;
+  color: rgba(0, 0, 0, 0.5058823529);
 }
 
-.budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-coco-carrito {
+.budin-frutosrojos,
+.muffin-frutosrojos-carrito,
+.muffin-coco-carrito {
   width: 250px;
   height: 300px;
   margin: 10px;
@@ -2872,7 +3031,7 @@ hr {
 
 .boton-comprar-carrito {
   color: white;
-  background-color: greenyellow;
+  background-color: rgb(255, 226, 163);
   width: fit-content;
   margin: 10px;
   padding: 10px;
@@ -2886,7 +3045,7 @@ hr {
   justify-content: center;
 }
 .boton-comprar-carrito:hover {
-  background-color: rgb(137, 224, 6);
+  background-color: rgb(241, 200, 112);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -2908,7 +3067,9 @@ hr {
   position: relative;
 }
 
-.boton-restar-carrito, .cantidad-valor-carrito, .boton-agregar-carrito {
+.boton-restar-carrito,
+.cantidad-valor-carrito,
+.boton-agregar-carrito {
   margin: 5px;
 }
 
@@ -2944,7 +3105,9 @@ hr {
   }
 }
 @media (max-width: 1200px) {
-  .compra1-carrito, .compra2-carrito, .compra3-carrito {
+  .compra1-carrito,
+  .compra2-carrito,
+  .compra3-carrito {
     background-color: white;
     display: flex;
     width: auto;
@@ -2953,11 +3116,15 @@ hr {
     padding: 0;
     border-radius: 10px;
   }
-  .budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-coco-carrito {
+  .budin-frutosrojos,
+  .muffin-frutosrojos-carrito,
+  .muffin-coco-carrito {
     width: 200px;
     object-fit: cover;
   }
-  .boton-restar-carrito, .cantidad-valor-carrito, .boton-agregar-carrito {
+  .boton-restar-carrito,
+  .cantidad-valor-carrito,
+  .boton-agregar-carrito {
     margin: 5px;
   }
   .icono-cruz-carrito {
@@ -2983,7 +3150,9 @@ hr {
   }
 }
 @media (max-width: 768px) {
-  .compra1-carrito, .compra2-carrito, .compra3-carrito {
+  .compra1-carrito,
+  .compra2-carrito,
+  .compra3-carrito {
     background-color: white;
     display: flex;
     width: auto;
@@ -2992,7 +3161,9 @@ hr {
     padding: 0;
     border-radius: 10px;
   }
-  .budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-coco-carrito {
+  .budin-frutosrojos,
+  .muffin-frutosrojos-carrito,
+  .muffin-coco-carrito {
     width: 200px;
   }
   .texto-carrito {
@@ -3008,7 +3179,9 @@ hr {
     padding: 5px;
     width: 250px;
   }
-  .boton-restar-carrito, .cantidad-valor-carrito, .boton-agregar-carrito {
+  .boton-restar-carrito,
+  .cantidad-valor-carrito,
+  .boton-agregar-carrito {
     margin: 5px;
   }
   .icono-cruz-carrito {
@@ -3034,7 +3207,9 @@ hr {
   }
 }
 @media (max-width: 576px) {
-  .compra1-carrito, .compra2-carrito, .compra3-carrito {
+  .compra1-carrito,
+  .compra2-carrito,
+  .compra3-carrito {
     display: flex;
     flex-direction: column;
     width: 250px;
@@ -3056,7 +3231,9 @@ hr {
     width: 250px;
     text-align: center;
   }
-  .budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-coco-carrito {
+  .budin-frutosrojos,
+  .muffin-frutosrojos-carrito,
+  .muffin-coco-carrito {
     width: 250px;
     height: 300px;
     margin: 0px;
@@ -3079,11 +3256,13 @@ hr {
     position: relative;
     width: 20px;
     height: 20px;
-    top: -580px;
+    top: -415px;
   }
 }
 @media (max-width: 320px) {
-  .compra1-carrito, .compra2-carrito, .compra3-carrito {
+  .compra1-carrito,
+  .compra2-carrito,
+  .compra3-carrito {
     display: flex;
     flex-direction: column;
     width: 250px;
@@ -3105,7 +3284,9 @@ hr {
     width: 250px;
     text-align: center;
   }
-  .budin-frutosrojos, .muffin-frutosrojos-carrito, .muffin-coco-carrito {
+  .budin-frutosrojos,
+  .muffin-frutosrojos-carrito,
+  .muffin-coco-carrito {
     width: 250px;
     height: 300px;
     margin: 0px;
