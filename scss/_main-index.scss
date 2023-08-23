@@ -17,7 +17,7 @@
     }
 
     h1 {
-        font-size: 60px;
+        font-size: 3.75rem;
         color: $color_1;
         animation: cambiarColor 3s infinite alternate;
         font-weight: 900;
@@ -25,7 +25,7 @@
         cursor: default;
 
         @media (max-width: 576px) {
-            font-size: 30px;
+            font-size: 1.875rem;
             margin: 13px;
         }
     }
@@ -47,23 +47,23 @@
 
 .tarjeta-principal {
     h2 {
-        font-size: 40px;
+        font-size: 2.5rem;
         margin: 30px;
         width: auto;
         text-align: center;
 
         @media (max-width: 576px) {
-            font-size: 20px;
+            font-size: 1.25rem;
         }
     }
 
     p {
-        font-size: 25px;
+        font-size: 1.5625rem;
         margin: 10px 20% 10px 20%;
         text-align: center;
 
         @media (max-width: 576px) {
-            font-size: 15px;
+            font-size: 0.9375rem;
         }
 
         a {
@@ -139,31 +139,31 @@
 
         h3 {
             margin: 10px;
-            font-size: 34px;
+            font-size:  2.125rem;
             color: whitesmoke;
 
             @media (max-width: 1200px) {
-                font-size: 29px;
+                font-size: 1.8125rem;
             }
 
             @media (max-width: 1000px) {
-                font-size: 25px;
+                font-size: 1.5625rem;
             }
         }
 
         p {
-            font-size: 25px;
+            font-size: 1.5625rem;
             margin: 20px;
             color: whitesmoke;
             text-align: left;
 
             @media (max-width: 1200px) {
-                font-size: 15px;
+                font-size: 0.9375rem;
                 margin: 10px;
             }
 
             @media (max-width: 1000px) {
-                font-size: 12px;
+                font-size: 0.75rem;
                 margin: 10px;
             }
         }
@@ -208,77 +208,77 @@
 
         h4 {
             width: fit-content;
-            font-size: 55px;
+            font-size: 3.4375rem;
             color: rgb(0, 0, 0);
             font-weight: 900;
             text-align: start;
             margin: 0px 0px 0px 10px;
 
             @media (max-width: 1600px) {
-                font-size: 50px;
+                font-size: 3.125rem;
             }
 
             @media (max-width: 1500px) {
-                font-size: 45px;
+                font-size: 2.8125rem;
             }
 
             @media (max-width: 1300px) {
-                font-size: 40px;
+                font-size: 2.5rem;
             }
 
             @media (max-width: 1100px) {
-                font-size: 35px;
+                font-size: 2.1875rem;
             }
 
             @media (max-width: 1000px) {
-                font-size: 30px;
+                font-size: 1.875rem;
             }
 
             @media (max-width: 900px) {
-                font-size: 25px;
+                font-size: 1.5625rem;
             }
 
             @media (max-width: 768px) {
-                font-size: 30px;
+                font-size: 1.875rem;
             }
 
             @media (max-width: 576px) {
-                font-size: 23px;
+                font-size: 1.43755rem;
             }
             @media (max-width: 400px) {
-                font-size: 20px;
+                font-size: 1.25rem;
             }
         }
 
         h5 {
             width: fit-content;
-            font-size: 40px;
+            font-size: 2.5rem;
             font-weight: 700;
             color: rgb(124, 90, 52);
             margin: 0px 0px 0px 10px;
 
             @media (max-width: 1600px) {
-                font-size: 35px;
+                font-size: 2.1875rem;
             }
 
             @media (max-width: 1500px) {
-                font-size: 30px;
+                font-size: 1.875rem;
             }
 
             @media (max-width: 1300px) {
-                font-size: 25px;
+                font-size: 1.5625rem;
             }
 
             @media (max-width: 1100px) {
-                font-size: 20px;
+                font-size: 1.25rem;
             }
 
             @media (max-width: 1000px) {
-                font-size: 15px;
+                font-size: 0.9375rem;
             }
 
             @media (max-width: 768px) {
-                font-size: 16px;
+                font-size: 1rem;
             }
         }
     }
