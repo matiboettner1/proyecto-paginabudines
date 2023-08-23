@@ -2,7 +2,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif, "Open sans";
   box-sizing: border-box;
 }
 
@@ -1122,6 +1122,11 @@ input[type=checkbox] {
 @media (max-width: 576px) {
   .imagen-con-texto-presentacion2 .texto-final h4 {
     font-size: 23px;
+  }
+}
+@media (max-width: 400px) {
+  .imagen-con-texto-presentacion2 .texto-final h4 {
+    font-size: 20px;
   }
 }
 .imagen-con-texto-presentacion2 .texto-final h5 {
@@ -3321,6 +3326,7 @@ footer {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
+  padding: 15px;
 }
 
 .icono-email {
@@ -3522,6 +3528,7 @@ h4 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 15px;
 }
 
 .icono-email-productosBudines {
@@ -3696,6 +3703,7 @@ h4 {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
+  padding: 15px;
 }
 
 .icono-email-productosMuffins {
@@ -3896,6 +3904,7 @@ h4 {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
+  padding: 15px;
 }
 
 .icono-email-productosClickeados {
@@ -4096,6 +4105,7 @@ h4 {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
+  padding: 15px;
 }
 
 .icono-email-carrito {
