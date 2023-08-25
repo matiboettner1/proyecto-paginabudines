@@ -139,18 +139,18 @@ input[type="checkbox"] {
 
 .h1-carrito {
     text-align: center;
-    font-size: 45px;
+    font-size: 2.8125rem;
 }
 
 @media (max-width: 1200px) {
     .h1-carrito {
-        font-size: 35px;
+        font-size: 2.1875rem;
     }
 }
 
 @media (max-width: 768px) {
     .h1-carrito {
-        font-size: 30px;
+        font-size: 1.875rem;
     }
 }
 
@@ -184,7 +184,7 @@ input[type="checkbox"] {
     }
 
     .h1-carrito {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
 }
