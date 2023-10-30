@@ -4,12 +4,15 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Budin de Zanahoria - Hecho En Casa</title>
+    <meta name="description"
+        content="Descubre el deleite de los sabores caseros con nuestros exquisitos budines y muffins. En HechoEnCasa.cb, te ofrecemos una irresistible selección de delicias horneadas con amor. Disfruta de la frescura y calidad en cada bocado. ¡Explora nuestra variedad de recetas y regálate momentos de dulce felicidad en cada mordisco!">
+    <title>Registrarse - Hecho En Casa</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/styles.css'>
 </head>
 
-<body>
+<body class="body-usuario">
+
     <header>
         <nav class="nav">
             <input type="checkbox" id="nav__checkbox" class="nav__checkbox">
@@ -44,43 +47,42 @@
                     alt="logo hechoencasa.cb" /></a>
             <p>hechoencasa.cb</p>
         </div>
-        <div class="productos-nav">
-            <div>
-                <ul class="paginas-productos">
-                    <li class="budines-productos">
-                        <a href="productos-budines.html">Budines</a>
-                    </li>
-                    <li class="muffins-productos">
-                        <a href="productos-muffins.html">Muffins</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
     </header>
 
     <main>
-        <h1 class="h1-productosClickeados">Productos / Budines / Budín de Zanahoria</h1>
-        <section class="producto-container-productosClickeados">
-            <div class="producto-productosClickeados">
-                <img src="../media/img/budin-zanahoria1.jpg" class="imagen-budin-productosClickeados"
-                    alt="imagen de un budin de frutos rojos" />
-                <div class="contenido-producto-productosClickeados">
-                    <div class="texto-productosClickeados">
-                        <h2 class="h2-productosClickeados">Budín de Zanahoria</h2>
-                        <p>Nuestro budín es el resultado de una cuidadosa combinación de ingredientes de la más alta
-                            calidad, mezclados con el toque mágico de nuestros chefs expertos. Las zanahorias, ralladas
-                            finamente para lograr una distribución uniforme, aportan una jugosidad excepcional y un
-                            matiz de dulzura que se funde perfectamente con la masa.
-                        </p>
-                    </div>
-                    <div class="agregar-productosClickeados">
-                        <img src="../media/img/anadir-a-la-cesta.png" class="agregar-al-carrito-productosClickeados"
-                            alt="icono de agregar al carrito" />
-                        <button type="button" class="boton-agregar-productosClickeados">Agregar</button>
-                    </div>
-                </div>
+        <form id="registerForm" class="formulario">
+            <h1>Registro de usuario</h1>
+    
+            <div>
+                <label id="labelNombreUsuario" for="nombreUsuario">Nombre de usuario</label>
+                <input type="text" id="nombreUsuario" autocomplete="username"/>
             </div>
-        </section>  
+    
+            <div>
+                <label id="labelContraseniaUsuario1" for="contraseniaUsuario">Contraseña</label>
+                <input type="password" id="contraseniaUsuario" autocomplete="new-password"/>
+            </div>
+            <div>
+                <label id="labelRepetirContrasenia" for="repetirContrasenia">Repetir contraseña</label>
+                <input type="password" id="repetirContrasenia" autocomplete="new-password"/>
+            </div>
+            
+            <div id="errorMessage">
+    
+            </div>
+            <div id="successfulMessage">
+    
+            </div>
+    
+            <div>
+                <button type="submit" id="boton-registrar">Registrarse</button>
+            </div>
+    
+            <div class="usuario-registrado usuario-registrado2">
+                <h3>¿Ya estas registrado?</h3>
+                <a href="./login-usuario.html">Iniciar sesión</a>
+            </div>
+        </form>
     </main>
 
     <footer>
@@ -107,6 +109,6 @@
         </div>
         <h4>Copyright © 2023 Hecho En Casa | Powered by Matías Boettner</h4>
     </footer>
+    <script src="main.js"></script>
 </body>
-
 </html>

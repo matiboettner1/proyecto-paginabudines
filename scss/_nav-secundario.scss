@@ -1,0 +1,56 @@
+.barra-con-logo {
+    margin-top: 125px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+    z-index: 0;
+}
+
+.productos-nav {
+    background-color: $background-color_1;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5625rem;
+    font-weight: bold;
+}
+
+.paginas-productos {
+    margin: 15px;
+    display: flex;
+}
+
+.budines-productos , .muffins-productos {
+    @include animacion-paginas();
+}
+
+@media (max-width: 576px) {
+
+    .barra-con-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: default;
+    }
+
+    .productos-nav- {
+        font-size: 1.25rem;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    .barra-con-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: default;
+    }
+
+    .productos-nav {
+        font-size: 1.25rem;
+    }
+
+}

@@ -141,121 +141,13 @@ input[type=checkbox] {
     display: flex;
   }
 }
-.nav-productosBudines {
-  background-color: #fff8ea;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 10px 10px;
-  width: 100%;
-  z-index: 100;
-  font-weight: bold;
-  text-decoration: none;
-}
-.nav-productosBudines li {
-  list-style: none;
-}
-
-.index-productosBudines, .productos-productosBudines, .carrito-productosBudines {
-  margin: 15px;
-  width: fit-content;
-  text-align: center;
-  position: relative;
-}
-.index-productosBudines::before, .productos-productosBudines::before, .carrito-productosBudines::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.index-productosBudines:hover::before, .productos-productosBudines:hover::before, .carrito-productosBudines:hover::before {
-  width: 100%;
-}
-
-.nav__toggle {
-  position: absolute;
-  cursor: pointer;
-  margin: 0rem 1rem;
-  right: 0;
-}
-
-.close,
-input[type=checkbox] {
-  display: none;
-}
-
-.hamburger {
-  width: 30px;
-  margin: 30px;
-  margin-right: 10px;
-}
-
-.nav__menu {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  margin: 1rem;
-}
-
-.logo-inicio-productosBudines {
-  margin-right: auto;
-  display: flex;
-  position: relative;
-}
-
-.logo-productosBudines {
-  width: 50px;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-.texto-logo-productosBudines {
-  display: flex;
-  position: relative;
-  top: 16px;
-  left: 9px;
-  cursor: default;
-}
-
-.nav__menu a {
-  text-decoration: none;
-  color: initial;
-  font-size: 1.2rem;
-}
-
-#nav__checkbox:checked ~ ul.nav__menu li {
+.icono-usuario {
+  width: 28px;
+  height: 28px;
   display: flex;
 }
 
-#nav__checkbox:checked ~ label.nav__toggle .hamburger {
-  display: none;
-}
-
-#nav__checkbox:checked ~ label.nav__toggle .close {
-  display: flex;
-  width: 30px;
-  margin: 30px;
-  margin-right: 10px;
-}
-
-@media (min-width: 768px) {
-  .nav__toggle {
-    display: none;
-  }
-  .nav__menu {
-    flex-direction: row;
-  }
-  .nav__menu li {
-    display: flex;
-  }
-}
-.barra-con-logo-productosBudines {
+.barra-con-logo {
   margin-top: 125px;
   margin-bottom: 10px;
   display: flex;
@@ -265,7 +157,7 @@ input[type=checkbox] {
   z-index: 0;
 }
 
-.productos-nav-productosBudines {
+.productos-nav {
   background-color: #fff8ea;
   display: flex;
   justify-content: center;
@@ -273,18 +165,18 @@ input[type=checkbox] {
   font-weight: bold;
 }
 
-.paginas-productos-productosBudines {
+.paginas-productos {
   margin: 15px;
   display: flex;
 }
 
-.budines-productosBudines, .muffins-productosBudines {
-  margin: 10px;
+.budines-productos, .muffins-productos {
+  margin: 15px;
   width: fit-content;
   text-align: center;
   position: relative;
 }
-.budines-productosBudines::before, .muffins-productosBudines::before {
+.budines-productos::before, .muffins-productos::before {
   content: "";
   position: absolute;
   top: 100%;
@@ -294,509 +186,32 @@ input[type=checkbox] {
   background: rgb(0, 0, 0);
   transition: 0.3s;
 }
-.budines-productosBudines:hover::before, .muffins-productosBudines:hover::before {
+.budines-productos:hover::before, .muffins-productos:hover::before {
   width: 100%;
 }
 
 @media (max-width: 576px) {
-  .barra-con-logo-productosBudines {
+  .barra-con-logo {
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: default;
   }
-  .productos-nav-productosBudines {
-    font-size: 20px;
+  .productos-nav- {
+    font-size: 1.25rem;
   }
 }
 @media (max-width: 320px) {
-  .barra-con-logo-productosBudines {
+  .barra-con-logo {
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: default;
   }
-  .productos-nav-productosBudines {
-    font-size: 20px;
+  .productos-nav {
+    font-size: 1.25rem;
   }
 }
-.nav-productosMuffins {
-  background-color: #fff8ea;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 10px 10px;
-  width: 100%;
-  z-index: 100;
-  font-weight: bold;
-  text-decoration: none;
-}
-.nav-productosMuffins li {
-  list-style: none;
-}
-
-.index-productosMuffins, .productos-productosMuffins, .carrito-productosMuffins {
-  margin: 15px;
-  width: fit-content;
-  text-align: center;
-  position: relative;
-}
-.index-productosMuffins::before, .productos-productosMuffins::before, .carrito-productosMuffins::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.index-productosMuffins:hover::before, .productos-productosMuffins:hover::before, .carrito-productosMuffins:hover::before {
-  width: 100%;
-}
-
-.nav__toggle {
-  position: absolute;
-  cursor: pointer;
-  margin: 0rem 1rem;
-  right: 0;
-}
-
-.close,
-input[type=checkbox] {
-  display: none;
-}
-
-.hamburger {
-  width: 30px;
-  margin: 30px;
-  margin-right: 10px;
-}
-
-.nav__menu {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  margin: 1rem;
-}
-
-.logo-inicio-productosMuffins {
-  margin-right: auto;
-  display: flex;
-  position: relative;
-}
-
-.logo-productosMuffins {
-  width: 50px;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-.texto-logo-productosMuffins {
-  display: flex;
-  position: relative;
-  top: 16px;
-  left: 9px;
-  cursor: default;
-}
-
-.nav__menu a {
-  text-decoration: none;
-  color: initial;
-  font-size: 1.2rem;
-}
-
-#nav__checkbox:checked ~ ul.nav__menu li {
-  display: flex;
-}
-
-#nav__checkbox:checked ~ label.nav__toggle .hamburger {
-  display: none;
-}
-
-#nav__checkbox:checked ~ label.nav__toggle .close {
-  display: flex;
-  width: 30px;
-  margin: 30px;
-  margin-right: 10px;
-}
-
-@media (min-width: 768px) {
-  .nav__toggle {
-    display: none;
-  }
-  .nav__menu {
-    flex-direction: row;
-  }
-  .nav__menu li {
-    display: flex;
-  }
-}
-.barra-con-logo-productosMuffins {
-  margin-top: 125px;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: default;
-  z-index: 0;
-}
-
-.productos-nav-productosMuffins {
-  background-color: #fff8ea;
-  display: flex;
-  justify-content: center;
-  font-size: 1.5625rem;
-  font-weight: bold;
-}
-
-.paginas-productos-productosMuffins {
-  margin: 15px;
-  display: flex;
-}
-
-.budines-productosMuffins, .muffins-productosMuffins {
-  margin: 10px;
-  width: fit-content;
-  text-align: center;
-  position: relative;
-}
-.budines-productosMuffins::before, .muffins-productosMuffins::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.budines-productosMuffins:hover::before, .muffins-productosMuffins:hover::before {
-  width: 100%;
-}
-
-@media (max-width: 576px) {
-  .barra-con-logo-productosMuffins {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: default;
-  }
-  .productos-nav-productosMuffins {
-    font-size: 20px;
-  }
-}
-@media (max-width: 320px) {
-  .barra-con-logo-productosMuffins {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: default;
-  }
-  .productos-nav-productosMuffins {
-    font-size: 20px;
-  }
-}
-.nav-productosClickeados {
-  background-color: #fff8ea;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 10px 10px;
-  width: 100%;
-  z-index: 100;
-  font-weight: bold;
-  text-decoration: none;
-}
-.nav-productosClickeados li {
-  list-style: none;
-}
-
-.index-productosClickeados, .productos-productosClickeados, .carrito-productosClickeados {
-  margin: 15px;
-  width: fit-content;
-  text-align: center;
-  position: relative;
-}
-.index-productosClickeados::before, .productos-productosClickeados::before, .carrito-productosClickeados::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.index-productosClickeados:hover::before, .productos-productosClickeados:hover::before, .carrito-productosClickeados:hover::before {
-  width: 100%;
-}
-
-.nav__toggle {
-  position: absolute;
-  cursor: pointer;
-  margin: 0rem 1rem;
-  right: 0;
-}
-
-.close,
-input[type=checkbox] {
-  display: none;
-}
-
-.hamburger {
-  width: 30px;
-  margin: 30px;
-  margin-right: 10px;
-}
-
-.nav__menu {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  margin: 1rem;
-}
-
-.logo-inicio-productosClickeados {
-  margin-right: auto;
-  display: flex;
-  position: relative;
-}
-
-.logo-productosClickeados {
-  width: 50px;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-.texto-logo-productosClickeados {
-  display: flex;
-  position: relative;
-  top: 16px;
-  left: 9px;
-  cursor: default;
-}
-
-.nav__menu a {
-  text-decoration: none;
-  color: initial;
-  font-size: 1.2rem;
-}
-
-#nav__checkbox:checked ~ ul.nav__menu li {
-  display: flex;
-}
-
-#nav__checkbox:checked ~ label.nav__toggle .hamburger {
-  display: none;
-}
-
-#nav__checkbox:checked ~ label.nav__toggle .close {
-  display: flex;
-  width: 30px;
-  margin: 30px;
-  margin-right: 10px;
-}
-
-@media (min-width: 768px) {
-  .nav__toggle {
-    display: none;
-  }
-  .nav__menu {
-    flex-direction: row;
-  }
-  .nav__menu li {
-    display: flex;
-  }
-}
-.barra-con-logo-productosClickeados {
-  margin-top: 125px;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: default;
-  z-index: 0;
-}
-
-.productos-nav-productosClickeados {
-  background-color: #fff8ea;
-  display: flex;
-  justify-content: center;
-  font-size: 1.5625rem;
-  font-weight: bold;
-}
-
-.paginas-productos-productosClickeados {
-  margin: 15px;
-  display: flex;
-}
-
-.budines-productosClickeados, .muffins-productosClickeados {
-  margin: 10px;
-  width: fit-content;
-  text-align: center;
-  position: relative;
-}
-.budines-productosClickeados::before, .muffins-productosClickeados::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.budines-productosClickeados:hover::before, .muffins-productosClickeados:hover::before {
-  width: 100%;
-}
-
-@media (max-width: 576px) {
-  .barra-con-logo-productosClickeados {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: default;
-  }
-  .productos-nav-productosClickeados {
-    font-size: 20px;
-  }
-}
-@media (max-width: 320px) {
-  .barra-con-logo-productosClickeados {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: default;
-  }
-  .productos-nav-productosClickeados {
-    font-size: 20px;
-  }
-}
-.nav-carrito {
-  background-color: #fff8ea;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 10px 10px;
-  width: 100%;
-  z-index: 100;
-  font-weight: bold;
-  text-decoration: none;
-}
-.nav-carrito li {
-  list-style: none;
-}
-
-.index-carrito,
-.productos-carrito,
-.carrito-Carrito {
-  margin: 15px;
-  width: fit-content;
-  text-align: center;
-  position: relative;
-}
-.index-carrito::before,
-.productos-carrito::before,
-.carrito-Carrito::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.index-carrito:hover::before,
-.productos-carrito:hover::before,
-.carrito-Carrito:hover::before {
-  width: 100%;
-}
-
-.nav__toggle {
-  position: absolute;
-  cursor: pointer;
-  margin: 0rem 1rem;
-  right: 0;
-}
-
-.close,
-input[type=checkbox] {
-  display: none;
-}
-
-.hamburger {
-  width: 30px;
-  margin: 30px;
-  margin-right: 10px;
-}
-
-.nav__menu {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  margin: 1rem;
-}
-
-.logo-inicio-carrito {
-  margin-right: auto;
-  display: flex;
-  position: relative;
-}
-
-.logo-carrito {
-  width: 50px;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-.texto-logo-carrito {
-  display: flex;
-  position: relative;
-  top: 16px;
-  left: 9px;
-  cursor: default;
-}
-
-.nav__menu a {
-  text-decoration: none;
-  color: initial;
-  font-size: 1.2rem;
-}
-
-#nav__checkbox:checked ~ ul.nav__menu li {
-  display: flex;
-}
-
-#nav__checkbox:checked ~ label.nav__toggle .hamburger {
-  display: none;
-}
-
-#nav__checkbox:checked ~ label.nav__toggle .close {
-  display: flex;
-  width: 30px;
-  margin: 30px;
-  margin-right: 10px;
-}
-
-.barra-con-logo-carrito {
-  margin-top: 125px;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: default;
-  z-index: 0;
-}
-
 .barra-con-texto-carrito {
   background-color: #fff8ea;
   display: flex;
@@ -813,17 +228,17 @@ input[type=checkbox] {
 
 .h1-carrito {
   text-align: center;
-  font-size: 45px;
+  font-size: 2.8125rem;
 }
 
 @media (max-width: 1200px) {
   .h1-carrito {
-    font-size: 35px;
+    font-size: 2.1875rem;
   }
 }
 @media (max-width: 768px) {
   .h1-carrito {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
 }
 @media (max-width: 576px) {
@@ -847,34 +262,7 @@ input[type=checkbox] {
     height: 20px;
   }
   .h1-carrito {
-    font-size: 20px;
-  }
-}
-@media (min-width: 768px) {
-  .nav__toggle {
-    display: none;
-  }
-  .nav__menu {
-    flex-direction: row;
-  }
-  .nav__menu li {
-    display: flex;
-  }
-}
-@media (max-width: 576px) {
-  .barra-con-logo-carrito {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: default;
-  }
-}
-@media (max-width: 320px) {
-  .barra-con-logo-carrito {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: default;
+    font-size: 1.25rem;
   }
 }
 .body-index {
@@ -2624,7 +2012,7 @@ hr {
 
 .boton-agregar-productosClickeados {
   color: white;
-  background-color: rgb(255, 226, 163);
+  background-color: rgb(255, 221, 159);
   width: fit-content;
   margin: 10px;
   padding: 10px;
@@ -2637,7 +2025,7 @@ hr {
   justify-content: center;
 }
 .boton-agregar-productosClickeados:hover {
-  background-color: rgb(241, 200, 112);
+  background-color: rgb(252, 238, 200);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -2984,7 +2372,7 @@ hr {
   bottom: -1px;
   width: 100%;
   height: 100%;
-  border-bottom: 2px solid rgb(255, 226, 163);
+  border-bottom: 2px solid rgb(255, 221, 159);
   transform: translateX(-100%);
   transition: all 0.3s ease;
 }
@@ -3041,7 +2429,7 @@ hr {
 
 .boton-comprar-carrito {
   color: white;
-  background-color: rgb(255, 226, 163);
+  background-color: rgb(255, 221, 159);
   width: fit-content;
   margin: 10px;
   padding: 10px;
@@ -3055,7 +2443,7 @@ hr {
   justify-content: center;
 }
 .boton-comprar-carrito:hover {
-  background-color: rgb(241, 200, 112);
+  background-color: rgb(252, 238, 200);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -3326,27 +2714,128 @@ hr {
     height: 20px;
   }
 }
+.formulario {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins";
+}
+.formulario h1 {
+  color: black;
+  font-size: 30px;
+  margin-bottom: 50px;
+  background-color: #fff8ea;
+  width: 100%;
+  text-align: center;
+  font-weight: lighter;
+  padding: 10px;
+}
+.formulario label {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+.formulario input {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  height: 30px;
+}
+.formulario button {
+  color: white;
+  background-color: rgb(255, 221, 159);
+  width: fit-content;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  display: flex;
+  justify-content: center;
+}
+.formulario button:hover {
+  background-color: rgb(252, 238, 200);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.usuario-registrado {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 5px;
+  margin-bottom: 220px;
+  width: 300px;
+}
+.usuario-registrado h3 {
+  color: black;
+  font-size: 15px;
+}
+.usuario-registrado a {
+  margin: 15px;
+  width: fit-content;
+  text-align: center;
+  position: relative;
+}
+.usuario-registrado a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: rgb(0, 0, 0);
+  transition: 0.3s;
+}
+.usuario-registrado a:hover::before {
+  width: 100%;
+}
+
+.usuario-registrado2 {
+  margin-bottom: 150px;
+}
+
+#errorMessage {
+  display: none;
+  width: 300px;
+  height: 45px;
+  background-color: rgb(255, 203, 203);
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+#errorMessage h2 {
+  font-size: 15px;
+  color: rgb(206, 52, 52);
+}
+
+#successfulMessage {
+  display: none;
+  width: 300px;
+  height: 45px;
+  background-color: rgb(205, 255, 203);
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+#successfulMessage h2 {
+  font-size: 15px;
+  color: rgb(70, 206, 52);
+}
+
 footer {
   background-color: #fff8ea;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   padding: 15px;
-}
-
-.icono-email {
-  width: 25px;
-  display: flex;
-}
-
-.icono-whatsapp {
-  width: 25px;
-  display: flex;
-}
-
-.icono-instagram {
-  width: 25px;
-  display: flex;
 }
 
 .email {
@@ -3357,17 +2846,17 @@ footer {
   margin-bottom: 4px;
 }
 
-.whatsapp {
+.whatsapp, .instagram {
   display: flex;
   position: relative;
   left: 10px;
   margin-top: 4px;
   margin-bottom: 4px;
 }
-.whatsapp p {
+.whatsapp p, .instagram p {
   width: fit-content;
 }
-.whatsapp p::before {
+.whatsapp p::before, .instagram p::before {
   content: "";
   position: absolute;
   top: 100%;
@@ -3377,31 +2866,7 @@ footer {
   background: rgb(0, 0, 0);
   transition: 0.3s;
 }
-.whatsapp p:hover::before {
-  width: 100%;
-}
-
-.instagram {
-  display: flex;
-  position: relative;
-  left: 10px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-.instagram p {
-  width: fit-content;
-}
-.instagram p::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.instagram p:hover::before {
+.whatsapp p:hover::before, .instagram p:hover::before {
   width: 100%;
 }
 
@@ -3414,6 +2879,10 @@ footer {
   font-weight: lighter;
   position: relative;
   left: 10px;
+}
+.contacto img {
+  width: 25px;
+  display: flex;
 }
 
 h4 {
@@ -3476,26 +2945,26 @@ h4 {
   }
 }
 @media (max-width: 576px) {
-  .footer-productosBudines {
+  .footer {
     width: auto;
     display: flex;
     flex-direction: column;
     align-items: start;
   }
-  .contacto-productosBudines {
+  .contacto {
     width: fit-content;
   }
-  .texto-contacto-productosBudines {
+  .texto-contacto {
     width: auto;
     margin-left: 10px;
     margin-top: 10px;
     font-weight: bold;
   }
-  .h4-productosBudines {
+  .h4 {
     margin: 20px;
     text-align: center;
   }
-  .email-productosBudines .whatsapp-productosBudines .instagram-productosBudines {
+  .email .whatsapp .instagram {
     width: fit-content;
     justify-content: flex-start;
     padding: 30px;
@@ -3524,785 +2993,6 @@ h4 {
   .email .whatsapp .instagram {
     width: fit-content;
     justify-content: flex-start;
-    padding: 30px;
-  }
-}
-.footer-productosBudines {
-  background-color: #fff8ea;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 15px;
-}
-
-.icono-email-productosBudines {
-  width: 25px;
-  display: flex;
-}
-
-.icono-whatsapp-productosBudines {
-  width: 25px;
-  display: flex;
-}
-
-.icono-instagram-productosBudines {
-  width: 25px;
-  display: flex;
-}
-
-.email-productosBudines {
-  display: flex;
-  position: relative;
-  left: 10px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-
-.whatsapp-productosBudines {
-  display: flex;
-  position: relative;
-  left: 10px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-.whatsapp-productosBudines p {
-  width: fit-content;
-}
-.whatsapp-productosBudines p::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.whatsapp-productosBudines p:hover::before {
-  width: 100%;
-}
-
-.instagram-productosBudines {
-  display: flex;
-  position: relative;
-  left: 10px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-.instagram-productosBudines p {
-  width: fit-content;
-}
-.instagram-productosBudines p::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.instagram-productosBudines p:hover::before {
-  width: 100%;
-}
-
-.texto-contacto-productosBudines {
-  margin-left: 10px;
-  font-weight: bold;
-}
-
-.contacto-productosBudines p {
-  font-weight: lighter;
-  position: relative;
-  left: 10px;
-}
-
-.h4-productosBudines {
-  font-weight: lighter;
-  margin-top: 45px;
-  margin-bottom: 40px;
-  margin-right: 40px;
-}
-
-@media (max-width: 1200px) {
-  .footer-productosBudines {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-  }
-  .contacto-productosBudines {
-    width: fit-content;
-  }
-  .texto-contacto-productosBudines {
-    width: auto;
-    margin-left: 10px;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  .h4-productosBudines {
-    width: auto;
-    margin: 20px;
-    text-align: center;
-  }
-  .email-productosBudines .whatsapp-productosBudines .instagram-productosBudines {
-    width: fit-content;
-    justify-content: flex-start;
-    padding: 30px;
-  }
-}
-@media (max-width: 768px) {
-  .footer-productosBudines {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-  }
-  .contacto.productosBudines {
-    width: fit-content;
-  }
-  .texto-contacto-productosBudines {
-    width: auto;
-    margin-left: 10px;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  .h4-productosBudines {
-    width: auto;
-    margin: 20px;
-    text-align: center;
-  }
-  .email-productosBudines .whatsapp-productosBudines .instagram-productosBudines {
-    width: fit-content;
-    justify-content: flex-start;
-    padding: 30px;
-  }
-}
-@media (max-width: 320px) {
-  .footer-productosBudines {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-  .contacto-productosBudines {
-    width: fit-content;
-  }
-  .texto-contacto-productosBudines {
-    width: auto;
-    margin-top: 10px;
-    margin-left: 10px;
-    font-weight: bold;
-  }
-  .h4-productosBudines {
-    margin: 20px;
-    text-align: center;
-  }
-  .email-productosBudines .whatsapp-productosBudines .instagram-productosBudines {
-    width: fit-content;
-    justify-content: flex-start;
-    padding: 30px;
-  }
-}
-.footer-productosMuffins {
-  background-color: #fff8ea;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-}
-
-.icono-email-productosMuffins {
-  width: 25px;
-  display: flex;
-}
-
-.icono-whatsapp-productosMuffins {
-  width: 25px;
-  display: flex;
-}
-
-.icono-instagram-productosMuffins {
-  width: 25px;
-  display: flex;
-}
-
-.email-productosMuffins {
-  display: flex;
-  position: relative;
-  left: 10px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-
-.whatsapp-productosMuffins {
-  display: flex;
-  position: relative;
-  left: 10px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-.whatsapp-productosMuffins p {
-  width: fit-content;
-}
-.whatsapp-productosMuffins p::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.whatsapp-productosMuffins p:hover::before {
-  width: 100%;
-}
-
-.instagram-productosMuffins {
-  display: flex;
-  position: relative;
-  left: 10px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-.instagram-productosMuffins p {
-  width: fit-content;
-}
-.instagram-productosMuffins p::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.instagram-productosMuffins p:hover::before {
-  width: 100%;
-}
-
-.texto-contacto-productosMuffins {
-  margin-left: 10px;
-  font-weight: bold;
-}
-
-.contacto-productosMuffins p {
-  font-weight: lighter;
-  position: relative;
-  left: 10px;
-}
-
-.h4-productosMuffins {
-  font-weight: lighter;
-  margin-top: 45px;
-  margin-bottom: 40px;
-  margin-right: 40px;
-}
-
-@media (max-width: 1200px) {
-  .footer-productosMuffins {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-  }
-  .contacto-productosMuffins {
-    width: fit-content;
-  }
-  .texto-contacto-productosMuffins {
-    width: auto;
-    margin-left: 10px;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  .h4-productosMuffins {
-    width: auto;
-    margin: 20px;
-    text-align: center;
-  }
-  .email-productosMuffins .whatsapp-productosMuffins .instagram-productosMuffins {
-    width: fit-content;
-    justify-content: flex-start;
-    padding: 30px;
-  }
-}
-@media (max-width: 768px) {
-  .footer-productosMuffins {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-  }
-  .contacto-productosMuffins {
-    width: fit-content;
-  }
-  .texto-contacto-productosMuffins {
-    width: auto;
-    margin-left: 10px;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  .h4-productosMuffins {
-    width: auto;
-    margin: 20px;
-    text-align: center;
-  }
-  .email-productosMuffins .whatsapp-productosMuffins .instagram-productosMuffins {
-    width: fit-content;
-    justify-content: flex-start;
-    padding: 30px;
-  }
-}
-@media (max-width: 576px) {
-  .footer-productosMuffins {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-  .contacto-productosMuffins {
-    width: fit-content;
-  }
-  .texto-contacto-productosMuffins {
-    width: auto;
-    margin-left: 10px;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  .h4-productosMuffins {
-    margin: 20px;
-    text-align: center;
-  }
-  .email-productosMuffins .whatsapp-productosMuffins .instagram-productosMuffins {
-    width: fit-content;
-    justify-content: flex-start;
-    padding: 30px;
-  }
-}
-@media (max-width: 320px) {
-  .footer-productosMuffins {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-  .contacto-productosMuffins {
-    width: fit-content;
-  }
-  .texto-contacto-productosMuffins {
-    width: auto;
-    margin-top: 10px;
-    margin-left: 10px;
-    font-weight: bold;
-  }
-  .h4-productosMuffins {
-    margin: 20px;
-    text-align: center;
-  }
-  .email-productosMuffins .whatsapp-productosMuffins .instagram-productosMuffins {
-    width: fit-content;
-    justify-content: flex-start;
-    padding: 30px;
-  }
-}
-.footer-productosClickeados {
-  background-color: #fff8ea;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-}
-
-.icono-email-productosClickeados {
-  width: 25px;
-  display: flex;
-}
-
-.icono-whatsapp-productosClickeados {
-  width: 25px;
-  display: flex;
-}
-
-.icono-instagram-productosClickeados {
-  width: 25px;
-  display: flex;
-}
-
-.email-productosClickeados {
-  display: flex;
-  position: relative;
-  left: 10px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-
-.whatsapp-productosClickeados {
-  display: flex;
-  position: relative;
-  left: 10px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-.whatsapp-productosClickeados p {
-  width: fit-content;
-}
-.whatsapp-productosClickeados p::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.whatsapp-productosClickeados p:hover::before {
-  width: 100%;
-}
-
-.instagram-productosClickeados {
-  display: flex;
-  position: relative;
-  left: 10px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-.instagram-productosClickeados p {
-  width: fit-content;
-}
-.instagram-productosClickeados p::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.instagram-productosClickeados p:hover::before {
-  width: 100%;
-}
-
-.texto-contacto-productosClickeados {
-  margin-left: 10px;
-  font-weight: bold;
-}
-
-.contacto-productosClickeados p {
-  font-weight: lighter;
-  position: relative;
-  left: 10px;
-}
-
-.h4-productosClickeados {
-  font-weight: lighter;
-  margin-top: 45px;
-  margin-bottom: 40px;
-  margin-right: 40px;
-}
-
-@media (max-width: 1200px) {
-  .footer-productosClickeados {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-  }
-  .contacto-productosClickeados {
-    width: fit-content;
-  }
-  .texto-contacto-productosClickeados {
-    width: auto;
-    margin-left: 10px;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  .h4-productosClickeados {
-    width: auto;
-    margin: 20px;
-    text-align: center;
-  }
-  .email-productosClickeados .whatsapp-productosClickeados .instagram-productosClickeados {
-    width: fit-content;
-    justify-content: start;
-    padding: 30px;
-  }
-}
-@media (max-width: 768px) {
-  .footer-productosClickeados {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-  }
-  .contacto-productosClickeados {
-    width: fit-content;
-  }
-  .texto-contacto-productosClickeados {
-    width: auto;
-    margin-left: 10px;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  .h4-productosClickeados {
-    width: auto;
-    margin: 20px;
-    text-align: center;
-  }
-  .email-productosClickeados .whatsapp-productosClickeados .instagram-productosClickeados {
-    width: fit-content;
-    justify-content: start;
-    padding: 30px;
-  }
-}
-@media (max-width: 576px) {
-  .footer-productosClickeados {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-  .contacto-productosClickeados {
-    width: fit-content;
-  }
-  .texto-contacto-productosClickeados {
-    width: auto;
-    margin-left: 10px;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  .h4-productosClickeados {
-    margin: 20px;
-    text-align: center;
-  }
-  .email-productosClickeados .whatsapp-productosClickeados .instagram-productosClickeados {
-    width: fit-content;
-    justify-content: start;
-    padding: 30px;
-  }
-}
-@media (max-width: 320px) {
-  .footer-productosClickeados {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-  .contacto-productosClickeados {
-    width: fit-content;
-  }
-  .texto-contacto-productosClickeados {
-    width: auto;
-    margin-top: 10px;
-    margin-left: 10px;
-    font-weight: bold;
-  }
-  .h4-productosClickeados {
-    margin: 20px;
-    text-align: center;
-  }
-  .email-productosClickeados .whatsapp-productosClickeados .instagram-productosClickeados {
-    width: fit-content;
-    justify-content: start;
-    padding: 30px;
-  }
-}
-.footer-carrito {
-  background-color: #fff8ea;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-}
-
-.icono-email-carrito {
-  width: 25px;
-  display: flex;
-}
-
-.icono-whatsapp-carrito {
-  width: 25px;
-  display: flex;
-}
-
-.icono-instagram-carrito {
-  width: 25px;
-  display: flex;
-}
-
-.email-carrito {
-  display: flex;
-  position: relative;
-  left: 10px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-
-.whatsapp-carrito {
-  display: flex;
-  position: relative;
-  left: 10px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-.whatsapp-carrito p {
-  width: fit-content;
-}
-.whatsapp-carrito p::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.whatsapp-carrito p:hover::before {
-  width: 100%;
-}
-
-.instagram-carrito {
-  display: flex;
-  position: relative;
-  left: 10px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-.instagram-carrito p {
-  width: fit-content;
-}
-.instagram-carrito p::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-.instagram-carrito p:hover::before {
-  width: 100%;
-}
-
-.texto-contacto-carrito {
-  margin-left: 10px;
-  font-weight: bold;
-}
-
-.contacto-carrito p {
-  font-weight: lighter;
-  position: relative;
-  left: 10px;
-}
-
-.h4-carrito {
-  font-weight: lighter;
-  margin-top: 45px;
-  margin-bottom: 40px;
-  margin-right: 40px;
-}
-
-@media (max-width: 1200px) {
-  .footer-carrito {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-  }
-  .contacto-carrito {
-    width: fit-content;
-  }
-  .texto-contacto-carrito {
-    width: auto;
-    margin-left: 10px;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  .h4-carrito {
-    width: auto;
-    margin: 20px;
-    text-align: center;
-  }
-  .email-carrito .whatsapp-carrito .instagram-carrito {
-    width: fit-content;
-    justify-content: start;
-    padding: 30px;
-  }
-}
-@media (max-width: 768px) {
-  .footer-carrito {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .contacto-carrito {
-    width: fit-content;
-  }
-  .texto-contacto-carrito {
-    width: auto;
-    margin-left: 10px;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  .h4-carrito {
-    width: auto;
-    margin: 20px;
-    text-align: center;
-  }
-  .email-carrito .whatsapp-carrito .instagram-carrito {
-    width: fit-content;
-    justify-content: start;
-    padding: 30px;
-  }
-}
-@media (max-width: 576px) {
-  .footer-carrito {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-  .contacto-carrito {
-    width: fit-content;
-  }
-  .texto-contacto-carrito {
-    width: auto;
-    margin-left: 10px;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  .h4-carrito {
-    margin: 20px;
-    text-align: center;
-  }
-  .email-carrito .whatsapp-carrito .instagram-carrito {
-    width: fit-content;
-    justify-content: start;
-    padding: 30px;
-  }
-}
-@media (max-width: 320px) {
-  .footer-carrito {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-  .contacto-carrito {
-    width: fit-content;
-  }
-  .texto-contacto-carrito {
-    width: auto;
-    margin-top: 10px;
-    margin-left: 10px;
-    font-weight: bold;
-  }
-  .h4-carrito {
-    margin: 20px;
-    text-align: center;
-  }
-  .email-carrito .whatsapp-carrito .instagram-carrito {
-    width: fit-content;
-    justify-content: start;
     padding: 30px;
   }
 }
