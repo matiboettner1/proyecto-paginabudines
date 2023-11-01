@@ -14,8 +14,10 @@
         <nav class="nav">
             <input type="checkbox" id="nav__checkbox" class="nav__checkbox">
             <label for="nav__checkbox" class="nav__toggle">
-                <img src="../media/img/menu-hamburguesa.png" class="hamburger" alt="icono de un menu hamburguesa de tres rayas"/>
-                <img src="../media/img/menu-hamburguesa-cerrar.png" class="close" alt="icono de un menu hamburguesa de tres rayas pero la del medio es mas corta"/>
+                <img src="../media/img/menu-hamburguesa.png" class="hamburger"
+                    alt="icono de un menu hamburguesa de tres rayas" />
+                <img src="../media/img/menu-hamburguesa-cerrar.png" class="close"
+                    alt="icono de un menu hamburguesa de tres rayas pero la del medio es mas corta" />
             </label>
 
             <ul class="nav__menu">
@@ -55,100 +57,57 @@
 
     <main>
         <section class="grilla-main">
-            <ul class="compras-container-carrito">
-                <li class="compra1-carrito">
-                    <img src="../media/img/budin-frutosrojos2.jpg" class="budin-frutosrojos"
-                        alt="imagen de un budin de frutos rojos" />
-                    <div class="texto-carrito">
-                        <h2 class="h2-carrito">Budín de Frutos Rojos</h2>
-                        <h3 class="precio-producto">$1500</h3>
+            <div id="cart-products">
+                <!--div class="cart-product">
+                    <img src="../media/img/${getImageName(product.name)}">
+                    <div class="product-name">
+                        <h4>Producto</h4>
+                        <p>${product-name}</p>
                     </div>
-                    <div class="cantidad-y-boton-cerrar-carrito">
-                        <div class="cantidad-carrito">
-                            <h3 class="h3-carrito">Cantidad</h3>
-                            <button class="boton-restar-carrito">-</button>
-                            <span class="cantidad-valor-carrito">1</span>
-                            <button class="boton-agregar-carrito">+</button>
-                        </div>
-                        <div class="boton-cerrar-carrito">
-                            <button type="button"><img src="../media/img/icono-cruz.png" class="icono-cruz-carrito"
-                                    alt="icono de una cruz" /></button>
-                        </div>
+                    <div class="product-quantity">
+                        <h4>Cantidad</h4>
+                        <p>${product-quantity}</p>
                     </div>
-                </li>
-                <li class="compra2-carrito">
-                    <img src="../media/img/muffin-frutosrojos-costado.jpg" class="muffin-frutosrojos-carrito"
-                        alt="imagen de un muffin de frutos rojos de costado" />
-                    <div class="texto-carrito">
-                        <h2 class="h2-carrito">Muffin de Frutos Rojos</h2>
-                        <h3 class="precio-producto">$500</h3>
+                    <div class="product-price">
+                        <h4>Precio</h4>
+                        <p>${product-price}</p>
                     </div>
-                    <div class="cantidad-y-boton-cerrar-carrito">
-                        <div class="cantidad-carrito">
-                            <h3 class="h3-carrito">Cantidad</h3>
-                            <button class="boton-restar-carrito">-</button>
-                            <span class="cantidad-valor-carrito">1</span>
-                            <button class="boton-agregar-carrito">+</button>
+                    <button class="delete-button">X</button>
+                </div>-->
+
+
+                <div class="total-container-carrito">
+                    <h3>Resumen de compra</h3>
+                    <hr>
+                    <div class="precios">
+                        <div class="productos-precios">
+                            <h4>Productos</h4>
+                            <h4>$<strong id="totalPrice">0</strong></h4>
                         </div>
-                        <div class="boton-cerrar-carrito">
-                            <button type="button"><img src="../media/img/icono-cruz.png" class="icono-cruz-carrito"
-                                    alt="icono de una cruz" /></button>
+                        <div class="envio-precios">
+                            <h4>Envío</h4>
+                            <h4>$<strong>500</strong></h4>
                         </div>
-                    </div>
-                </li>
-                <li class="compra3-carrito">
-                    <img src="../media/img/muffin-coco-costado.jpg" class="muffin-coco-carrito"
-                        alt="imagen de un muffin de coco de costado" />
-                    <div class="texto-carrito">
-                        <h2 class="h2-carrito">Muffin de Coco</h2>
-                        <h3 class="precio-producto">$500</h3>
-                    </div>
-                    <div class="cantidad-y-boton-cerrar-carrito">
-                        <div class="cantidad-carrito">
-                            <h3>Cantidad</h3>
-                            <button class="boton-restar-carrito">-</button>
-                            <span class="cantidad-valor-carrito">1</span>
-                            <button class="boton-agregar-carrito">+</button>
-                        </div>
-                        <div class="boton-cerrar-carrito">
-                            <button type="button"><img src="../media/img/icono-cruz.png" class="icono-cruz-carrito"
-                                    alt="icono de una cruz" /></button>
+                        <div class="codigo-cupon">
+                            <h4>Código de cupón</h4>
+                            <form class="form">
+                                <input type="text" required name="codigo-de-cupon" />
+                                <label class="texto-label">
+                                    <span class="placeholder">Ingrese el código</span>
+                                </label>
+                            </form>
                         </div>
                     </div>
-                </li>
-            </ul>
-            <div class="total-container-carrito">
-                <h3>Resumen de compra</h3>
-                <hr>
-                <div class="precios">
-                    <div class="productos-precios">
-                        <h4>Productos</h4>
-                        <h4>$2500</h4>
+                    <hr>
+                    <div class="total">
+                        <h4>Total</h4>
+                        <h4>$<strong id="totalPriceWShipment">0</strong></h4>
                     </div>
-                    <div class="envio-precios">
-                        <h4>Envío</h4>
-                        <h4>$500</h4>
-                    </div>
-                    <div class="codigo-cupon">
-                        <h4>Código de cupón</h4>
-                        <form class="form">
-                            <input type="text" required name="codigo-de-cupon"/>
-                            <label class="texto-label">
-                                <span class="placeholder">Ingrese el código</span>
-                            </label>
-                        </form>
+                    <hr>
+                    <div class="botoncomprar-container-carrito">
+                        <button type="submit" class="boton-comprar-carrito">Comprar</button>
                     </div>
                 </div>
-                <hr>
-                <div class="total">
-                    <h4>Total</h4>
-                    <h4>$3000</h4>
-                </div>
-                <hr>
-                <div class="botoncomprar-container-carrito">
-                    <button type="submit" class="boton-comprar-carrito">Comprar</button>
-                </div>
-            </div>
         </section>
 
     </main>
@@ -177,6 +136,9 @@
         </div>
         <h4>Copyright © 2023 Hecho En Casa | Powered by Matías Boettner</h4>
     </footer>
+    <script src="../classes/usuario.js"></script>
+    <script src="../constants/index.js"></script>
+    <script src="../scripts/main.js"></script>
 </body>
 
 </html>

@@ -6,7 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name="description"
         content="Descubre el deleite de los sabores caseros con nuestros exquisitos budines y muffins. En HechoEnCasa.cb, te ofrecemos una irresistible selección de delicias horneadas con amor. Disfruta de la frescura y calidad en cada bocado. ¡Explora nuestra variedad de recetas y regálate momentos de dulce felicidad en cada mordisco!">
-    <title>Usuario - Hecho En Casa</title>
+    <title>Iniciar sesión - Hecho En Casa</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/styles.css'>
 </head>
@@ -17,8 +17,10 @@
         <nav class="nav">
             <input type="checkbox" id="nav__checkbox" class="nav__checkbox">
             <label for="nav__checkbox" class="nav__toggle">
-                <img src="../media/img/menu-hamburguesa.png" class="hamburger" alt="icono de un menu hamburguesa de tres rayas"/>
-                <img src="../media/img/menu-hamburguesa-cerrar.png" class="close" alt="icono de un menu hamburguesa de tres rayas pero la del medio es mas corta"/>
+                <img src="../media/img/menu-hamburguesa.png" class="hamburger"
+                    alt="icono de un menu hamburguesa de tres rayas" />
+                <img src="../media/img/menu-hamburguesa-cerrar.png" class="close"
+                    alt="icono de un menu hamburguesa de tres rayas pero la del medio es mas corta" />
             </label>
 
             <ul class="nav__menu">
@@ -52,33 +54,39 @@
     <main>
         <form id="loginForm" class="formulario">
             <h1>Inicio de sesión</h1>
-    
-            <div>
-                <label id="labelNombreUsuario" for="nombreUsuario">Nombre de usuario</label>
-                <input type="text" id="nombreUsuario" autocomplete="username" autofocus="true"/>
+
+            <div class="inputs">
+                <input type="text" id="nombreUsuario" autocomplete="username" required />
+                <label id="labelNombreUsuario" for="nombreUsuario" class="texto-label"><span class="placeholder">Nombre de usuario</span></label>
             </div>
-    
-            <div>
-                <label id="labelContrasenia" for="contrasenia">Contraseña</label>
-                <input type="password" id="contrasenia" autocomplete="current-password"/>
+
+            <div class="inputs">
+                <input type="password" id="contrasenia" autocomplete="current-password" required />
+                <label id="labelContrasenia" for="contrasenia" class="texto-label"><span class="placeholder">Contraseña</span></label>
             </div>
-    
+
             <div id="errorMessage">
-    
+
             </div>
             <div id="successfulMessage">
-    
+
             </div>
-    
+
             <div>
                 <button type="submit" id="boton-iniciar-sesion">Inciar sesión</button>
             </div>
-    
+
             <div class="usuario-registrado">
                 <h3>¿No estas registrado?</h3>
                 <a href="./registrar-usuario.html">Registrarse</a>
             </div>
         </form>
+        <div id="panel-usuario">
+            <h2>Usuario</h2>
+            <p>Nombre de usuario: <strong id="nombre-usuario"></strong></p>
+            <p>Contraseña: <strong id="contrasenia-usuario"></strong></p>
+            <button id="boton-cerrar-sesion">Cerrar sesión</button>
+        </div>
     </main>
 
     <footer>
@@ -105,6 +113,9 @@
         </div>
         <h4>Copyright © 2023 Hecho En Casa | Powered by Matías Boettner</h4>
     </footer>
-    <script src="main.js"></script>
+    <script src='../classes/usuario.js'></script>
+    <script src="../constants/index.js"></script>
+    <script src="../scripts/mainLogin.js"></script>
 </body>
+
 </html>

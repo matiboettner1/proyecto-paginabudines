@@ -570,7 +570,7 @@ hr {
   background-color: #f7f6f6;
 }
 
-.h1-productosBudines {
+.h1-productos {
   text-align: center;
   font-size: 0.75rem;
   margin: 10px;
@@ -578,348 +578,133 @@ hr {
   cursor: default;
 }
 
-.h2-productosBudines {
+.product-info .product-name {
+  font-size: 1, 25rem;
   text-align: center;
-  font-size: 1.4375rem;
+  margin: 10px;
+}
+.product-info .product-price {
+  font-size: 1.5625rem;
+  text-align: center;
   margin: 10px;
 }
 
-.productos-container-productosBudines {
+.buttons {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+}
+.buttons .add-button {
+  border: solid 2px rgb(147, 202, 247);
+  color: rgb(147, 202, 247);
+  background-color: white;
+  width: fit-content;
+  margin: 2px;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  display: flex;
+  justify-content: center;
+}
+.buttons .add-button:hover {
+  background-color: rgb(147, 202, 247);
+  color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.buttons .add-button:active {
+  border-radius: 15px;
+}
+.buttons .info-button {
+  border: solid 2px rgb(147, 202, 247);
+  color: white;
+  background-color: rgb(147, 202, 247);
+  width: fit-content;
+  margin: 2px;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  display: flex;
+  justify-content: center;
+}
+.buttons .info-button:hover {
+  background-color: white;
+  color: rgb(147, 202, 247);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.buttons .info-button:active {
+  border-radius: 15px;
+}
+
+.productos-container {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 50px;
-  margin-bottom: 70px;
-  gap: 69px;
+  gap: 68px;
 }
 
-.budin1-productosBudines, .budin2-productosBudines, .budin3-productosBudines {
+.muffin1-productos,
+.muffin2-productos,
+.muffin3-productos,
+.muffin4-productos,
+.muffin5-productos,
+.muffin6-productos,
+.budin1-productos,
+.budin2-productos,
+.budin3-productos {
   background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   width: 400px;
-  height: 650px;
+  height: auto;
+  border-radius: 10px;
 }
-.budin1-productosBudines:hover, .budin2-productosBudines:hover, .budin3-productosBudines:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+.muffin1-productos:hover,
+.muffin2-productos:hover,
+.muffin3-productos:hover,
+.muffin4-productos:hover,
+.muffin5-productos:hover,
+.muffin6-productos:hover,
+.budin1-productos:hover,
+.budin2-productos:hover,
+.budin3-productos:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
-
-.budin-de-frutosrojos, .budin-de-limonyamapola, .budin-de-zanahoria {
-  width: 400px;
+.muffin1-productos div,
+.muffin2-productos div,
+.muffin3-productos div,
+.muffin4-productos div,
+.muffin5-productos div,
+.muffin6-productos div,
+.budin1-productos div,
+.budin2-productos div,
+.budin3-productos div {
+  width: 100%;
+}
+.muffin1-productos div img,
+.muffin2-productos div img,
+.muffin3-productos div img,
+.muffin4-productos div img,
+.muffin5-productos div img,
+.muffin6-productos div img,
+.budin1-productos div img,
+.budin2-productos div img,
+.budin3-productos div img {
   display: flex;
-  align-items: center;
-}
-
-.descripcion-productosBudines {
-  text-align: center;
-  padding: 5px;
-  font-size: 0.875rem;
-  margin: 0px 20px;
-}
-
-.budin1-productosBudines .descripcion-productosBudines {
-  margin-bottom: 20px;
-}
-
-.img-agregar-al-carrito-productosBudines {
   width: 40px;
-  display: flex;
-  position: relative;
-  left: 350px;
-  top: 10px;
-}
-
-@media (max-width: 1400px) {
-  .productos-container-productosBudines {
-    gap: 50px;
-  }
-  .budin1-productosBudines, .budin2-productosBudines, .budin3-productosBudines {
-    width: 350px;
-    height: auto;
-  }
-  .budin-de-frutosrojos, .budin-de-limonyamapola, .budin-de-zanahoria {
-    width: 350px;
-    display: flex;
-    align-items: center;
-  }
-  .img-agregar-al-carrito-productosBudines {
-    width: 30px;
-    display: flex;
-    position: relative;
-    left: 310px;
-    top: 0px;
-  }
-}
-@media (max-width: 1200px) {
-  .productos-container-productosBudines {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-  .budin1-productosBudines, .budin2-productosBudines, .budin3-productosBudines {
-    width: 450px;
-    height: auto;
-  }
-  .budin-de-frutosrojos, .budin-de-limonyamapola, .budin-de-zanahoria {
-    width: 450px;
-    display: flex;
-    align-items: center;
-  }
-  .img-agregar-al-carrito-productosBudines {
-    width: 30px;
-    display: flex;
-    position: relative;
-    left: 410px;
-  }
-}
-@media (max-width: 768px) {
-  .productos-container-productosBudines {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-}
-@media (max-width: 576px) {
-  .productos-container-productosBudines {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-  .budin1-productosBudines, .budin2-productosBudines, .budin3-productosBudines {
-    width: 300px;
-    height: auto;
-  }
-  .budin-de-frutosrojos, .budin-de-limonyamapola, .budin-de-zanahoria {
-    width: 300px;
-    display: flex;
-    align-items: center;
-  }
-  .img-agregar-al-carrito-productosBudines {
-    width: 30px;
-    display: flex;
-    position: relative;
-    left: 260px;
-  }
-}
-@media (max-width: 320px) {
-  .productos-container-productosBudines {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-  .budin1-productosBudines, .budin2-productosBudines, .budin3-productosBudines {
-    width: 250px;
-    height: auto;
-  }
-  .budin-de-frutosrojos, .budin-de-limonyamapola, .budin-de-zanahoria {
-    width: 250px;
-    display: flex;
-    align-items: center;
-  }
-  .img-agregar-al-carrito-productosBudines {
-    width: 30px;
-    display: flex;
-    position: relative;
-    left: 210px;
-  }
-}
-.body-carrito {
-  background-color: #f7f6f6;
-}
-
-.h1-productosMuffins {
-  text-align: center;
-  font-size: 0.75rem;
-  margin: 10px;
-  font-weight: lighter;
-  cursor: default;
-}
-
-.h2-productosMuffins {
-  text-align: center;
-  font-size: 1.4375rem;
-  margin: 10px;
-}
-
-.productos-container-productosMuffins {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "muffin1 muffin2 muffin3" "muffin4 muffin5 muffin6";
-  justify-items: center;
-  justify-content: space-around;
-  gap: 40px;
-  margin: 40px;
-}
-
-.muffin1-productosMuffins,
-.muffin2-productosMuffins,
-.muffin3-productosMuffins,
-.muffin4-productosMuffins,
-.muffin5-productosMuffins,
-.muffin6-productosMuffins {
-  background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  width: 400px;
-  height: auto;
-  background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  width: 400px;
-  height: auto;
-  background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  width: 400px;
-  height: auto;
-  background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  width: 400px;
-  height: auto;
-  background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  width: 400px;
-  height: auto;
-  background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  width: 400px;
-  height: auto;
-}
-.muffin1-productosMuffins .muffin1-productosMuffins,
-.muffin2-productosMuffins .muffin1-productosMuffins,
-.muffin3-productosMuffins .muffin1-productosMuffins,
-.muffin4-productosMuffins .muffin1-productosMuffins,
-.muffin5-productosMuffins .muffin1-productosMuffins,
-.muffin6-productosMuffins .muffin1-productosMuffins {
-  grid-area: muffin1;
-  width: 400px;
-  height: auto;
-}
-.muffin1-productosMuffins:hover,
-.muffin2-productosMuffins:hover,
-.muffin3-productosMuffins:hover,
-.muffin4-productosMuffins:hover,
-.muffin5-productosMuffins:hover,
-.muffin6-productosMuffins:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-.muffin1-productosMuffins .muffin2-productosMuffins,
-.muffin2-productosMuffins .muffin2-productosMuffins,
-.muffin3-productosMuffins .muffin2-productosMuffins,
-.muffin4-productosMuffins .muffin2-productosMuffins,
-.muffin5-productosMuffins .muffin2-productosMuffins,
-.muffin6-productosMuffins .muffin2-productosMuffins {
-  grid-area: muffin2;
-  width: 400px;
-  height: auto;
-}
-.muffin1-productosMuffins:hover,
-.muffin2-productosMuffins:hover,
-.muffin3-productosMuffins:hover,
-.muffin4-productosMuffins:hover,
-.muffin5-productosMuffins:hover,
-.muffin6-productosMuffins:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-.muffin1-productosMuffins .muffin3-productosMuffins,
-.muffin2-productosMuffins .muffin3-productosMuffins,
-.muffin3-productosMuffins .muffin3-productosMuffins,
-.muffin4-productosMuffins .muffin3-productosMuffins,
-.muffin5-productosMuffins .muffin3-productosMuffins,
-.muffin6-productosMuffins .muffin3-productosMuffins {
-  grid-area: muffin3;
-  width: 400px;
-  height: auto;
-}
-.muffin1-productosMuffins:hover,
-.muffin2-productosMuffins:hover,
-.muffin3-productosMuffins:hover,
-.muffin4-productosMuffins:hover,
-.muffin5-productosMuffins:hover,
-.muffin6-productosMuffins:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-.muffin1-productosMuffins .muffin4-productosMuffins,
-.muffin2-productosMuffins .muffin4-productosMuffins,
-.muffin3-productosMuffins .muffin4-productosMuffins,
-.muffin4-productosMuffins .muffin4-productosMuffins,
-.muffin5-productosMuffins .muffin4-productosMuffins,
-.muffin6-productosMuffins .muffin4-productosMuffins {
-  grid-area: muffin1;
-  width: 400px;
-  height: auto;
-}
-.muffin1-productosMuffins:hover,
-.muffin2-productosMuffins:hover,
-.muffin3-productosMuffins:hover,
-.muffin4-productosMuffins:hover,
-.muffin5-productosMuffins:hover,
-.muffin6-productosMuffins:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-.muffin1-productosMuffins .muffin5-productosMuffins,
-.muffin2-productosMuffins .muffin5-productosMuffins,
-.muffin3-productosMuffins .muffin5-productosMuffins,
-.muffin4-productosMuffins .muffin5-productosMuffins,
-.muffin5-productosMuffins .muffin5-productosMuffins,
-.muffin6-productosMuffins .muffin5-productosMuffins {
-  grid-area: muffin2;
-  width: 400px;
-  height: auto;
-}
-.muffin1-productosMuffins:hover,
-.muffin2-productosMuffins:hover,
-.muffin3-productosMuffins:hover,
-.muffin4-productosMuffins:hover,
-.muffin5-productosMuffins:hover,
-.muffin6-productosMuffins:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-.muffin1-productosMuffins .muffin6-productosMuffins,
-.muffin2-productosMuffins .muffin6-productosMuffins,
-.muffin3-productosMuffins .muffin6-productosMuffins,
-.muffin4-productosMuffins .muffin6-productosMuffins,
-.muffin5-productosMuffins .muffin6-productosMuffins,
-.muffin6-productosMuffins .muffin6-productosMuffins {
-  grid-area: muffin3;
-  width: 400px;
-  height: auto;
-}
-.muffin1-productosMuffins:hover,
-.muffin2-productosMuffins:hover,
-.muffin3-productosMuffins:hover,
-.muffin4-productosMuffins:hover,
-.muffin5-productosMuffins:hover,
-.muffin6-productosMuffins:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  float: right;
+  margin: 5px;
 }
 
 .muffin-banana,
@@ -927,997 +712,159 @@ hr {
 .muffin-frutosrojos,
 .muffin-frutossecos,
 .muffin-limonyamapola,
-.muffin-vainillaychips {
+.muffin-vainillaychips,
+.budin-de-frutosrojos,
+.budin-de-limonyamapola,
+.budin-de-zanahoria {
   width: 400px;
   display: flex;
   align-items: center;
 }
 
-.descripcion-producto-productosMuffins {
-  text-align: center;
-  padding: 5px;
-  font-size: 0.875rem;
-  margin: 0px 20px;
-}
-
-.img-agregar-al-carrito-productosMuffins {
-  width: 40px;
-  display: flex;
-  position: relative;
-  left: 350px;
-}
-
 @media (max-width: 1400px) {
-  .productos-container-productosMuffins {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "muffin1 muffin2" "muffin3 muffin4" "muffin5 muffin6";
-    justify-items: center;
-  }
-  .muffin1-productosMuffins,
-  .muffin2-productosMuffins,
-  .muffin3-productosMuffins,
-  .muffin4-productosMuffins,
-  .muffin5-productosMuffins,
-  .muffin6-productosMuffins {
+  .muffin1-productos,
+  .muffin2-productos,
+  .muffin3-productos,
+  .muffin4-productos,
+  .muffin5-productos,
+  .muffin6-productos,
+  .budin1-productos,
+  .budin2-productos,
+  .budin3-productos {
     background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 400px;
+    width: 350px;
     height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 400px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 400px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 400px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 400px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 400px;
-    height: auto;
+    border-radius: 10px;
   }
-  .muffin1-productosMuffins .muffin1-productosMuffins,
-  .muffin2-productosMuffins .muffin1-productosMuffins,
-  .muffin3-productosMuffins .muffin1-productosMuffins,
-  .muffin4-productosMuffins .muffin1-productosMuffins,
-  .muffin5-productosMuffins .muffin1-productosMuffins,
-  .muffin6-productosMuffins .muffin1-productosMuffins {
-    grid-area: muffin1;
-    width: 400px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin2-productosMuffins,
-  .muffin2-productosMuffins .muffin2-productosMuffins,
-  .muffin3-productosMuffins .muffin2-productosMuffins,
-  .muffin4-productosMuffins .muffin2-productosMuffins,
-  .muffin5-productosMuffins .muffin2-productosMuffins,
-  .muffin6-productosMuffins .muffin2-productosMuffins {
-    grid-area: muffin2;
-    width: 400px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin3-productosMuffins,
-  .muffin2-productosMuffins .muffin3-productosMuffins,
-  .muffin3-productosMuffins .muffin3-productosMuffins,
-  .muffin4-productosMuffins .muffin3-productosMuffins,
-  .muffin5-productosMuffins .muffin3-productosMuffins,
-  .muffin6-productosMuffins .muffin3-productosMuffins {
-    grid-area: muffin3;
-    width: 400px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin4-productosMuffins,
-  .muffin2-productosMuffins .muffin4-productosMuffins,
-  .muffin3-productosMuffins .muffin4-productosMuffins,
-  .muffin4-productosMuffins .muffin4-productosMuffins,
-  .muffin5-productosMuffins .muffin4-productosMuffins,
-  .muffin6-productosMuffins .muffin4-productosMuffins {
-    grid-area: muffin1;
-    width: 400px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin5-productosMuffins,
-  .muffin2-productosMuffins .muffin5-productosMuffins,
-  .muffin3-productosMuffins .muffin5-productosMuffins,
-  .muffin4-productosMuffins .muffin5-productosMuffins,
-  .muffin5-productosMuffins .muffin5-productosMuffins,
-  .muffin6-productosMuffins .muffin5-productosMuffins {
-    grid-area: muffin2;
-    width: 400px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin6-productosMuffins,
-  .muffin2-productosMuffins .muffin6-productosMuffins,
-  .muffin3-productosMuffins .muffin6-productosMuffins,
-  .muffin4-productosMuffins .muffin6-productosMuffins,
-  .muffin5-productosMuffins .muffin6-productosMuffins,
-  .muffin6-productosMuffins .muffin6-productosMuffins {
-    grid-area: muffin3;
-    width: 400px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  .muffin1-productos:hover,
+  .muffin2-productos:hover,
+  .muffin3-productos:hover,
+  .muffin4-productos:hover,
+  .muffin5-productos:hover,
+  .muffin6-productos:hover,
+  .budin1-productos:hover,
+  .budin2-productos:hover,
+  .budin3-productos:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   }
   .muffin-banana,
   .muffin-coco,
   .muffin-frutosrojos,
   .muffin-frutossecos,
   .muffin-limonyamapola,
-  .muffin-vainillaychips {
-    width: 400px;
+  .muffin-vainillaychips,
+  .budin-de-frutosrojos,
+  .budin-de-limonyamapola,
+  .budin-de-zanahoria {
+    width: 350px;
     display: flex;
     align-items: center;
-  }
-  .img-agregar-al-carrito-productosMuffins {
-    left: 350px;
   }
 }
 @media (max-width: 1200px) {
-  .productos-container-productosMuffins {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "muffin1 muffin2" "muffin3 muffin4" "muffin5 muffin6";
-    justify-items: center;
-  }
-  .muffin1-productosMuffins,
-  .muffin2-productosMuffins,
-  .muffin3-productosMuffins,
-  .muffin4-productosMuffins,
-  .muffin5-productosMuffins,
-  .muffin6-productosMuffins {
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 350px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 350px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 350px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 350px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 350px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 350px;
-    height: auto;
-  }
-  .muffin1-productosMuffins .muffin1-productosMuffins,
-  .muffin2-productosMuffins .muffin1-productosMuffins,
-  .muffin3-productosMuffins .muffin1-productosMuffins,
-  .muffin4-productosMuffins .muffin1-productosMuffins,
-  .muffin5-productosMuffins .muffin1-productosMuffins,
-  .muffin6-productosMuffins .muffin1-productosMuffins {
-    grid-area: muffin1;
-    width: 350px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin2-productosMuffins,
-  .muffin2-productosMuffins .muffin2-productosMuffins,
-  .muffin3-productosMuffins .muffin2-productosMuffins,
-  .muffin4-productosMuffins .muffin2-productosMuffins,
-  .muffin5-productosMuffins .muffin2-productosMuffins,
-  .muffin6-productosMuffins .muffin2-productosMuffins {
-    grid-area: muffin2;
-    width: 350px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin3-productosMuffins,
-  .muffin2-productosMuffins .muffin3-productosMuffins,
-  .muffin3-productosMuffins .muffin3-productosMuffins,
-  .muffin4-productosMuffins .muffin3-productosMuffins,
-  .muffin5-productosMuffins .muffin3-productosMuffins,
-  .muffin6-productosMuffins .muffin3-productosMuffins {
-    grid-area: muffin3;
-    width: 350px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin4-productosMuffins,
-  .muffin2-productosMuffins .muffin4-productosMuffins,
-  .muffin3-productosMuffins .muffin4-productosMuffins,
-  .muffin4-productosMuffins .muffin4-productosMuffins,
-  .muffin5-productosMuffins .muffin4-productosMuffins,
-  .muffin6-productosMuffins .muffin4-productosMuffins {
-    grid-area: muffin1;
-    width: 350px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin5-productosMuffins,
-  .muffin2-productosMuffins .muffin5-productosMuffins,
-  .muffin3-productosMuffins .muffin5-productosMuffins,
-  .muffin4-productosMuffins .muffin5-productosMuffins,
-  .muffin5-productosMuffins .muffin5-productosMuffins,
-  .muffin6-productosMuffins .muffin5-productosMuffins {
-    grid-area: muffin2;
-    width: 350px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin6-productosMuffins,
-  .muffin2-productosMuffins .muffin6-productosMuffins,
-  .muffin3-productosMuffins .muffin6-productosMuffins,
-  .muffin4-productosMuffins .muffin6-productosMuffins,
-  .muffin5-productosMuffins .muffin6-productosMuffins,
-  .muffin6-productosMuffins .muffin6-productosMuffins {
-    grid-area: muffin3;
-    width: 350px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
   .muffin-banana,
   .muffin-coco,
   .muffin-frutosrojos,
   .muffin-frutossecos,
   .muffin-limonyamapola,
-  .muffin-vainillaychips {
+  .muffin-vainillaychips,
+  .budin-de-frutosrojos,
+  .budin-de-limonyamapola,
+  .budin-de-zanahoria {
     width: 350px;
     display: flex;
     align-items: center;
-  }
-  .img-agregar-al-carrito-productosMuffins {
-    width: 30px;
-    display: flex;
-    position: relative;
-    left: 310px;
-  }
-  .muffin1-productosMuffins .img-agregar-al-carrito-productosMuffins {
-    bottom: -20px;
-  }
-  .muffin2-productosMuffins .img-agregar-al-carrito-productosMuffins {
-    bottom: -20px;
-  }
-  .muffin6-productosMuffins .img-agregar-al-carrito-productosMuffins {
-    bottom: -20px;
   }
 }
 @media (max-width: 768px) {
-  .productos-container-productosMuffins {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(1fr 1fr 1fr);
-    grid-template-areas: "muffin1 muffin2" "muffin3 muffin4" "muffin5 muffin6";
-    justify-items: center;
-  }
-  .muffin1-productosMuffins,
-  .muffin2-productosMuffins,
-  .muffin3-productosMuffins,
-  .muffin4-productosMuffins,
-  .muffin5-productosMuffins,
-  .muffin6-productosMuffins {
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 250px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 250px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 250px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 250px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 250px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 250px;
-    height: auto;
-  }
-  .muffin1-productosMuffins .muffin1-productosMuffins,
-  .muffin2-productosMuffins .muffin1-productosMuffins,
-  .muffin3-productosMuffins .muffin1-productosMuffins,
-  .muffin4-productosMuffins .muffin1-productosMuffins,
-  .muffin5-productosMuffins .muffin1-productosMuffins,
-  .muffin6-productosMuffins .muffin1-productosMuffins {
-    grid-area: muffin1;
-    width: 250px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin2-productosMuffins,
-  .muffin2-productosMuffins .muffin2-productosMuffins,
-  .muffin3-productosMuffins .muffin2-productosMuffins,
-  .muffin4-productosMuffins .muffin2-productosMuffins,
-  .muffin5-productosMuffins .muffin2-productosMuffins,
-  .muffin6-productosMuffins .muffin2-productosMuffins {
-    grid-area: muffin2;
-    width: 250px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin3-productosMuffins,
-  .muffin2-productosMuffins .muffin3-productosMuffins,
-  .muffin3-productosMuffins .muffin3-productosMuffins,
-  .muffin4-productosMuffins .muffin3-productosMuffins,
-  .muffin5-productosMuffins .muffin3-productosMuffins,
-  .muffin6-productosMuffins .muffin3-productosMuffins {
-    grid-area: muffin3;
-    width: 250px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin4-productosMuffins,
-  .muffin2-productosMuffins .muffin4-productosMuffins,
-  .muffin3-productosMuffins .muffin4-productosMuffins,
-  .muffin4-productosMuffins .muffin4-productosMuffins,
-  .muffin5-productosMuffins .muffin4-productosMuffins,
-  .muffin6-productosMuffins .muffin4-productosMuffins {
-    grid-area: muffin1;
-    width: 250px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin5-productosMuffins,
-  .muffin2-productosMuffins .muffin5-productosMuffins,
-  .muffin3-productosMuffins .muffin5-productosMuffins,
-  .muffin4-productosMuffins .muffin5-productosMuffins,
-  .muffin5-productosMuffins .muffin5-productosMuffins,
-  .muffin6-productosMuffins .muffin5-productosMuffins {
-    grid-area: muffin2;
-    width: 250px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin6-productosMuffins,
-  .muffin2-productosMuffins .muffin6-productosMuffins,
-  .muffin3-productosMuffins .muffin6-productosMuffins,
-  .muffin4-productosMuffins .muffin6-productosMuffins,
-  .muffin5-productosMuffins .muffin6-productosMuffins,
-  .muffin6-productosMuffins .muffin6-productosMuffins {
-    grid-area: muffin3;
-    width: 250px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin-banana,
-  .muffin-coco,
-  .muffin-frutosrojos,
-  .muffin-frutossecos,
-  .muffin-limonyamapola,
-  .muffin-vainillaychips {
-    width: 250px;
+  .productos-container-productos {
     display: flex;
+    flex-direction: column;
     align-items: center;
-  }
-  .img-agregar-al-carrito-productosMuffins {
-    left: 210px;
-  }
-  .muffin1-productosMuffins .img-agregar-al-carrito-productosMuffins {
-    bottom: -75px;
-  }
-  .muffin2-productosMuffins .img-agregar-al-carrito-productosMuffins {
-    bottom: -33px;
-  }
-  .muffin4-productosMuffins .img-agregar-al-carrito-productosMuffins {
-    bottom: -20px;
-  }
-  .muffin6-productosMuffins .img-agregar-al-carrito-productosMuffins {
-    bottom: -20px;
+    margin-bottom: 40px;
   }
 }
 @media (max-width: 576px) {
-  .productos-container-productosMuffins {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(1fr 1fr 1fr 1fr 1fr 1fr);
-    grid-template-areas: "muffin1" "muffin2" "muffin3" "muffin4" "muffin5" "muffin6";
-    justify-items: center;
+  .productos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
   }
-  .muffin1-productosMuffins,
-  .muffin2-productosMuffins,
-  .muffin3-productosMuffins,
-  .muffin4-productosMuffins,
-  .muffin5-productosMuffins,
-  .muffin6-productosMuffins {
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 300px;
+  .muffin1-productos,
+  .muffin2-productos,
+  .muffin3-productos,
+  .muffin4-productos,
+  .muffin5-productos,
+  .muffin6-productos,
+  .budin1-productos,
+  .budin2-productos,
+  .budin3-productos {
+    width: 280px;
     height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 300px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 300px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 300px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 300px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 300px;
-    height: auto;
-  }
-  .muffin1-productosMuffins .muffin1-productosMuffins,
-  .muffin2-productosMuffins .muffin1-productosMuffins,
-  .muffin3-productosMuffins .muffin1-productosMuffins,
-  .muffin4-productosMuffins .muffin1-productosMuffins,
-  .muffin5-productosMuffins .muffin1-productosMuffins,
-  .muffin6-productosMuffins .muffin1-productosMuffins {
-    grid-area: muffin1;
-    width: 300px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin2-productosMuffins,
-  .muffin2-productosMuffins .muffin2-productosMuffins,
-  .muffin3-productosMuffins .muffin2-productosMuffins,
-  .muffin4-productosMuffins .muffin2-productosMuffins,
-  .muffin5-productosMuffins .muffin2-productosMuffins,
-  .muffin6-productosMuffins .muffin2-productosMuffins {
-    grid-area: muffin2;
-    width: 300px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin3-productosMuffins,
-  .muffin2-productosMuffins .muffin3-productosMuffins,
-  .muffin3-productosMuffins .muffin3-productosMuffins,
-  .muffin4-productosMuffins .muffin3-productosMuffins,
-  .muffin5-productosMuffins .muffin3-productosMuffins,
-  .muffin6-productosMuffins .muffin3-productosMuffins {
-    grid-area: muffin3;
-    width: 300px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin4-productosMuffins,
-  .muffin2-productosMuffins .muffin4-productosMuffins,
-  .muffin3-productosMuffins .muffin4-productosMuffins,
-  .muffin4-productosMuffins .muffin4-productosMuffins,
-  .muffin5-productosMuffins .muffin4-productosMuffins,
-  .muffin6-productosMuffins .muffin4-productosMuffins {
-    grid-area: muffin1;
-    width: 300px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin5-productosMuffins,
-  .muffin2-productosMuffins .muffin5-productosMuffins,
-  .muffin3-productosMuffins .muffin5-productosMuffins,
-  .muffin4-productosMuffins .muffin5-productosMuffins,
-  .muffin5-productosMuffins .muffin5-productosMuffins,
-  .muffin6-productosMuffins .muffin5-productosMuffins {
-    grid-area: muffin2;
-    width: 300px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin6-productosMuffins,
-  .muffin2-productosMuffins .muffin6-productosMuffins,
-  .muffin3-productosMuffins .muffin6-productosMuffins,
-  .muffin4-productosMuffins .muffin6-productosMuffins,
-  .muffin5-productosMuffins .muffin6-productosMuffins,
-  .muffin6-productosMuffins .muffin6-productosMuffins {
-    grid-area: muffin3;
-    width: 300px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   .muffin-banana,
   .muffin-coco,
   .muffin-frutosrojos,
   .muffin-frutossecos,
   .muffin-limonyamapola,
-  .muffin-vainillaychips {
-    width: 300px;
+  .muffin-vainillaychips,
+  .budin-de-frutosrojos,
+  .budin-de-limonyamapola,
+  .budin-de-zanahoria {
+    width: 280px;
     display: flex;
     align-items: center;
-  }
-  .img-agregar-al-carrito-productosMuffins {
-    width: 30px;
-    display: flex;
-    position: relative;
-    left: 260px;
-  }
-  .muffin1-productosMuffins .img-agregar-al-carrito-productosMuffins {
-    bottom: -40px;
-  }
-  .muffin2-productosMuffins .img-agregar-al-carrito-productosMuffins {
-    bottom: -20px;
-  }
-  .muffin4-productosMuffins .img-agregar-al-carrito-productosMuffins {
-    bottom: 0px;
-  }
-  .muffin6-productosMuffins .img-agregar-al-carrito-productosMuffins {
-    bottom: 0px;
   }
 }
 @media (max-width: 320px) {
-  .productos-container-productosMuffins {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(1fr 1fr 1fr 1fr 1fr 1fr);
-    grid-template-areas: "muffin1" "muffin2" "muffin3" "muffin4" "muffin5" "muffin6";
-    justify-items: center;
+  .productos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    margin-bottom: 40px;
   }
-  .muffin1-productosMuffins,
-  .muffin2-productosMuffins,
-  .muffin3-productosMuffins,
-  .muffin4-productosMuffins,
-  .muffin5-productosMuffins,
-  .muffin6-productosMuffins {
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 250px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 250px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 250px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 250px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 250px;
-    height: auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  .muffin1-productos,
+  .muffin2-productos,
+  .muffin3-productos,
+  .muffin4-productos,
+  .muffin5-productos,
+  .muffin6-productos,
+  .budin1-productos,
+  .budin2-productos,
+  .budin3-productos {
     width: 250px;
     height: auto;
   }
-  .muffin1-productosMuffins .muffin1-productosMuffins,
-  .muffin2-productosMuffins .muffin1-productosMuffins,
-  .muffin3-productosMuffins .muffin1-productosMuffins,
-  .muffin4-productosMuffins .muffin1-productosMuffins,
-  .muffin5-productosMuffins .muffin1-productosMuffins,
-  .muffin6-productosMuffins .muffin1-productosMuffins {
-    grid-area: muffin1;
-    width: 250px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin2-productosMuffins,
-  .muffin2-productosMuffins .muffin2-productosMuffins,
-  .muffin3-productosMuffins .muffin2-productosMuffins,
-  .muffin4-productosMuffins .muffin2-productosMuffins,
-  .muffin5-productosMuffins .muffin2-productosMuffins,
-  .muffin6-productosMuffins .muffin2-productosMuffins {
-    grid-area: muffin2;
-    width: 250px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin3-productosMuffins,
-  .muffin2-productosMuffins .muffin3-productosMuffins,
-  .muffin3-productosMuffins .muffin3-productosMuffins,
-  .muffin4-productosMuffins .muffin3-productosMuffins,
-  .muffin5-productosMuffins .muffin3-productosMuffins,
-  .muffin6-productosMuffins .muffin3-productosMuffins {
-    grid-area: muffin3;
-    width: 250px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin4-productosMuffins,
-  .muffin2-productosMuffins .muffin4-productosMuffins,
-  .muffin3-productosMuffins .muffin4-productosMuffins,
-  .muffin4-productosMuffins .muffin4-productosMuffins,
-  .muffin5-productosMuffins .muffin4-productosMuffins,
-  .muffin6-productosMuffins .muffin4-productosMuffins {
-    grid-area: muffin1;
-    width: 250px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin5-productosMuffins,
-  .muffin2-productosMuffins .muffin5-productosMuffins,
-  .muffin3-productosMuffins .muffin5-productosMuffins,
-  .muffin4-productosMuffins .muffin5-productosMuffins,
-  .muffin5-productosMuffins .muffin5-productosMuffins,
-  .muffin6-productosMuffins .muffin5-productosMuffins {
-    grid-area: muffin2;
-    width: 250px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  .muffin1-productosMuffins .muffin6-productosMuffins,
-  .muffin2-productosMuffins .muffin6-productosMuffins,
-  .muffin3-productosMuffins .muffin6-productosMuffins,
-  .muffin4-productosMuffins .muffin6-productosMuffins,
-  .muffin5-productosMuffins .muffin6-productosMuffins,
-  .muffin6-productosMuffins .muffin6-productosMuffins {
-    grid-area: muffin3;
-    width: 250px;
-    height: auto;
-  }
-  .muffin1-productosMuffins:hover,
-  .muffin2-productosMuffins:hover,
-  .muffin3-productosMuffins:hover,
-  .muffin4-productosMuffins:hover,
-  .muffin5-productosMuffins:hover,
-  .muffin6-productosMuffins:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  .muffin1-productos div img,
+  .muffin2-productos div img,
+  .muffin3-productos div img,
+  .muffin4-productos div img,
+  .muffin5-productos div img,
+  .muffin6-productos div img,
+  .budin1-productos div img,
+  .budin2-productos div img,
+  .budin3-productos div img {
+    width: 30px;
   }
   .muffin-banana,
   .muffin-coco,
   .muffin-frutosrojos,
   .muffin-frutossecos,
   .muffin-limonyamapola,
-  .muffin-vainillaychips {
+  .muffin-vainillaychips,
+  .budin-de-frutosrojos,
+  .budin-de-limonyamapola,
+  .budin-de-zanahoria {
     width: 250px;
     display: flex;
     align-items: center;
-  }
-  .img-agregar-al-carrito-productosMuffins {
-    width: 30px;
-    display: flex;
-    position: relative;
-    left: 210px;
-  }
-  .muffin1-productosMuffins .img-agregar-al-carrito-productosMuffins {
-    bottom: -75px;
-  }
-  .muffin2-productosMuffins .img-agregar-al-carrito-productosMuffins {
-    bottom: -30px;
   }
 }
 .body-carrito {
@@ -1932,284 +879,83 @@ hr {
   cursor: default;
 }
 
-.imagen-budin-productosClickeados {
-  width: 400px;
-  border-radius: 10px;
-  border: none;
-  object-fit: cover;
-  transition: box-shadow 0.3s ease-in-out;
-}
-.imagen-budin-productosClickeados:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
-}
-
-.imagen-muffin-productosClickeados {
-  width: 400px;
-  border-radius: 10px;
-  border: none;
-  transition: box-shadow 0.3s ease-in-out;
-}
-.imagen-muffin-productosClickeados:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
-}
-
-.producto-container-productosClickeados {
+.container-producto {
+  width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin: 50px;
-}
-
-.contenido-producto-productosClickeados {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.contenido-producto-productosClickeados .agregar-productosClickeados {
-  width: auto;
-  justify-content: end;
+  margin: 70px 0px 70px 0px;
 }
 
 .producto-productosClickeados {
+  display: flex;
   background-color: whitesmoke;
-  display: flex;
-  justify-items: center;
-  margin: 20px;
-  margin-bottom: 35px;
-  padding: 0;
-  border-radius: 10px;
-}
-
-.texto-productosClickeados {
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-  width: 450px;
-  margin-left: 10px;
-}
-.texto-productosClickeados .h2-productosClickeados {
-  font-size: 2.5rem;
-  margin: 10px 0px;
-  padding: 5px;
-}
-.texto-productosClickeados p {
-  font-size: 1.25rem;
-  padding: 5px 15px 5px 15px;
-  margin: 10px 0px;
-  line-height: 25px;
-  width: 450px;
-  text-align: start;
-}
-
-.agregar-al-carrito-productosClickeados {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  position: relative;
-  bottom: 13px;
-}
-
-.boton-agregar-productosClickeados {
-  color: white;
-  background-color: rgb(255, 221, 159);
-  width: fit-content;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 1.5625rem;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  display: flex;
+  border-radius: 20px;
   justify-content: center;
+  width: 70%;
 }
-.boton-agregar-productosClickeados:hover {
-  background-color: rgb(252, 238, 200);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-
-.agregar-productosClickeados {
-  width: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  padding: 10px;
-}
-
-@media (max-width: 1200px) {
-  .imagen-budin-productosClickeados {
-    width: 280px;
-    border-radius: 5px;
-    object-fit: cover;
-  }
-  .imagen-muffin-productosClickeados {
-    width: 280px;
-    border-radius: 5px;
-    object-fit: cover;
-  }
-  .contenido-producto-productosClickeados {
+@media (max-width: 768px) {
+  .producto-productosClickeados {
     display: flex;
     flex-direction: column;
+    width: 300px;
+    height: auto;
+    margin: 20px;
+    justify-content: center;
   }
-  .contenido-producto-productosClickeados .agregar-productosClickeados {
-    width: auto;
-    justify-content: end;
+}
+.producto-productosClickeados img {
+  width: 400px;
+  height: auto;
+  border-radius: 3px;
+  object-fit: cover;
+}
+@media (max-width: 1200px) {
+  .producto-productosClickeados img {
+    width: 350px;
+  }
+}
+@media (max-width: 1000px) {
+  .producto-productosClickeados img {
+    width: 250px;
   }
 }
 @media (max-width: 768px) {
-  .imagen-budin-productosClickeados {
-    width: 250px;
-    border-radius: 5px;
-    object-fit: cover;
-  }
-  .imagen-muffin-productosClickeados {
-    width: 250px;
-    border-radius: 5px;
-    object-fit: cover;
-  }
-  .contenido-producto-productosClickeados {
-    display: flex;
-    flex-direction: column;
-  }
-  .contenido-producto-productosClickeados .agregar-productosClickeados {
-    width: auto;
-    justify-content: end;
-  }
-  .texto-productosClickeados {
-    width: 250px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  .texto-productosClickeados .h2-productosClickeados {
-    font-size: 1.1875rem;
-  }
-  .texto-productosClickeados p {
-    font-size: 0.9375rem;
-    padding: 5px;
-    margin: 0;
-    line-height: 20px;
-    width: 250px;
-    text-align: center;
-  }
-  .agregar-al-carrito-productosClickeados {
-    width: 30px;
-    height: 30px;
-    bottom: 13px;
-    align-items: center;
-  }
-  .boton-agregar-productosClickeados {
-    font-size: 0.9375rem;
-    margin: 5px;
+  .producto-productosClickeados img {
+    width: 300px;
   }
 }
-@media (max-width: 576px) {
-  .imagen-budin-productosClickeados {
-    width: 250px;
-    border-radius: 5px;
-    object-fit: cover;
-  }
-  .imagen-muffin-productosClickeados {
-    width: 250px;
-    border-radius: 5px;
-    object-fit: cover;
-  }
-  .producto-container-productosClickeados {
-    margin: 40px;
-  }
-  .producto-productosClickeados {
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    align-items: center;
-  }
-  .contenido-producto-productosClickeados .agregar-productosClickeados {
-    width: auto;
-    justify-content: end;
-  }
-  .texto-productosClickeados {
-    width: 250px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  .texto-productosClickeados .h2-productosClickeados {
-    font-size: 1.1875rem;
-  }
-  .texto-productosClickeados p {
-    font-size: 0.9375rem;
-    padding: 5px;
-    margin: 0;
-    line-height: 20px;
-    width: 250px;
-    text-align: center;
-  }
-  .agregar-al-carrito-productosClickeados {
-    width: 30px;
-    height: 30px;
-    bottom: 13px;
-    align-items: center;
-  }
-  .boton-agregar-productosClickeados {
-    font-size: 0.9375rem;
-    margin: 5px;
+.producto-productosClickeados .texto-productosClickeados {
+  flex-direction: column;
+  padding: 20px;
+  text-align: start;
+}
+.producto-productosClickeados .texto-productosClickeados h2 {
+  font-size: 1.75rem;
+}
+@media (max-width: 1200px) {
+  .producto-productosClickeados .texto-productosClickeados h2 {
+    font-size: 1.5rem;
   }
 }
-@media (max-width: 320px) {
-  .imagen-budin-productosClickeados {
-    width: 250px;
-    border-radius: 5px;
-    object-fit: cover;
-  }
-  .imagen-muffin-productosClickeados {
-    width: 250px;
-    border-radius: 5px;
-    object-fit: cover;
-  }
-  .producto-container-productosClickeados {
-    margin: 40px;
-  }
-  .producto-productosClickeados {
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    align-items: center;
-  }
-  .contenido-producto-productosClickeados .agregar-productosClickeados {
-    width: auto;
-    align-items: end;
-  }
-  .texto-productosClickeados {
-    width: 250px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  .texto-productosClickeados .h2-productosClickeados {
-    font-size: 1.1875rem;
-  }
-  .texto-productosClickeados p {
-    font-size: 0.9375rem;
-    padding: 5px;
-    margin: 0;
-    line-height: 20px;
-    width: 250px;
-    text-align: center;
-  }
-  .agregar-al-carrito-productosClickeados {
-    width: 30px;
-    height: 30px;
-    bottom: 13px;
-    align-items: center;
-  }
-  .boton-agregar-productosClickeados {
-    font-size: 0.9375rem;
-    margin: 5px;
+@media (max-width: 1000px) {
+  .producto-productosClickeados .texto-productosClickeados h2 {
+    font-size: 1.25rem;
   }
 }
+.producto-productosClickeados .texto-productosClickeados p {
+  font-size: 1.5rem;
+}
+@media (max-width: 1200px) {
+  .producto-productosClickeados .texto-productosClickeados p {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 1000px) {
+  .producto-productosClickeados .texto-productosClickeados p {
+    font-size: 1rem;
+  }
+}
+
 .body-carrito {
   background-color: #f7f6f6;
 }
@@ -2221,70 +967,99 @@ hr {
   grid-template-areas: "compras total";
   justify-items: center;
 }
-@media (max-width: 1500px) {
+@media (max-width: 1200px) {
   .grilla-main {
     grid-template-columns: 1fr;
-    grid-template-rows: 70% 30%;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: "compras" "total";
-    margin-bottom: 100px;
   }
 }
-@media (max-width: 576px) {
-  .grilla-main {
-    grid-template-rows: 80% 20%;
-  }
-}
-
-.compras-container-carrito {
+#cart-products {
   grid-area: compras;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 0px 50px 0px;
+  width: 100%;
+  gap: 1rem;
+  padding: 20px;
 }
 @media (max-width: 1500px) {
-  .compras-container-carrito {
+  #cart-products {
     margin: 0;
+  }
+}
+#cart-products .cart-product {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  justify-items: center;
+  border-radius: 10px;
+  padding: 5px;
+  padding-right: 30px;
+}
+#cart-products .cart-product img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+#cart-products .cart-product h4 {
+  font-size: 0.75rem;
+  margin: 0;
+}
+#cart-products .cart-product p {
+  font-size: 1rem;
+  font-weight: bolder;
+  margin: 0;
+}
+#cart-products .cart-product .delete-button {
+  background-color: rgb(255, 123, 123);
+  color: white;
+  font-weight: bolder;
+  border-radius: 100px;
+  border: 1px solid rgb(255, 123, 123);
+  width: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 1px;
+}
+#cart-products .cart-product .delete-button:hover {
+  background-color: white;
+  color: rgb(255, 123, 123);
+}
+@media (max-width: 576px) {
+  #cart-products .cart-product {
+    flex-direction: column;
+    width: auto;
+    padding-right: 5px;
+  }
+  #cart-products .cart-product img {
+    width: 250px;
+    height: auto;
+  }
+  #cart-products .cart-product .product-name,
+  #cart-products .cart-product .product-quantity,
+  #cart-products .cart-product .product-price {
+    text-align: center;
+  }
+  #cart-products .cart-product button {
+    position: relative;
+    top: -375px;
+    left: 110px;
+  }
+}
+@media (max-width: 576px) {
+  #cart-products {
+    align-items: center;
   }
 }
 
 .total-container-carrito {
   grid-area: total;
-  padding: 50px;
-  width: 750px;
-}
-@media (max-width: 1500px) {
-  .total-container-carrito {
-    width: 730px;
-    justify-items: center;
-    padding: 0;
-  }
-}
-@media (max-width: 1200px) {
-  .total-container-carrito {
-    width: 680px;
-  }
-}
-@media (max-width: 768px) {
-  .total-container-carrito {
-    width: 580px;
-  }
-}
-@media (max-width: 576px) {
-  .total-container-carrito {
-    width: 350px;
-  }
-}
-@media (max-width: 400px) {
-  .total-container-carrito {
-    width: 300px;
-  }
-}
-@media (max-width: 320px) {
-  .total-container-carrito {
-    width: 280px;
-  }
+  padding: 40px;
+  width: 95%;
 }
 .total-container-carrito h3 {
   font-size: 2.5rem;
@@ -2372,7 +1147,7 @@ hr {
   bottom: -1px;
   width: 100%;
   height: 100%;
-  border-bottom: 2px solid rgb(255, 221, 159);
+  border-bottom: 2px solid rgb(147, 202, 247);
   transform: translateX(-100%);
   transition: all 0.3s ease;
 }
@@ -2388,63 +1163,28 @@ hr {
   justify-content: space-between;
 }
 
-.compra1-carrito,
-.compra2-carrito,
-.compra3-carrito {
-  background-color: white;
-  display: flex;
-  width: auto;
-  justify-items: start;
-  margin: 20px;
-  padding: 0;
-  border-radius: 10px;
-}
-
-.texto-carrito {
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-  width: 350px;
-}
-.texto-carrito .h2-carrito {
-  font-size: 1.875rem;
-  margin: 10px;
-  font-weight: bold;
-}
-.texto-carrito .precio-producto {
-  font-size: 1.875rem;
-  margin: 10px;
-  color: rgba(0, 0, 0, 0.5058823529);
-}
-
-.budin-frutosrojos,
-.muffin-frutosrojos-carrito,
-.muffin-coco-carrito {
-  width: 250px;
-  height: 300px;
-  margin: 10px;
-  border-radius: 5px;
-  object-fit: cover;
-}
-
 .boton-comprar-carrito {
-  color: white;
-  background-color: rgb(255, 221, 159);
+  border: solid 2px rgb(147, 202, 247);
+  color: rgb(147, 202, 247);
+  background-color: white;
   width: fit-content;
-  margin: 10px;
+  margin: 2px;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: bold;
-  font-size: 1.5625rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-  margin-bottom: 30px;
   display: flex;
   justify-content: center;
 }
 .boton-comprar-carrito:hover {
-  background-color: rgb(252, 238, 200);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-color: rgb(147, 202, 247);
+  color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.boton-comprar-carrito:active {
+  border-radius: 15px;
 }
 
 .botoncomprar-container-carrito {
@@ -2453,267 +1193,6 @@ hr {
   justify-content: center;
 }
 
-.cantidad-carrito {
-  background-color: white;
-  margin: 10px;
-  padding: 5px;
-  height: 60px;
-  width: fit-content;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  position: relative;
-}
-
-.boton-restar-carrito,
-.cantidad-valor-carrito,
-.boton-agregar-carrito {
-  margin: 5px;
-}
-
-.icono-cruz-carrito {
-  width: 30px;
-  height: 30px;
-  margin: 5px;
-}
-
-.cantidad-y-boton-cerrar-carrito {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "cerrar" "cantidad";
-  gap: 160px;
-}
-
-.boton-cerrar-carrito {
-  grid-area: cerrar;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-.cantidad-carrito {
-  grid-area: cantidad;
-}
-
-@media (max-width: 1400px) {
-  .muffin-frutosrojos-carrito {
-    width: 250px;
-    object-fit: cover;
-  }
-}
-@media (max-width: 1200px) {
-  .compra1-carrito,
-  .compra2-carrito,
-  .compra3-carrito {
-    background-color: white;
-    display: flex;
-    width: auto;
-    justify-items: start;
-    margin: 20px;
-    padding: 0;
-    border-radius: 10px;
-  }
-  .budin-frutosrojos,
-  .muffin-frutosrojos-carrito,
-  .muffin-coco-carrito {
-    width: 200px;
-    object-fit: cover;
-  }
-  .boton-restar-carrito,
-  .cantidad-valor-carrito,
-  .boton-agregar-carrito {
-    margin: 5px;
-  }
-  .icono-cruz-carrito {
-    width: 30px;
-    height: 30px;
-    margin: 5px;
-  }
-  .cantidad-y-boton-cerrar-carrito {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "cerrar" "cantidad";
-    gap: 160px;
-  }
-  .boton-cerrar-carrito {
-    grid-area: cerrar;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-  }
-  .cantidad-carrito {
-    grid-area: cantidad;
-  }
-}
-@media (max-width: 768px) {
-  .compra1-carrito,
-  .compra2-carrito,
-  .compra3-carrito {
-    background-color: white;
-    display: flex;
-    width: auto;
-    justify-items: start;
-    margin: 20px;
-    padding: 0;
-    border-radius: 10px;
-  }
-  .budin-frutosrojos,
-  .muffin-frutosrojos-carrito,
-  .muffin-coco-carrito {
-    width: 200px;
-  }
-  .texto-carrito {
-    width: 250px;
-  }
-  .texto-carrito .h2-carrito {
-    font-size: 1.5625rem;
-    margin: 10px;
-    font-weight: bold;
-  }
-  .texto-carrito p {
-    font-size: 1rem;
-    padding: 5px;
-    width: 250px;
-  }
-  .boton-restar-carrito,
-  .cantidad-valor-carrito,
-  .boton-agregar-carrito {
-    margin: 5px;
-  }
-  .icono-cruz-carrito {
-    width: 30px;
-    height: 30px;
-    margin: 5px;
-  }
-  .cantidad-y-boton-cerrar-carrito {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "cerrar" "cantidad";
-    gap: 160px;
-  }
-  .boton-cerrar-carrito {
-    grid-area: cerrar;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-  }
-  .cantidad-carrito {
-    grid-area: cantidad;
-  }
-}
-@media (max-width: 576px) {
-  .compra1-carrito,
-  .compra2-carrito,
-  .compra3-carrito {
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-  }
-  .texto-carrito {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 250px;
-  }
-  .texto-carrito .h2-carrito {
-    font-size: 1.25rem;
-    margin: 10px;
-    font-weight: bold;
-  }
-  .texto-carrito p {
-    font-size: 1rem;
-    padding: 5px;
-    width: 250px;
-    text-align: center;
-  }
-  .budin-frutosrojos,
-  .muffin-frutosrojos-carrito,
-  .muffin-coco-carrito {
-    width: 250px;
-    height: 300px;
-    margin: 0px;
-    border-radius: 5px;
-  }
-  .cantidad-carrito {
-    top: 0;
-    left: 130px;
-    justify-content: center;
-    align-items: center;
-  }
-  .cantidad-y-boton-cerrar-carrito {
-    display: flex;
-    flex: row;
-    justify-content: end;
-    position: relative;
-  }
-  .icono-cruz-carrito {
-    display: flex;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    top: -415px;
-  }
-}
-@media (max-width: 320px) {
-  .compra1-carrito,
-  .compra2-carrito,
-  .compra3-carrito {
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-  }
-  .texto-carrito {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 250px;
-  }
-  .texto-carrito .h2-carrito {
-    font-size: 1.25rem;
-    margin: 10px;
-    font-weight: bold;
-  }
-  .texto-carrito p {
-    font-size: 1rem;
-    padding: 5px;
-    width: 250px;
-    text-align: center;
-  }
-  .budin-frutosrojos,
-  .muffin-frutosrojos-carrito,
-  .muffin-coco-carrito {
-    width: 250px;
-    height: 300px;
-    margin: 0px;
-    border-radius: 5px;
-  }
-  .cantidad-carrito {
-    top: 0;
-    left: 130px;
-    justify-content: center;
-  }
-  .boton-cerrar-carrito {
-    top: -515px;
-    left: 105px;
-  }
-  .cantidad-y-boton-cerrar-carrito {
-    display: flex;
-    flex: row;
-    justify-content: end;
-    position: relative;
-  }
-  .icono-cruz-carrito {
-    width: 20px;
-    height: 20px;
-  }
-  .cruz-carrito {
-    width: 20px;
-    height: 20px;
-  }
-}
 .formulario {
   background-color: white;
   display: flex;
@@ -2724,44 +1203,33 @@ hr {
 .formulario h1 {
   color: black;
   font-size: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   background-color: #fff8ea;
   width: 100%;
   text-align: center;
   font-weight: lighter;
   padding: 10px;
 }
-.formulario label {
-  display: flex;
-  flex-direction: column;
-  font-size: 20px;
-}
-.formulario input {
-  margin: 5px;
-  padding: 5px;
-  border-radius: 5px;
-  border: none;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  width: 300px;
-  height: 30px;
-}
-.formulario button {
-  color: white;
-  background-color: rgb(255, 221, 159);
+
+button {
+  border: solid 2px rgb(147, 202, 247);
+  color: rgb(147, 202, 247);
+  background-color: white;
   width: fit-content;
   margin: 10px;
   padding: 10px;
   border-radius: 8px;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   cursor: pointer;
   transition: all 0.3s ease 0s;
   display: flex;
   justify-content: center;
 }
-.formulario button:hover {
-  background-color: rgb(252, 238, 200);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+button:hover {
+  background-color: rgb(147, 202, 247);
+  color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .usuario-registrado {
@@ -2809,6 +1277,7 @@ hr {
   align-items: center;
   justify-content: center;
   margin: 10px;
+  text-align: center;
 }
 #errorMessage h2 {
   font-size: 15px;
@@ -2824,10 +1293,108 @@ hr {
   align-items: center;
   justify-content: center;
   margin: 10px;
+  text-align: center;
 }
 #successfulMessage h2 {
   font-size: 15px;
   color: rgb(70, 206, 52);
+}
+
+#panel-usuario {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#panel-usuario h2 {
+  color: black;
+  font-size: 30px;
+  margin-bottom: 50px;
+  background-color: #fff8ea;
+  width: 100%;
+  text-align: center;
+  font-weight: lighter;
+  padding: 10px;
+}
+#panel-usuario p {
+  font-size: 1.25rem;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px;
+}
+#panel-usuario button {
+  border: solid 2px rgb(147, 202, 247);
+  color: rgb(147, 202, 247);
+  background-color: white;
+  width: fit-content;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 240px;
+}
+#panel-usuario button:hover {
+  background-color: rgb(147, 202, 247);
+  color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.formulario .inputs {
+  width: fit-content;
+  height: 58px;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.formulario .inputs input {
+  width: 300px;
+  height: 100%;
+  background: none;
+  color: black;
+  padding-top: 20px;
+  border: none;
+  outline: 0px;
+}
+.formulario .inputs input:focus + .texto-label .placeholder, .formulario .inputs input:valid + .texto-label .placeholder {
+  transform: translateY(-110%);
+  font-size: 0.9375rem;
+  color: #383838;
+}
+.formulario .inputs input:focus + .texto-label::after, .formulario .inputs input:valid + .texto-label::after {
+  transform: translateX(0%);
+}
+.formulario .inputs .texto-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #383838;
+}
+.formulario .inputs .texto-label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid rgb(147, 202, 247);
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+.formulario .inputs .texto-label .placeholder {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s ease;
+  color: black;
 }
 
 footer {

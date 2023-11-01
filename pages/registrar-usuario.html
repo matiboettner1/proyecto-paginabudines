@@ -53,18 +53,18 @@
         <form id="registerForm" class="formulario">
             <h1>Registro de usuario</h1>
     
-            <div>
-                <label id="labelNombreUsuario" for="nombreUsuario">Nombre de usuario</label>
-                <input type="text" id="nombreUsuario" autocomplete="username"/>
+            <div class="inputs">
+                <input type="text" id="nombreUsuario" autocomplete="username" required/>
+                <label id="labelNombreUsuario" for="nombreUsuario" class="texto-label"><span class="placeholder">Nombre de usuario</span></label>
             </div>
     
-            <div>
-                <label id="labelContraseniaUsuario1" for="contraseniaUsuario">Contraseña</label>
-                <input type="password" id="contraseniaUsuario" autocomplete="new-password"/>
+            <div class="inputs">
+                <input type="password" id="contraseniaUsuario" autocomplete="new-password" required/>
+                <label id="labelContraseniaUsuario1" for="contraseniaUsuario" class="texto-label"><span class="placeholder">Contraseña</span></label>
             </div>
-            <div>
-                <label id="labelRepetirContrasenia" for="repetirContrasenia">Repetir contraseña</label>
-                <input type="password" id="repetirContrasenia" autocomplete="new-password"/>
+            <div class="inputs">
+                <input type="password" id="repetirContrasenia" autocomplete="new-password" required/>
+                <label id="labelRepetirContrasenia" for="repetirContrasenia" class="texto-label"><span class="placeholder">Repetir contraseña</span></label>
             </div>
             
             <div id="errorMessage">
@@ -109,6 +109,8 @@
         </div>
         <h4>Copyright © 2023 Hecho En Casa | Powered by Matías Boettner</h4>
     </footer>
-    <script src="main.js"></script>
+    <script src="../classes/usuario.js"></script>
+    <script src="../constants/index.js"></script>
+    <script src='../scripts/mainRegistroUsuario.js'></script>
 </body>
 </html>
