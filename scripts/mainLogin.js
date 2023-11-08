@@ -66,8 +66,3 @@ const cerrarSesion = () => {
     sessionStorage.removeItem(USER_LOGGED_KEY);
     location.reload();
 }
-
-
-
-
-

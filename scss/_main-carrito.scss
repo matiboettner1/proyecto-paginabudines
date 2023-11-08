@@ -58,19 +58,22 @@
 			margin: 0;
 		}
 		.delete-button {
-			background-color: rgb(255, 123, 123);
-			color: $color_1;
+			background-color: $color_1;
+			color: rgb(255, 123, 123);
 			font-weight: bolder;
 			border-radius: 100px;
 			border: 1px solid rgb(255, 123, 123);
 			width: 20px;
+			height: 20px;
 			display: flex;
 			text-align: center;
 			justify-content: center;
+			justify-items: center;
+			align-items: center;
 			margin: 1px;
 			&:hover {
-				background-color: $color_1;
-				color: rgb(255, 123, 123);
+				background-color: rgb(255, 123, 123);
+				color: $color_1;
 			}
 		}
 		@media (max-width: 576px) {
@@ -93,6 +96,22 @@
 			}
 		}
 	}
+
+	.quantity-control {
+		display: flex;
+		button {
+			margin: 5px;
+			padding: 4px;
+			height: 17px;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50px;
+			position: sticky;
+			font-size: 0.8rem;
+		}
+	}
+
 	@media (max-width: 576px) {
 		align-items: center;
 	}

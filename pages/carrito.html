@@ -56,58 +56,58 @@
     </header>
 
     <main>
-        <section class="grilla-main">
+        <section id='cart' class="grilla-main">
             <div id="cart-products">
                 <!--div class="cart-product">
                     <img src="../media/img/${getImageName(product.name)}">
                     <div class="product-name">
                         <h4>Producto</h4>
-                        <p>${product-name}</p>
+                        <p>${product.name}</p>
                     </div>
                     <div class="product-quantity">
                         <h4>Cantidad</h4>
-                        <p>${product-quantity}</p>
+                        <p>${product.quantity}</p>
                     </div>
                     <div class="product-price">
                         <h4>Precio</h4>
-                        <p>${product-price}</p>
+                        <p>${product.price}</p>
                     </div>
                     <button class="delete-button">X</button>
                 </div>-->
+            </div>
 
-
-                <div class="total-container-carrito">
-                    <h3>Resumen de compra</h3>
-                    <hr>
-                    <div class="precios">
-                        <div class="productos-precios">
-                            <h4>Productos</h4>
-                            <h4>$<strong id="totalPrice">0</strong></h4>
-                        </div>
-                        <div class="envio-precios">
-                            <h4>Envío</h4>
-                            <h4>$<strong>500</strong></h4>
-                        </div>
-                        <div class="codigo-cupon">
-                            <h4>Código de cupón</h4>
-                            <form class="form">
-                                <input type="text" required name="codigo-de-cupon" />
-                                <label class="texto-label">
-                                    <span class="placeholder">Ingrese el código</span>
-                                </label>
-                            </form>
-                        </div>
+            <div class="total-container-carrito">
+                <h3>Resumen de compra</h3>
+                <hr>
+                <div class="precios">
+                    <div class="productos-precios">
+                        <h4>Productos</h4>
+                        <h4>$<strong id="totalPrice">0</strong></h4>
                     </div>
-                    <hr>
-                    <div class="total">
-                        <h4>Total</h4>
-                        <h4>$<strong id="totalPriceWShipment">0</strong></h4>
+                    <div class="envio-precios">
+                        <h4>Envío</h4>
+                        <h4>$<strong>500</strong></h4>
                     </div>
-                    <hr>
-                    <div class="botoncomprar-container-carrito">
-                        <button type="submit" class="boton-comprar-carrito">Comprar</button>
+                    <div class="codigo-cupon">
+                        <h4>Código de cupón</h4>
+                        <form class="form">
+                            <input type="text" required name="codigo-de-cupon" />
+                            <label class="texto-label">
+                                <span class="placeholder">Ingrese el código</span>
+                            </label>
+                        </form>
                     </div>
                 </div>
+                <hr>
+                <div class="total">
+                    <h4>Total</h4>
+                    <h4>$<strong id="totalPriceWShipment">0</strong></h4>
+                </div>
+                <hr>
+                <div class="botoncomprar-container-carrito">
+                    <button type="submit" class="boton-comprar-carrito">Comprar</button>
+                </div>
+            </div>
         </section>
 
     </main>

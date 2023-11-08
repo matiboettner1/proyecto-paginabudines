@@ -1014,20 +1014,23 @@ hr {
   margin: 0;
 }
 #cart-products .cart-product .delete-button {
-  background-color: rgb(255, 123, 123);
-  color: white;
+  background-color: white;
+  color: rgb(255, 123, 123);
   font-weight: bolder;
   border-radius: 100px;
   border: 1px solid rgb(255, 123, 123);
   width: 20px;
+  height: 20px;
   display: flex;
   text-align: center;
   justify-content: center;
+  justify-items: center;
+  align-items: center;
   margin: 1px;
 }
 #cart-products .cart-product .delete-button:hover {
-  background-color: white;
-  color: rgb(255, 123, 123);
+  background-color: rgb(255, 123, 123);
+  color: white;
 }
 @media (max-width: 576px) {
   #cart-products .cart-product {
@@ -1049,6 +1052,20 @@ hr {
     top: -375px;
     left: 110px;
   }
+}
+#cart-products .quantity-control {
+  display: flex;
+}
+#cart-products .quantity-control button {
+  margin: 5px;
+  padding: 4px;
+  height: 17px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  position: sticky;
+  font-size: 0.8rem;
 }
 @media (max-width: 576px) {
   #cart-products {

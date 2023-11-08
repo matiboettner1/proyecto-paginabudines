@@ -53,3 +53,7 @@ const showSuccessfulMessage = (successfulMessage, message) => {
     messageContainer.style.display = 'flex';
     messageContainer.innerHTML = `<h2>${message}<h2>`;
 }
+
+const getImageName = (productName) => {
+    return productName.toLowerCase().split(' ').join('-') + '.jpg';
+}
