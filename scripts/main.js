@@ -1,24 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const cartProducts = document.getElementById('cart-products');
 
-    let cart = [];
+const cartProducts = document.getElementById('cart-products');
 
-    const totalPrice = document.getElementById('totalPrice');
-    const totalPriceWShipment = document.getElementById('totalPriceWShipment');
-    const addButton = document.querySelectorAll('.addButton');
+let cart = [];
 
-    const showHTMLProducts = () => {
-        if (cartProducts) {
-            cartProducts.innerHTML = '';
-        }
+const totalPrice = document.getElementById('totalPrice');
+const totalPriceWShipment = document.getElementById('totalPriceWShipment');
+const addButton = document.querySelectorAll('.add-button');
 
-        let total = 0;
+const showHTMLProducts = () => {
+    if (cartProducts) {
+        cartProducts.innerHTML = '';
+    }
 
-        cart.forEach((product, index) => {
-            const containerProduct = document.createElement('div');
-            containerProduct.classList.add('cart-product');
+    let total = 0;
 
-            containerProduct.innerHTML = `
+    cart.forEach((product) => {
+        const containerProduct = document.createElement('div');
+        containerProduct.classList.add('cart-product');
+
+        containerProduct.innerHTML = `
                 <img src="../media/img/${getImageName(product.name)}">
                 <div class="product-name">
                     <h4>Producto</h4>
@@ -39,110 +39,111 @@ document.addEventListener('DOMContentLoaded', () => {
                 <button class="delete-button">X</button>
             `;
 
-            if (cartProducts) {
-                cartProducts.appendChild(containerProduct);
-            }
+        if (cartProducts) {
+            cartProducts.appendChild(containerProduct);
+        }
 
-            const decreaseButton = containerProduct.querySelector('.decrement-button');
-            const increaseButton = containerProduct.querySelector('.increment-button');
-            const quantityDisplay = containerProduct.querySelector('.product-quantity p');
+        const decreaseButton = containerProduct.querySelector('.decrement-button');
+        const increaseButton = containerProduct.querySelector('.increment-button');
+        const quantityDisplay = containerProduct.querySelector('.product-quantity p');
 
-            decreaseButton.addEventListener('click', () => {
-                if (product.quantity > 1) {
-                    product.quantity--;
-                    quantityDisplay.innerText = product.quantity;
-                    updateCartAndSave();
-                }
-            });
-
-            increaseButton.addEventListener('click', () => {
-                product.quantity++;
+        decreaseButton.addEventListener('click', () => {
+            if (product.quantity > 1) {
+                product.quantity--;
                 quantityDisplay.innerText = product.quantity;
                 updateCartAndSave();
-            });
-
-            total += product.quantity * parseInt(product.price.slice(1));
-        });
-
-        if (totalPrice) {
-            totalPrice.innerText = `${total}`;
-        }
-
-        if (totalPriceWShipment) {
-            totalPriceWShipment.innerText = `${total + 500}`;
-        }
-    };
-
-
-    const productsList = document.querySelectorAll('.productos-container');
-    productsList.forEach(item => {
-        item.addEventListener('click', (e) => {
-            if (addButton) {
-                if (!isUserLogged()) {
-                    window.location.href = './login-usuario.html';
-                    return;
-                }
-                const product = e.target.parentElement.parentElement;
-                const infoProduct = {
-                    name: product.querySelector('.product-info h2').textContent,
-                    quantity: 1,
-                    price: product.querySelector('.product-info p').textContent,
-                };
-
-                const isProductExist = cart.some((product) => product.name === infoProduct.name);
-                if (isProductExist) {
-                    const products = cart.map((product) => {
-                        if (product.name === infoProduct.name) {
-                            product.quantity++;
-                            return product;
-                        } else {
-                            return product;
-                        }
-                    });
-                    cart = [...products];
-                    console.log(cart)
-                } else {
-                    cart = [...cart, infoProduct];
-                    console.log(cart)
-                }
-
-                showHTMLProducts();
-                updateCartAndSave();
             }
         });
+
+        increaseButton.addEventListener('click', () => {
+            product.quantity++;
+            quantityDisplay.innerText = product.quantity;
+            updateCartAndSave();
+        });
+
+        total += product.quantity * parseInt(product.price.slice(1));
     });
 
-    if (cartProducts) {
-        cartProducts.addEventListener('click', (e) => {
-            if (e.target.classList.contains('delete-button')) {
-                const product = e.target.parentElement;
-                console.log(product)
-                const name = product.querySelector('.product-name p').textContent;
-                console.log(name)
-
-                cart = cart.filter(product => product.name !== name);
-                showHTMLProducts();
-                updateCartAndSave();
-            }
-        });
+    if (totalPrice) {
+        totalPrice.innerText = `${total}`;
     }
 
-    const saveCartToSessionStorage = () => {
-        sessionStorage.setItem('cart', JSON.stringify(cart));
-    };
+    if (totalPriceWShipment) {
+        totalPriceWShipment.innerText = `${total + 500}`;
+    }
+};
 
-    const getCartFromSessionStorage = () => {
-        const cartFromStorage = sessionStorage.getItem('cart');
-        if (cartFromStorage) {
-            cart = JSON.parse(cartFromStorage);
-            showHTMLProducts();
+
+const productsList = document.querySelectorAll('.productos-container');
+productsList.forEach((item) => {
+    item.addEventListener('click', (e) => {
+        if (e.target.classList.contains('add-button')) {
+            if (!isUserLogged()) {
+                window.location.href = './login-usuario.html';
+                return;
+            }
+            const product = e.target.parentElement.parentElement;
+            const infoProduct = {
+                name: product.querySelector('.product-info h2').textContent,
+                quantity: 1,
+                price: product.querySelector('.product-info p').textContent,
+            };
+
+            const isProductExist = cart.some((product) => product.name === infoProduct.name);
+            if (isProductExist) {
+                const products = cart.map((product) => {
+                    if (product.name === infoProduct.name) {
+                        product.quantity++;
+                        return product;
+                    } else {
+                        return product;
+                    }
+                });
+                cart = [...products];
+                console.log(cart);
+            } else {
+                cart = [...cart, infoProduct];
+                console.log(cart);
+            }
         }
-    };
 
-    window.addEventListener('load', getCartFromSessionStorage);
-
-    const updateCartAndSave = () => {
         showHTMLProducts();
-        saveCartToSessionStorage();
-    };
+        updateCartAndSave();
+    });
 });
+
+if (cartProducts) {
+    cartProducts.addEventListener('click', (e) => {
+        if (e.target.classList.contains('delete-button')) {
+            const product = e.target.parentElement;
+            console.log(product)
+            const name = product.querySelector('.product-name p').textContent;
+            console.log(name)
+
+            cart = cart.filter(product => product.name !== name);
+            showHTMLProducts();
+            updateCartAndSave();
+        }
+    });
+}
+
+const saveCartToSessionStorage = () => {
+    sessionStorage.setItem('cart', JSON.stringify(cart));
+};
+
+const getCartFromSessionStorage = () => {
+    const cartFromStorage = sessionStorage.getItem('cart');
+    if (cartFromStorage) {
+        cart = JSON.parse(cartFromStorage);
+        showHTMLProducts();
+    }
+};
+
+window.addEventListener('load', getCartFromSessionStorage);
+
+const updateCartAndSave = () => {
+    showHTMLProducts();
+    saveCartToSessionStorage();
+};
+
+

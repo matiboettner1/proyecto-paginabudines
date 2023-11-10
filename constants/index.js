@@ -57,3 +57,10 @@ const showSuccessfulMessage = (successfulMessage, message) => {
 const getImageName = (productName) => {
     return productName.toLowerCase().split(' ').join('-') + '.jpg';
 }
+
+const clearCart = () => {
+    cart = [];
+    showHTMLProducts();
+    updateCartAndSave();
+}
+

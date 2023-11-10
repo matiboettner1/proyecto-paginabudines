@@ -63,6 +63,7 @@ buttonLogOut.addEventListener('click', () => {
 });
 
 const cerrarSesion = () => {
+    clearCart();
     sessionStorage.removeItem(USER_LOGGED_KEY);
     location.reload();
 }
