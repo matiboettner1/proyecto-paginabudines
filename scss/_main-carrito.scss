@@ -38,6 +38,7 @@
 		height: auto;
 		justify-content: space-between;
 		background-color: $color_1;
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 		align-items: center;
 		justify-items: center;
 		border-radius: 10px;
@@ -262,7 +263,7 @@
 
 }
 
-.boton-comprar-carrito {
+#boton-comprar-carrito {
 	border: solid 2px $background-color_5;
 	color: $background-color_5;
 	background-color: $color_1;
@@ -288,7 +289,7 @@
 	}
 }
 
-.botoncomprar-container-carrito {
+#botoncomprar-container-carrito {
 	width: 100%;
 	display: flex;
 	justify-content: center;

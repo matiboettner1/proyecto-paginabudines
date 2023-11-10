@@ -70,7 +70,7 @@ const productAddAlert = () => {
         text: 'Producto agregado correctamente.',
         icon: 'success',
         confirmButtonText: 'Seguir comprando',
-        footer: '<a href="../pages/carrito.html">Carrito</a>',
+        footer: '<a href="../pages/carrito.html">Ir al carrito</a>',
         buttonsStyling: false
       })
 }
@@ -83,14 +83,4 @@ const buyProductsAlert = () => {
         confirmButtonText: 'Finalizar',
         buttonsStyling: false
       })
-}
-
-const noProductsAlert = () => {
-    Swal.fire({
-        icon: "error",
-        title: "Algo salio mal...",
-        text: "No hay productos en el carrito",
-        confirmButtonText: 'Ok',
-        buttonsStyling: false
-    });
 }
