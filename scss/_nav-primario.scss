@@ -9,6 +9,7 @@ nav {
 	z-index: 100;
 	font-weight: bold;
 	text-decoration: none;
+
 	li {
 		list-style: none;
 		display: none;
@@ -39,7 +40,9 @@ nav {
 	}
 }
 
-.index , .productos , .carrito{
+.index,
+.productos,
+.carrito {
 	@include animacion-paginas();
 }
 

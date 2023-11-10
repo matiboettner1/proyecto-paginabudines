@@ -8,7 +8,7 @@ const recoverStorageList = () => {
     const recoverUsers = JSON.parse(localStorage.getItem(LOCAL_STORAGE_USERNAME));
     if (recoverUsers) {
         return recoverUsers.map((e) => {
-            return new User (e.userName, e.password);
+            return new User(e.userName, e.password);
         });
     }
 }
@@ -72,7 +72,7 @@ const productAddAlert = () => {
         confirmButtonText: 'Seguir comprando',
         footer: '<a href="../pages/carrito.html">Ir al carrito</a>',
         buttonsStyling: false
-      })
+    })
 }
 
 const buyProductsAlert = () => {
@@ -82,5 +82,5 @@ const buyProductsAlert = () => {
         icon: 'success',
         confirmButtonText: 'Finalizar',
         buttonsStyling: false
-      })
+    })
 }

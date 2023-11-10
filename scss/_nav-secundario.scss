@@ -21,7 +21,8 @@
     display: flex;
 }
 
-.budines-productos , .muffins-productos {
+.budines-productos,
+.muffins-productos {
     @include animacion-paginas();
 }
 

@@ -5,12 +5,12 @@ miFormulario.addEventListener('submit', (e) => {
     let userName = document.getElementById('nombreUsuario').value;
     let password = document.getElementById('contrasenia').value;
 
-    if(!validarFormulario(userName, password)) {
+    if (!validarFormulario(userName, password)) {
         return false;
     }
-    
+
     const unUsuario = getUser(usuarios, userName);
-    if(!unUsuario) {
+    if (!unUsuario) {
         showErrorMessages(errorMessage, message = 'El usuario o contraseña ingresados no existe.');
         return false;
     }
@@ -23,23 +23,23 @@ miFormulario.addEventListener('submit', (e) => {
     unUsuario.isLogged = true;
     registrarLogin(unUsuario);
     showSuccessfulMessage(successfulMessage, message = 'Inicio de sesion exitoso.');
-        setTimeout(() => {
-            window.location.href = '../index.html';
-        }, 1200);
+    setTimeout(() => {
+        window.location.href = '../index.html';
+    }, 1200);
 });
 
 const validarFormulario = (userName, password) => {
-    
+
     if (userName.length == 0) {
         showErrorMessages(errorMessage, message = 'Debes completar todos los campos.');
         return false;
-      }
-    
-      if (password.length == 0) {
+    }
+
+    if (password.length == 0) {
         showErrorMessages(errorMessage, message = 'Debes completar todos los campos.');
         return false;
-      }
-    
+    }
+
     return true;
 }
 

@@ -17,8 +17,10 @@
         <nav class="nav">
             <input type="checkbox" id="nav__checkbox" class="nav__checkbox">
             <label for="nav__checkbox" class="nav__toggle">
-                <img src="../media/img/menu-hamburguesa.png" class="hamburger" alt="icono de un menu hamburguesa de tres rayas"/>
-                <img src="../media/img/menu-hamburguesa-cerrar.png" class="close" alt="icono de un menu hamburguesa de tres rayas pero la del medio es mas corta"/>
+                <img src="../media/img/menu-hamburguesa.png" class="hamburger"
+                    alt="icono de un menu hamburguesa de tres rayas" />
+                <img src="../media/img/menu-hamburguesa-cerrar.png" class="close"
+                    alt="icono de un menu hamburguesa de tres rayas pero la del medio es mas corta" />
             </label>
 
             <ul class="nav__menu">
@@ -52,32 +54,35 @@
     <main>
         <form id="registerForm" class="formulario">
             <h1>Registro de usuario</h1>
-    
+
             <div class="inputs">
-                <input type="text" id="nombreUsuario" autocomplete="username" required/>
-                <label id="labelNombreUsuario" for="nombreUsuario" class="texto-label"><span class="placeholder">Nombre de usuario</span></label>
+                <input type="text" id="nombreUsuario" autocomplete="username" required />
+                <label id="labelNombreUsuario" for="nombreUsuario" class="texto-label"><span class="placeholder">Nombre
+                        de usuario</span></label>
             </div>
-    
+
             <div class="inputs">
-                <input type="password" id="contraseniaUsuario" autocomplete="new-password" required/>
-                <label id="labelContraseniaUsuario1" for="contraseniaUsuario" class="texto-label"><span class="placeholder">Contraseña</span></label>
+                <input type="password" id="contraseniaUsuario" autocomplete="new-password" required />
+                <label id="labelContraseniaUsuario1" for="contraseniaUsuario" class="texto-label"><span
+                        class="placeholder">Contraseña</span></label>
             </div>
             <div class="inputs">
-                <input type="password" id="repetirContrasenia" autocomplete="new-password" required/>
-                <label id="labelRepetirContrasenia" for="repetirContrasenia" class="texto-label"><span class="placeholder">Repetir contraseña</span></label>
+                <input type="password" id="repetirContrasenia" autocomplete="new-password" required />
+                <label id="labelRepetirContrasenia" for="repetirContrasenia" class="texto-label"><span
+                        class="placeholder">Repetir contraseña</span></label>
             </div>
-            
+
             <div id="errorMessage">
-    
+
             </div>
             <div id="successfulMessage">
-    
+
             </div>
-    
+
             <div>
                 <button type="submit" id="boton-registrar">Registrarse</button>
             </div>
-    
+
             <div class="usuario-registrado usuario-registrado2">
                 <h3>¿Ya estas registrado?</h3>
                 <a href="./login-usuario.html">Iniciar sesión</a>
@@ -113,4 +118,5 @@
     <script src="../constants/index.js"></script>
     <script src='../scripts/mainRegistroUsuario.js'></script>
 </body>
+
 </html>
