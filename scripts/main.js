@@ -1,4 +1,3 @@
-
 const cartProducts = document.getElementById('cart-products');
 
 let cart = [];
@@ -106,7 +105,7 @@ productsList.forEach((item) => {
                 console.log(cart);
             }
         }
-
+        productAddAlert();
         showHTMLProducts();
         updateCartAndSave();
     });
@@ -116,9 +115,7 @@ if (cartProducts) {
     cartProducts.addEventListener('click', (e) => {
         if (e.target.classList.contains('delete-button')) {
             const product = e.target.parentElement;
-            console.log(product)
             const name = product.querySelector('.product-name p').textContent;
-            console.log(name)
 
             cart = cart.filter(product => product.name !== name);
             showHTMLProducts();
@@ -145,5 +142,13 @@ const updateCartAndSave = () => {
     showHTMLProducts();
     saveCartToSessionStorage();
 };
+
+const buyButton = document.querySelector('.botoncomprar-container-carrito');
+buyButton.addEventListener('click', (e) => {
+    if (e.target.classList.contains('boton-comprar-carrito')) {
+        buyProductsAlert();
+        clearCart();
+    }
+})
 
 

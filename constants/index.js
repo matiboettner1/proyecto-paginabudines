@@ -64,3 +64,33 @@ const clearCart = () => {
     updateCartAndSave();
 }
 
+const productAddAlert = () => {
+    Swal.fire({
+        title: 'Añadido al carrito!',
+        text: 'Producto agregado correctamente.',
+        icon: 'success',
+        confirmButtonText: 'Seguir comprando',
+        footer: '<a href="../pages/carrito.html">Carrito</a>',
+        buttonsStyling: false
+      })
+}
+
+const buyProductsAlert = () => {
+    Swal.fire({
+        title: 'Compra realizada!',
+        text: 'La compra se realizo con exito.',
+        icon: 'success',
+        confirmButtonText: 'Finalizar',
+        buttonsStyling: false
+      })
+}
+
+const noProductsAlert = () => {
+    Swal.fire({
+        icon: "error",
+        title: "Algo salio mal...",
+        text: "No hay productos en el carrito",
+        confirmButtonText: 'Ok',
+        buttonsStyling: false
+    });
+}
