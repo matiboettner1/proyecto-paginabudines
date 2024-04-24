@@ -32,7 +32,7 @@ const showHTMLProducts = () => {
                     </div>
                 </div>
                 <div class="product-price">
-                    <h4>Precio</h4>
+                    <h4>Precio Unitario</h4>
                     <p>${product.price}</p>
                 </div>
                 <button class="delete-button">X</button>
